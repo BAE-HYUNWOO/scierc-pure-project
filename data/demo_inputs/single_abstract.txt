@@ -1,0 +1,1 @@
+We propose a SciBERT-based model for scientific relation extraction. The model is evaluated on SciERC and compared with previous neural baselines.

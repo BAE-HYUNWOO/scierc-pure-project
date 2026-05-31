@@ -1,0 +1,1723 @@
+[PURE ENTITY CMD] /usr/bin/python3 run_entity.py --context_window 0 --task scierc --data_dir /content/scierc_pure_project/data/scierc/processed_data/json --model allenai/scibert_scivocab_uncased --output_dir /content/scierc_pure_project/models/fine_tuned/entity --do_train --learning_rate 1e-5 --task_learning_rate 5e-4 --train_batch_size 16 --do_eval --eval_test
+05/31/2026 06:22:57 - INFO - root - ['run_entity.py', '--context_window', '0', '--task', 'scierc', '--data_dir', '/content/scierc_pure_project/data/scierc/processed_data/json', '--model', 'allenai/scibert_scivocab_uncased', '--output_dir', '/content/scierc_pure_project/models/fine_tuned/entity', '--do_train', '--learning_rate', '1e-5', '--task_learning_rate', '5e-4', '--train_batch_size', '16', '--do_eval', '--eval_test']
+05/31/2026 06:22:57 - INFO - root - Namespace(task='scierc', data_dir='/content/scierc_pure_project/data/scierc/processed_data/json', output_dir='/content/scierc_pure_project/models/fine_tuned/entity', max_span_length=8, train_batch_size=16, eval_batch_size=32, learning_rate=1e-05, task_learning_rate=0.0005, warmup_proportion=0.1, num_epoch=100, print_loss_step=100, eval_per_epoch=1, bertadam=False, do_train=True, train_shuffle=False, do_eval=True, eval_test=True, dev_pred_filename='ent_pred_dev.json', test_pred_filename='ent_pred_test.json', use_albert=False, model='allenai/scibert_scivocab_uncased', bert_model_dir=None, seed=0, context_window=0, train_data='/content/scierc_pure_project/data/scierc/processed_data/json/train.json', dev_data='/content/scierc_pure_project/data/scierc/processed_data/json/dev.json', test_data='/content/scierc_pure_project/data/scierc/processed_data/json/test.json')
+05/31/2026 06:22:57 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/allenai/scibert_scivocab_uncased/resolve/main/tokenizer_config.json "HTTP/1.1 404 Not Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+05/31/2026 06:22:57 - WARNING - huggingface_hub.utils._http - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+05/31/2026 06:22:58 - INFO - httpx - HTTP Request: GET https://huggingface.co/api/models/allenai/scibert_scivocab_uncased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+05/31/2026 06:22:58 - INFO - httpx - HTTP Request: GET https://huggingface.co/api/models/allenai/scibert_scivocab_uncased/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+05/31/2026 06:22:58 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/allenai/scibert_scivocab_uncased/resolve/main/vocab.txt "HTTP/1.1 307 Temporary Redirect"
+05/31/2026 06:22:58 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/allenai/scibert_scivocab_uncased/24f92d32b1bfb0bcaf9ab193ff3ad01e87732fc1/vocab.txt "HTTP/1.1 200 OK"
+05/31/2026 06:22:58 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/allenai/scibert_scivocab_uncased/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+05/31/2026 06:22:58 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/allenai/scibert_scivocab_uncased/24f92d32b1bfb0bcaf9ab193ff3ad01e87732fc1/config.json "HTTP/1.1 200 OK"
+05/31/2026 06:22:58 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/allenai/scibert_scivocab_uncased/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+05/31/2026 06:22:58 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/allenai/scibert_scivocab_uncased/24f92d32b1bfb0bcaf9ab193ff3ad01e87732fc1/config.json "HTTP/1.1 200 OK"
+05/31/2026 06:22:58 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/allenai/scibert_scivocab_uncased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+05/31/2026 06:22:58 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/allenai/scibert_scivocab_uncased/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+05/31/2026 06:22:58 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/allenai/scibert_scivocab_uncased/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
+05/31/2026 06:22:58 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/allenai/scibert_scivocab_uncased/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+05/31/2026 06:22:59 - INFO - httpx - HTTP Request: GET https://huggingface.co/api/models/allenai/scibert_scivocab_uncased "HTTP/1.1 200 OK"
+05/31/2026 06:22:59 - INFO - httpx - HTTP Request: GET https://huggingface.co/api/models/allenai/scibert_scivocab_uncased/commits/main "HTTP/1.1 200 OK"
+05/31/2026 06:22:59 - INFO - httpx - HTTP Request: GET https://huggingface.co/api/models/allenai/scibert_scivocab_uncased/discussions?p=0 "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:   1%|          | 1/199 [00:00<00:00, 11881.88it/s, Materializing param=bert.embeddings.LayerNorm.bias]Loading weights:   1%|          | 1/199 [00:00<00:00, 5090.17it/s, Materializing param=bert.embeddings.LayerNorm.bias] Loading weights:   1%|          | 2/199 [00:00<00:00, 4431.38it/s, Materializing param=bert.embeddings.LayerNorm.weight]Loading weights:   1%|          | 2/199 [00:00<00:00, 3640.89it/s, Materializing param=bert.embeddings.LayerNorm.weight]Loading weights:   2%|▏         | 3/199 [00:00<00:00, 4009.85it/s, Materializing param=bert.embeddings.position_embeddings.weight]Loading weights:   2%|▏         | 3/199 [00:00<00:00, 3568.61it/s, Materializing param=bert.embeddings.position_embeddings.weight]Loading weights:   2%|▏         | 4/199 [00:00<00:00, 3877.33it/s, Materializing param=bert.embeddings.token_type_embeddings.weight]Loading weights:   2%|▏         | 4/199 [00:00<00:00, 3580.29it/s, Materializing param=bert.embeddings.token_type_embeddings.weight]Loading weights:   3%|▎         | 5/199 [00:00<00:00, 3813.70it/s, Materializing param=bert.embeddings.word_embeddings.weight]      Loading weights:   3%|▎         | 5/199 [00:00<00:00, 3547.28it/s, Materializing param=bert.embeddings.word_embeddings.weight]Loading weights:   3%|▎         | 6/199 [00:00<00:00, 3779.79it/s, Materializing param=bert.encoder.layer.0.attention.output.LayerNorm.bias]Loading weights:   3%|▎         | 6/199 [00:00<00:00, 3580.79it/s, Materializing param=bert.encoder.layer.0.attention.output.LayerNorm.bias]Loading weights:   4%|▎         | 7/199 [00:00<00:00, 3725.90it/s, Materializing param=bert.encoder.layer.0.attention.output.LayerNorm.weight]Loading weights:   4%|▎         | 7/199 [00:00<00:00, 3563.99it/s, Materializing param=bert.encoder.layer.0.attention.output.LayerNorm.weight]Loading weights:   4%|▍         | 8/199 [00:00<00:00, 3710.95it/s, Materializing param=bert.encoder.layer.0.attention.output.dense.bias]      Loading weights:   4%|▍         | 8/199 [00:00<00:00, 3527.22it/s, Materializing param=bert.encoder.layer.0.attention.output.dense.bias]Loading weights:   5%|▍         | 9/199 [00:00<00:00, 3626.90it/s, Materializing param=bert.encoder.layer.0.attention.output.dense.weight]Loading weights:   5%|▍         | 9/199 [00:00<00:00, 3503.69it/s, Materializing param=bert.encoder.layer.0.attention.output.dense.weight]Loading weights:   5%|▌         | 10/199 [00:00<00:00, 3633.32it/s, Materializing param=bert.encoder.layer.0.attention.self.key.bias]     Loading weights:   5%|▌         | 10/199 [00:00<00:00, 3526.70it/s, Materializing param=bert.encoder.layer.0.attention.self.key.bias]Loading weights:   6%|▌         | 11/199 [00:00<00:00, 3645.20it/s, Materializing param=bert.encoder.layer.0.attention.self.key.weight]Loading weights:   6%|▌         | 11/199 [00:00<00:00, 3550.39it/s, Materializing param=bert.encoder.layer.0.attention.self.key.weight]Loading weights:   6%|▌         | 12/199 [00:00<00:00, 3639.31it/s, Materializing param=bert.encoder.layer.0.attention.self.query.bias]Loading weights:   6%|▌         | 12/199 [00:00<00:00, 3537.26it/s, Materializing param=bert.encoder.layer.0.attention.self.query.bias]Loading weights:   7%|▋         | 13/199 [00:00<00:00, 3636.03it/s, Materializing param=bert.encoder.layer.0.attention.self.query.weight]Loading weights:   7%|▋         | 13/199 [00:00<00:00, 3551.49it/s, Materializing param=bert.encoder.layer.0.attention.self.query.weight]Loading weights:   7%|▋         | 14/199 [00:00<00:00, 3636.60it/s, Materializing param=bert.encoder.layer.0.attention.self.value.bias]  Loading weights:   7%|▋         | 14/199 [00:00<00:00, 3557.29it/s, Materializing param=bert.encoder.layer.0.attention.self.value.bias]Loading weights:   8%|▊         | 15/199 [00:00<00:00, 3647.43it/s, Materializing param=bert.encoder.layer.0.attention.self.value.weight]Loading weights:   8%|▊         | 15/199 [00:00<00:00, 3550.68it/s, Materializing param=bert.encoder.layer.0.attention.self.value.weight]Loading weights:   8%|▊         | 16/199 [00:00<00:00, 3585.26it/s, Materializing param=bert.encoder.layer.0.intermediate.dense.bias]    Loading weights:   8%|▊         | 16/199 [00:00<00:00, 3512.45it/s, Materializing param=bert.encoder.layer.0.intermediate.dense.bias]Loading weights:   9%|▊         | 17/199 [00:00<00:00, 3579.66it/s, Materializing param=bert.encoder.layer.0.intermediate.dense.weight]Loading weights:   9%|▊         | 17/199 [00:00<00:00, 3519.23it/s, Materializing param=bert.encoder.layer.0.intermediate.dense.weight]Loading weights:   9%|▉         | 18/199 [00:00<00:00, 3592.55it/s, Materializing param=bert.encoder.layer.0.output.LayerNorm.bias]    Loading weights:   9%|▉         | 18/199 [00:00<00:00, 3535.68it/s, Materializing param=bert.encoder.layer.0.output.LayerNorm.bias]Loading weights:  10%|▉         | 19/199 [00:00<00:00, 3595.87it/s, Materializing param=bert.encoder.layer.0.output.LayerNorm.weight]Loading weights:  10%|▉         | 19/199 [00:00<00:00, 3535.88it/s, Materializing param=bert.encoder.layer.0.output.LayerNorm.weight]Loading weights:  10%|█         | 20/199 [00:00<00:00, 3603.35it/s, Materializing param=bert.encoder.layer.0.output.dense.bias]      Loading weights:  10%|█         | 20/199 [00:00<00:00, 3549.23it/s, Materializing param=bert.encoder.layer.0.output.dense.bias]Loading weights:  11%|█         | 21/199 [00:00<00:00, 3616.67it/s, Materializing param=bert.encoder.layer.0.output.dense.weight]Loading weights:  11%|█         | 21/199 [00:00<00:00, 3566.44it/s, Materializing param=bert.encoder.layer.0.output.dense.weight]Loading weights:  11%|█         | 22/199 [00:00<00:00, 3628.29it/s, Materializing param=bert.encoder.layer.1.attention.output.LayerNorm.bias]Loading weights:  11%|█         | 22/199 [00:00<00:00, 3579.59it/s, Materializing param=bert.encoder.layer.1.attention.output.LayerNorm.bias]Loading weights:  12%|█▏        | 23/199 [00:00<00:00, 3629.38it/s, Materializing param=bert.encoder.layer.1.attention.output.LayerNorm.weight]Loading weights:  12%|█▏        | 23/199 [00:00<00:00, 3577.43it/s, Materializing param=bert.encoder.layer.1.attention.output.LayerNorm.weight]Loading weights:  12%|█▏        | 24/199 [00:00<00:00, 3633.00it/s, Materializing param=bert.encoder.layer.1.attention.output.dense.bias]      Loading weights:  12%|█▏        | 24/199 [00:00<00:00, 3587.05it/s, Materializing param=bert.encoder.layer.1.attention.output.dense.bias]Loading weights:  13%|█▎        | 25/199 [00:00<00:00, 3642.79it/s, Materializing param=bert.encoder.layer.1.attention.output.dense.weight]Loading weights:  13%|█▎        | 25/199 [00:00<00:00, 3598.90it/s, Materializing param=bert.encoder.layer.1.attention.output.dense.weight]Loading weights:  13%|█▎        | 26/199 [00:00<00:00, 3651.86it/s, Materializing param=bert.encoder.layer.1.attention.self.key.bias]      Loading weights:  13%|█▎        | 26/199 [00:00<00:00, 3609.91it/s, Materializing param=bert.encoder.layer.1.attention.self.key.bias]Loading weights:  14%|█▎        | 27/199 [00:00<00:00, 3648.51it/s, Materializing param=bert.encoder.layer.1.attention.self.key.weight]Loading weights:  14%|█▎        | 27/199 [00:00<00:00, 3607.37it/s, Materializing param=bert.encoder.layer.1.attention.self.key.weight]Loading weights:  14%|█▍        | 28/199 [00:00<00:00, 3649.37it/s, Materializing param=bert.encoder.layer.1.attention.self.query.bias]Loading weights:  14%|█▍        | 28/199 [00:00<00:00, 3609.67it/s, Materializing param=bert.encoder.layer.1.attention.self.query.bias]Loading weights:  15%|█▍        | 29/199 [00:00<00:00, 3655.11it/s, Materializing param=bert.encoder.layer.1.attention.self.query.weight]Loading weights:  15%|█▍        | 29/199 [00:00<00:00, 3616.75it/s, Materializing param=bert.encoder.layer.1.attention.self.query.weight]Loading weights:  15%|█▌        | 30/199 [00:00<00:00, 3661.66it/s, Materializing param=bert.encoder.layer.1.attention.self.value.bias]  Loading weights:  15%|█▌        | 30/199 [00:00<00:00, 3600.88it/s, Materializing param=bert.encoder.layer.1.attention.self.value.bias]Loading weights:  16%|█▌        | 31/199 [00:00<00:00, 3630.62it/s, Materializing param=bert.encoder.layer.1.attention.self.value.weight]Loading weights:  16%|█▌        | 31/199 [00:00<00:00, 3594.89it/s, Materializing param=bert.encoder.layer.1.attention.self.value.weight]Loading weights:  16%|█▌        | 32/199 [00:00<00:00, 3636.15it/s, Materializing param=bert.encoder.layer.1.intermediate.dense.bias]    Loading weights:  16%|█▌        | 32/199 [00:00<00:00, 3601.71it/s, Materializing param=bert.encoder.layer.1.intermediate.dense.bias]Loading weights:  17%|█▋        | 33/199 [00:00<00:00, 3639.55it/s, Materializing param=bert.encoder.layer.1.intermediate.dense.weight]Loading weights:  17%|█▋        | 33/199 [00:00<00:00, 3607.30it/s, Materializing param=bert.encoder.layer.1.intermediate.dense.weight]Loading weights:  17%|█▋        | 34/199 [00:00<00:00, 3642.00it/s, Materializing param=bert.encoder.layer.1.output.LayerNorm.bias]    Loading weights:  17%|█▋        | 34/199 [00:00<00:00, 3604.99it/s, Materializing param=bert.encoder.layer.1.output.LayerNorm.bias]Loading weights:  18%|█▊        | 35/199 [00:00<00:00, 3643.87it/s, Materializing param=bert.encoder.layer.1.output.LayerNorm.weight]Loading weights:  18%|█▊        | 35/199 [00:00<00:00, 3612.66it/s, Materializing param=bert.encoder.layer.1.output.LayerNorm.weight]Loading weights:  18%|█▊        | 36/199 [00:00<00:00, 3651.54it/s, Materializing param=bert.encoder.layer.1.output.dense.bias]      Loading weights:  18%|█▊        | 36/199 [00:00<00:00, 3622.20it/s, Materializing param=bert.encoder.layer.1.output.dense.bias]Loading weights:  19%|█▊        | 37/199 [00:00<00:00, 3661.51it/s, Materializing param=bert.encoder.layer.1.output.dense.weight]Loading weights:  19%|█▊        | 37/199 [00:00<00:00, 3632.45it/s, Materializing param=bert.encoder.layer.1.output.dense.weight]Loading weights:  19%|█▉        | 38/199 [00:00<00:00, 3661.63it/s, Materializing param=bert.encoder.layer.2.attention.output.LayerNorm.bias]Loading weights:  19%|█▉        | 38/199 [00:00<00:00, 3631.43it/s, Materializing param=bert.encoder.layer.2.attention.output.LayerNorm.bias]Loading weights:  20%|█▉        | 39/199 [00:00<00:00, 3659.38it/s, Materializing param=bert.encoder.layer.2.attention.output.LayerNorm.weight]Loading weights:  20%|█▉        | 39/199 [00:00<00:00, 3630.38it/s, Materializing param=bert.encoder.layer.2.attention.output.LayerNorm.weight]Loading weights:  20%|██        | 40/199 [00:00<00:00, 3656.52it/s, Materializing param=bert.encoder.layer.2.attention.output.dense.bias]      Loading weights:  20%|██        | 40/199 [00:00<00:00, 3627.04it/s, Materializing param=bert.encoder.layer.2.attention.output.dense.bias]Loading weights:  21%|██        | 41/199 [00:00<00:00, 3648.07it/s, Materializing param=bert.encoder.layer.2.attention.output.dense.weight]Loading weights:  21%|██        | 41/199 [00:00<00:00, 3616.24it/s, Materializing param=bert.encoder.layer.2.attention.output.dense.weight]Loading weights:  21%|██        | 42/199 [00:00<00:00, 3641.94it/s, Materializing param=bert.encoder.layer.2.attention.self.key.bias]      Loading weights:  21%|██        | 42/199 [00:00<00:00, 3615.85it/s, Materializing param=bert.encoder.layer.2.attention.self.key.bias]Loading weights:  22%|██▏       | 43/199 [00:00<00:00, 3644.13it/s, Materializing param=bert.encoder.layer.2.attention.self.key.weight]Loading weights:  22%|██▏       | 43/199 [00:00<00:00, 3618.25it/s, Materializing param=bert.encoder.layer.2.attention.self.key.weight]Loading weights:  22%|██▏       | 44/199 [00:00<00:00, 3646.07it/s, Materializing param=bert.encoder.layer.2.attention.self.query.bias]Loading weights:  22%|██▏       | 44/199 [00:00<00:00, 3621.74it/s, Materializing param=bert.encoder.layer.2.attention.self.query.bias]Loading weights:  23%|██▎       | 45/199 [00:00<00:00, 3645.67it/s, Materializing param=bert.encoder.layer.2.attention.self.query.weight]Loading weights:  23%|██▎       | 45/199 [00:00<00:00, 3618.48it/s, Materializing param=bert.encoder.layer.2.attention.self.query.weight]Loading weights:  23%|██▎       | 46/199 [00:00<00:00, 3644.67it/s, Materializing param=bert.encoder.layer.2.attention.self.value.bias]  Loading weights:  23%|██▎       | 46/199 [00:00<00:00, 3618.97it/s, Materializing param=bert.encoder.layer.2.attention.self.value.bias]Loading weights:  24%|██▎       | 47/199 [00:00<00:00, 3639.07it/s, Materializing param=bert.encoder.layer.2.attention.self.value.weight]Loading weights:  24%|██▎       | 47/199 [00:00<00:00, 3614.92it/s, Materializing param=bert.encoder.layer.2.attention.self.value.weight]Loading weights:  24%|██▍       | 48/199 [00:00<00:00, 3625.42it/s, Materializing param=bert.encoder.layer.2.intermediate.dense.bias]    Loading weights:  24%|██▍       | 48/199 [00:00<00:00, 3597.30it/s, Materializing param=bert.encoder.layer.2.intermediate.dense.bias]Loading weights:  25%|██▍       | 49/199 [00:00<00:00, 3612.16it/s, Materializing param=bert.encoder.layer.2.intermediate.dense.weight]Loading weights:  25%|██▍       | 49/199 [00:00<00:00, 3581.06it/s, Materializing param=bert.encoder.layer.2.intermediate.dense.weight]Loading weights:  25%|██▌       | 50/199 [00:00<00:00, 3604.28it/s, Materializing param=bert.encoder.layer.2.output.LayerNorm.bias]    Loading weights:  25%|██▌       | 50/199 [00:00<00:00, 3583.04it/s, Materializing param=bert.encoder.layer.2.output.LayerNorm.bias]Loading weights:  26%|██▌       | 51/199 [00:00<00:00, 3608.52it/s, Materializing param=bert.encoder.layer.2.output.LayerNorm.weight]Loading weights:  26%|██▌       | 51/199 [00:00<00:00, 3584.57it/s, Materializing param=bert.encoder.layer.2.output.LayerNorm.weight]Loading weights:  26%|██▌       | 52/199 [00:00<00:00, 3606.57it/s, Materializing param=bert.encoder.layer.2.output.dense.bias]      Loading weights:  26%|██▌       | 52/199 [00:00<00:00, 3586.17it/s, Materializing param=bert.encoder.layer.2.output.dense.bias]Loading weights:  27%|██▋       | 53/199 [00:00<00:00, 3610.61it/s, Materializing param=bert.encoder.layer.2.output.dense.weight]Loading weights:  27%|██▋       | 53/199 [00:00<00:00, 3590.49it/s, Materializing param=bert.encoder.layer.2.output.dense.weight]Loading weights:  27%|██▋       | 54/199 [00:00<00:00, 3614.57it/s, Materializing param=bert.encoder.layer.3.attention.output.LayerNorm.bias]Loading weights:  27%|██▋       | 54/199 [00:00<00:00, 3594.72it/s, Materializing param=bert.encoder.layer.3.attention.output.LayerNorm.bias]Loading weights:  28%|██▊       | 55/199 [00:00<00:00, 3608.03it/s, Materializing param=bert.encoder.layer.3.attention.output.LayerNorm.weight]Loading weights:  28%|██▊       | 55/199 [00:00<00:00, 3585.27it/s, Materializing param=bert.encoder.layer.3.attention.output.LayerNorm.weight]Loading weights:  28%|██▊       | 56/199 [00:00<00:00, 3602.36it/s, Materializing param=bert.encoder.layer.3.attention.output.dense.bias]      Loading weights:  28%|██▊       | 56/199 [00:00<00:00, 3580.89it/s, Materializing param=bert.encoder.layer.3.attention.output.dense.bias]Loading weights:  29%|██▊       | 57/199 [00:00<00:00, 3601.89it/s, Materializing param=bert.encoder.layer.3.attention.output.dense.weight]Loading weights:  29%|██▊       | 57/199 [00:00<00:00, 3583.10it/s, Materializing param=bert.encoder.layer.3.attention.output.dense.weight]Loading weights:  29%|██▉       | 58/199 [00:00<00:00, 3603.30it/s, Materializing param=bert.encoder.layer.3.attention.self.key.bias]      Loading weights:  29%|██▉       | 58/199 [00:00<00:00, 3584.56it/s, Materializing param=bert.encoder.layer.3.attention.self.key.bias]Loading weights:  30%|██▉       | 59/199 [00:00<00:00, 3606.87it/s, Materializing param=bert.encoder.layer.3.attention.self.key.weight]Loading weights:  30%|██▉       | 59/199 [00:00<00:00, 3587.01it/s, Materializing param=bert.encoder.layer.3.attention.self.key.weight]Loading weights:  30%|███       | 60/199 [00:00<00:00, 3607.59it/s, Materializing param=bert.encoder.layer.3.attention.self.query.bias]Loading weights:  30%|███       | 60/199 [00:00<00:00, 3589.58it/s, Materializing param=bert.encoder.layer.3.attention.self.query.bias]Loading weights:  31%|███       | 61/199 [00:00<00:00, 3606.60it/s, Materializing param=bert.encoder.layer.3.attention.self.query.weight]Loading weights:  31%|███       | 61/199 [00:00<00:00, 3589.00it/s, Materializing param=bert.encoder.layer.3.attention.self.query.weight]Loading weights:  31%|███       | 62/199 [00:00<00:00, 3609.26it/s, Materializing param=bert.encoder.layer.3.attention.self.value.bias]  Loading weights:  31%|███       | 62/199 [00:00<00:00, 3581.42it/s, Materializing param=bert.encoder.layer.3.attention.self.value.bias]Loading weights:  32%|███▏      | 63/199 [00:00<00:00, 3607.19it/s, Materializing param=bert.encoder.layer.3.attention.self.value.weight]Loading weights:  32%|███▏      | 63/199 [00:00<00:00, 3595.80it/s, Materializing param=bert.encoder.layer.3.attention.self.value.weight]Loading weights:  32%|███▏      | 64/199 [00:00<00:00, 3632.91it/s, Materializing param=bert.encoder.layer.3.intermediate.dense.bias]    Loading weights:  32%|███▏      | 64/199 [00:00<00:00, 3622.61it/s, Materializing param=bert.encoder.layer.3.intermediate.dense.bias]Loading weights:  33%|███▎      | 65/199 [00:00<00:00, 3660.20it/s, Materializing param=bert.encoder.layer.3.intermediate.dense.weight]Loading weights:  33%|███▎      | 65/199 [00:00<00:00, 3650.40it/s, Materializing param=bert.encoder.layer.3.intermediate.dense.weight]Loading weights:  33%|███▎      | 66/199 [00:00<00:00, 3689.07it/s, Materializing param=bert.encoder.layer.3.output.LayerNorm.bias]    Loading weights:  33%|███▎      | 66/199 [00:00<00:00, 3679.61it/s, Materializing param=bert.encoder.layer.3.output.LayerNorm.bias]Loading weights:  34%|███▎      | 67/199 [00:00<00:00, 3716.93it/s, Materializing param=bert.encoder.layer.3.output.LayerNorm.weight]Loading weights:  34%|███▎      | 67/199 [00:00<00:00, 3707.27it/s, Materializing param=bert.encoder.layer.3.output.LayerNorm.weight]Loading weights:  34%|███▍      | 68/199 [00:00<00:00, 3744.77it/s, Materializing param=bert.encoder.layer.3.output.dense.bias]      Loading weights:  34%|███▍      | 68/199 [00:00<00:00, 3725.84it/s, Materializing param=bert.encoder.layer.3.output.dense.bias]Loading weights:  35%|███▍      | 69/199 [00:00<00:00, 3757.75it/s, Materializing param=bert.encoder.layer.3.output.dense.weight]Loading weights:  35%|███▍      | 69/199 [00:00<00:00, 3738.43it/s, Materializing param=bert.encoder.layer.3.output.dense.weight]Loading weights:  35%|███▌      | 70/199 [00:00<00:00, 3770.84it/s, Materializing param=bert.encoder.layer.4.attention.output.LayerNorm.bias]Loading weights:  35%|███▌      | 70/199 [00:00<00:00, 3760.94it/s, Materializing param=bert.encoder.layer.4.attention.output.LayerNorm.bias]Loading weights:  36%|███▌      | 71/199 [00:00<00:00, 3794.73it/s, Materializing param=bert.encoder.layer.4.attention.output.LayerNorm.weight]Loading weights:  36%|███▌      | 71/199 [00:00<00:00, 3784.90it/s, Materializing param=bert.encoder.layer.4.attention.output.LayerNorm.weight]Loading weights:  36%|███▌      | 72/199 [00:00<00:00, 3820.05it/s, Materializing param=bert.encoder.layer.4.attention.output.dense.bias]      Loading weights:  36%|███▌      | 72/199 [00:00<00:00, 3810.69it/s, Materializing param=bert.encoder.layer.4.attention.output.dense.bias]Loading weights:  37%|███▋      | 73/199 [00:00<00:00, 3845.96it/s, Materializing param=bert.encoder.layer.4.attention.output.dense.weight]Loading weights:  37%|███▋      | 73/199 [00:00<00:00, 3836.61it/s, Materializing param=bert.encoder.layer.4.attention.output.dense.weight]Loading weights:  37%|███▋      | 74/199 [00:00<00:00, 3870.15it/s, Materializing param=bert.encoder.layer.4.attention.self.key.bias]      Loading weights:  37%|███▋      | 74/199 [00:00<00:00, 3860.57it/s, Materializing param=bert.encoder.layer.4.attention.self.key.bias]Loading weights:  38%|███▊      | 75/199 [00:00<00:00, 3880.84it/s, Materializing param=bert.encoder.layer.4.attention.self.key.weight]Loading weights:  38%|███▊      | 75/199 [00:00<00:00, 3868.57it/s, Materializing param=bert.encoder.layer.4.attention.self.key.weight]Loading weights:  38%|███▊      | 76/199 [00:00<00:00, 3901.73it/s, Materializing param=bert.encoder.layer.4.attention.self.query.bias]Loading weights:  38%|███▊      | 76/199 [00:00<00:00, 3892.34it/s, Materializing param=bert.encoder.layer.4.attention.self.query.bias]Loading weights:  39%|███▊      | 77/199 [00:00<00:00, 3925.34it/s, Materializing param=bert.encoder.layer.4.attention.self.query.weight]Loading weights:  39%|███▊      | 77/199 [00:00<00:00, 3916.06it/s, Materializing param=bert.encoder.layer.4.attention.self.query.weight]Loading weights:  39%|███▉      | 78/199 [00:00<00:00, 3949.49it/s, Materializing param=bert.encoder.layer.4.attention.self.value.bias]  Loading weights:  39%|███▉      | 78/199 [00:00<00:00, 3940.26it/s, Materializing param=bert.encoder.layer.4.attention.self.value.bias]Loading weights:  40%|███▉      | 79/199 [00:00<00:00, 3973.21it/s, Materializing param=bert.encoder.layer.4.attention.self.value.weight]Loading weights:  40%|███▉      | 79/199 [00:00<00:00, 3963.90it/s, Materializing param=bert.encoder.layer.4.attention.self.value.weight]Loading weights:  40%|████      | 80/199 [00:00<00:00, 3996.81it/s, Materializing param=bert.encoder.layer.4.intermediate.dense.bias]    Loading weights:  40%|████      | 80/199 [00:00<00:00, 3987.50it/s, Materializing param=bert.encoder.layer.4.intermediate.dense.bias]Loading weights:  41%|████      | 81/199 [00:00<00:00, 4020.05it/s, Materializing param=bert.encoder.layer.4.intermediate.dense.weight]Loading weights:  41%|████      | 81/199 [00:00<00:00, 4008.48it/s, Materializing param=bert.encoder.layer.4.intermediate.dense.weight]Loading weights:  41%|████      | 82/199 [00:00<00:00, 4039.52it/s, Materializing param=bert.encoder.layer.4.output.LayerNorm.bias]    Loading weights:  41%|████      | 82/199 [00:00<00:00, 4030.29it/s, Materializing param=bert.encoder.layer.4.output.LayerNorm.bias]Loading weights:  42%|████▏     | 83/199 [00:00<00:00, 4060.60it/s, Materializing param=bert.encoder.layer.4.output.LayerNorm.weight]Loading weights:  42%|████▏     | 83/199 [00:00<00:00, 4051.34it/s, Materializing param=bert.encoder.layer.4.output.LayerNorm.weight]Loading weights:  42%|████▏     | 84/199 [00:00<00:00, 4083.42it/s, Materializing param=bert.encoder.layer.4.output.dense.bias]      Loading weights:  42%|████▏     | 84/199 [00:00<00:00, 4074.49it/s, Materializing param=bert.encoder.layer.4.output.dense.bias]Loading weights:  43%|████▎     | 85/199 [00:00<00:00, 4106.24it/s, Materializing param=bert.encoder.layer.4.output.dense.weight]Loading weights:  43%|████▎     | 85/199 [00:00<00:00, 4097.18it/s, Materializing param=bert.encoder.layer.4.output.dense.weight]Loading weights:  43%|████▎     | 86/199 [00:00<00:00, 4128.54it/s, Materializing param=bert.encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  43%|████▎     | 86/199 [00:00<00:00, 4119.25it/s, Materializing param=bert.encoder.layer.5.attention.output.LayerNorm.bias]Loading weights:  44%|████▎     | 87/199 [00:00<00:00, 4149.71it/s, Materializing param=bert.encoder.layer.5.attention.output.LayerNorm.weight]Loading weights:  44%|████▎     | 87/199 [00:00<00:00, 4140.57it/s, Materializing param=bert.encoder.layer.5.attention.output.LayerNorm.weight]Loading weights:  44%|████▍     | 88/199 [00:00<00:00, 4170.04it/s, Materializing param=bert.encoder.layer.5.attention.output.dense.bias]      Loading weights:  44%|████▍     | 88/199 [00:00<00:00, 4160.73it/s, Materializing param=bert.encoder.layer.5.attention.output.dense.bias]Loading weights:  45%|████▍     | 89/199 [00:00<00:00, 4187.53it/s, Materializing param=bert.encoder.layer.5.attention.output.dense.weight]Loading weights:  45%|████▍     | 89/199 [00:00<00:00, 4177.87it/s, Materializing param=bert.encoder.layer.5.attention.output.dense.weight]Loading weights:  45%|████▌     | 90/199 [00:00<00:00, 4201.87it/s, Materializing param=bert.encoder.layer.5.attention.self.key.bias]      Loading weights:  45%|████▌     | 90/199 [00:00<00:00, 4191.84it/s, Materializing param=bert.encoder.layer.5.attention.self.key.bias]Loading weights:  46%|████▌     | 91/199 [00:00<00:00, 4219.99it/s, Materializing param=bert.encoder.layer.5.attention.self.key.weight]Loading weights:  46%|████▌     | 91/199 [00:00<00:00, 4210.68it/s, Materializing param=bert.encoder.layer.5.attention.self.key.weight]Loading weights:  46%|████▌     | 92/199 [00:00<00:00, 4239.74it/s, Materializing param=bert.encoder.layer.5.attention.self.query.bias]Loading weights:  46%|████▌     | 92/199 [00:00<00:00, 4230.82it/s, Materializing param=bert.encoder.layer.5.attention.self.query.bias]Loading weights:  47%|████▋     | 93/199 [00:00<00:00, 4260.08it/s, Materializing param=bert.encoder.layer.5.attention.self.query.weight]Loading weights:  47%|████▋     | 93/199 [00:00<00:00, 4251.17it/s, Materializing param=bert.encoder.layer.5.attention.self.query.weight]Loading weights:  47%|████▋     | 94/199 [00:00<00:00, 4280.46it/s, Materializing param=bert.encoder.layer.5.attention.self.value.bias]  Loading weights:  47%|████▋     | 94/199 [00:00<00:00, 4271.37it/s, Materializing param=bert.encoder.layer.5.attention.self.value.bias]Loading weights:  48%|████▊     | 95/199 [00:00<00:00, 4300.27it/s, Materializing param=bert.encoder.layer.5.attention.self.value.weight]Loading weights:  48%|████▊     | 95/199 [00:00<00:00, 4291.47it/s, Materializing param=bert.encoder.layer.5.attention.self.value.weight]Loading weights:  48%|████▊     | 96/199 [00:00<00:00, 4317.07it/s, Materializing param=bert.encoder.layer.5.intermediate.dense.bias]    Loading weights:  48%|████▊     | 96/199 [00:00<00:00, 4307.46it/s, Materializing param=bert.encoder.layer.5.intermediate.dense.bias]Loading weights:  49%|████▊     | 97/199 [00:00<00:00, 4333.88it/s, Materializing param=bert.encoder.layer.5.intermediate.dense.weight]Loading weights:  49%|████▊     | 97/199 [00:00<00:00, 4324.90it/s, Materializing param=bert.encoder.layer.5.intermediate.dense.weight]Loading weights:  49%|████▉     | 98/199 [00:00<00:00, 4352.73it/s, Materializing param=bert.encoder.layer.5.output.LayerNorm.bias]    Loading weights:  49%|████▉     | 98/199 [00:00<00:00, 4343.95it/s, Materializing param=bert.encoder.layer.5.output.LayerNorm.bias]Loading weights:  50%|████▉     | 99/199 [00:00<00:00, 4371.69it/s, Materializing param=bert.encoder.layer.5.output.LayerNorm.weight]Loading weights:  50%|████▉     | 99/199 [00:00<00:00, 4362.92it/s, Materializing param=bert.encoder.layer.5.output.LayerNorm.weight]Loading weights:  50%|█████     | 100/199 [00:00<00:00, 4390.84it/s, Materializing param=bert.encoder.layer.5.output.dense.bias]     Loading weights:  50%|█████     | 100/199 [00:00<00:00, 4381.98it/s, Materializing param=bert.encoder.layer.5.output.dense.bias]Loading weights:  51%|█████     | 101/199 [00:00<00:00, 4409.50it/s, Materializing param=bert.encoder.layer.5.output.dense.weight]Loading weights:  51%|█████     | 101/199 [00:00<00:00, 4400.61it/s, Materializing param=bert.encoder.layer.5.output.dense.weight]Loading weights:  51%|█████▏    | 102/199 [00:00<00:00, 4428.13it/s, Materializing param=bert.encoder.layer.6.attention.output.LayerNorm.bias]Loading weights:  51%|█████▏    | 102/199 [00:00<00:00, 4419.12it/s, Materializing param=bert.encoder.layer.6.attention.output.LayerNorm.bias]Loading weights:  52%|█████▏    | 103/199 [00:00<00:00, 4444.22it/s, Materializing param=bert.encoder.layer.6.attention.output.LayerNorm.weight]Loading weights:  52%|█████▏    | 103/199 [00:00<00:00, 4432.32it/s, Materializing param=bert.encoder.layer.6.attention.output.LayerNorm.weight]Loading weights:  52%|█████▏    | 104/199 [00:00<00:00, 4457.24it/s, Materializing param=bert.encoder.layer.6.attention.output.dense.bias]      Loading weights:  52%|█████▏    | 104/199 [00:00<00:00, 4445.16it/s, Materializing param=bert.encoder.layer.6.attention.output.dense.bias]Loading weights:  53%|█████▎    | 105/199 [00:00<00:00, 4470.09it/s, Materializing param=bert.encoder.layer.6.attention.output.dense.weight]Loading weights:  53%|█████▎    | 105/199 [00:00<00:00, 4461.21it/s, Materializing param=bert.encoder.layer.6.attention.output.dense.weight]Loading weights:  53%|█████▎    | 106/199 [00:00<00:00, 4487.02it/s, Materializing param=bert.encoder.layer.6.attention.self.key.bias]      Loading weights:  53%|█████▎    | 106/199 [00:00<00:00, 4478.16it/s, Materializing param=bert.encoder.layer.6.attention.self.key.bias]Loading weights:  54%|█████▍    | 107/199 [00:00<00:00, 4503.71it/s, Materializing param=bert.encoder.layer.6.attention.self.key.weight]Loading weights:  54%|█████▍    | 107/199 [00:00<00:00, 4494.96it/s, Materializing param=bert.encoder.layer.6.attention.self.key.weight]Loading weights:  54%|█████▍    | 108/199 [00:00<00:00, 4520.67it/s, Materializing param=bert.encoder.layer.6.attention.self.query.bias]Loading weights:  54%|█████▍    | 108/199 [00:00<00:00, 4512.12it/s, Materializing param=bert.encoder.layer.6.attention.self.query.bias]Loading weights:  55%|█████▍    | 109/199 [00:00<00:00, 4537.67it/s, Materializing param=bert.encoder.layer.6.attention.self.query.weight]Loading weights:  55%|█████▍    | 109/199 [00:00<00:00, 4529.08it/s, Materializing param=bert.encoder.layer.6.attention.self.query.weight]Loading weights:  55%|█████▌    | 110/199 [00:00<00:00, 4554.75it/s, Materializing param=bert.encoder.layer.6.attention.self.value.bias]  Loading weights:  55%|█████▌    | 110/199 [00:00<00:00, 4543.85it/s, Materializing param=bert.encoder.layer.6.attention.self.value.bias]Loading weights:  56%|█████▌    | 111/199 [00:00<00:00, 4567.84it/s, Materializing param=bert.encoder.layer.6.attention.self.value.weight]Loading weights:  56%|█████▌    | 111/199 [00:00<00:00, 4559.16it/s, Materializing param=bert.encoder.layer.6.attention.self.value.weight]Loading weights:  56%|█████▋    | 112/199 [00:00<00:00, 4582.33it/s, Materializing param=bert.encoder.layer.6.intermediate.dense.bias]    Loading weights:  56%|█████▋    | 112/199 [00:00<00:00, 4573.76it/s, Materializing param=bert.encoder.layer.6.intermediate.dense.bias]Loading weights:  57%|█████▋    | 113/199 [00:00<00:00, 4598.66it/s, Materializing param=bert.encoder.layer.6.intermediate.dense.weight]Loading weights:  57%|█████▋    | 113/199 [00:00<00:00, 4590.24it/s, Materializing param=bert.encoder.layer.6.intermediate.dense.weight]Loading weights:  57%|█████▋    | 114/199 [00:00<00:00, 4615.44it/s, Materializing param=bert.encoder.layer.6.output.LayerNorm.bias]    Loading weights:  57%|█████▋    | 114/199 [00:00<00:00, 4607.13it/s, Materializing param=bert.encoder.layer.6.output.LayerNorm.bias]Loading weights:  58%|█████▊    | 115/199 [00:00<00:00, 4631.79it/s, Materializing param=bert.encoder.layer.6.output.LayerNorm.weight]Loading weights:  58%|█████▊    | 115/199 [00:00<00:00, 4623.48it/s, Materializing param=bert.encoder.layer.6.output.LayerNorm.weight]Loading weights:  58%|█████▊    | 116/199 [00:00<00:00, 4648.45it/s, Materializing param=bert.encoder.layer.6.output.dense.bias]      Loading weights:  58%|█████▊    | 116/199 [00:00<00:00, 4640.12it/s, Materializing param=bert.encoder.layer.6.output.dense.bias]Loading weights:  59%|█████▉    | 117/199 [00:00<00:00, 4664.86it/s, Materializing param=bert.encoder.layer.6.output.dense.weight]Loading weights:  59%|█████▉    | 117/199 [00:00<00:00, 4656.67it/s, Materializing param=bert.encoder.layer.6.output.dense.weight]Loading weights:  59%|█████▉    | 118/199 [00:00<00:00, 4677.29it/s, Materializing param=bert.encoder.layer.7.attention.output.LayerNorm.bias]Loading weights:  59%|█████▉    | 118/199 [00:00<00:00, 4668.07it/s, Materializing param=bert.encoder.layer.7.attention.output.LayerNorm.bias]Loading weights:  60%|█████▉    | 119/199 [00:00<00:00, 4689.24it/s, Materializing param=bert.encoder.layer.7.attention.output.LayerNorm.weight]Loading weights:  60%|█████▉    | 119/199 [00:00<00:00, 4680.40it/s, Materializing param=bert.encoder.layer.7.attention.output.LayerNorm.weight]Loading weights:  60%|██████    | 120/199 [00:00<00:00, 4703.28it/s, Materializing param=bert.encoder.layer.7.attention.output.dense.bias]      Loading weights:  60%|██████    | 120/199 [00:00<00:00, 4694.72it/s, Materializing param=bert.encoder.layer.7.attention.output.dense.bias]Loading weights:  61%|██████    | 121/199 [00:00<00:00, 4717.78it/s, Materializing param=bert.encoder.layer.7.attention.output.dense.weight]Loading weights:  61%|██████    | 121/199 [00:00<00:00, 4709.33it/s, Materializing param=bert.encoder.layer.7.attention.output.dense.weight]Loading weights:  61%|██████▏   | 122/199 [00:00<00:00, 4732.36it/s, Materializing param=bert.encoder.layer.7.attention.self.key.bias]      Loading weights:  61%|██████▏   | 122/199 [00:00<00:00, 4723.88it/s, Materializing param=bert.encoder.layer.7.attention.self.key.bias]Loading weights:  62%|██████▏   | 123/199 [00:00<00:00, 4746.56it/s, Materializing param=bert.encoder.layer.7.attention.self.key.weight]Loading weights:  62%|██████▏   | 123/199 [00:00<00:00, 4738.06it/s, Materializing param=bert.encoder.layer.7.attention.self.key.weight]Loading weights:  62%|██████▏   | 124/199 [00:00<00:00, 4760.67it/s, Materializing param=bert.encoder.layer.7.attention.self.query.bias]Loading weights:  62%|██████▏   | 124/199 [00:00<00:00, 4751.75it/s, Materializing param=bert.encoder.layer.7.attention.self.query.bias]Loading weights:  63%|██████▎   | 125/199 [00:00<00:00, 4773.81it/s, Materializing param=bert.encoder.layer.7.attention.self.query.weight]Loading weights:  63%|██████▎   | 125/199 [00:00<00:00, 4753.81it/s, Materializing param=bert.encoder.layer.7.attention.self.query.weight]Loading weights:  63%|██████▎   | 126/199 [00:00<00:00, 4769.27it/s, Materializing param=bert.encoder.layer.7.attention.self.value.bias]  Loading weights:  63%|██████▎   | 126/199 [00:00<00:00, 4760.20it/s, Materializing param=bert.encoder.layer.7.attention.self.value.bias]Loading weights:  64%|██████▍   | 127/199 [00:00<00:00, 4781.53it/s, Materializing param=bert.encoder.layer.7.attention.self.value.weight]Loading weights:  64%|██████▍   | 127/199 [00:00<00:00, 4773.17it/s, Materializing param=bert.encoder.layer.7.attention.self.value.weight]Loading weights:  64%|██████▍   | 128/199 [00:00<00:00, 4794.09it/s, Materializing param=bert.encoder.layer.7.intermediate.dense.bias]    Loading weights:  64%|██████▍   | 128/199 [00:00<00:00, 4785.84it/s, Materializing param=bert.encoder.layer.7.intermediate.dense.bias]Loading weights:  65%|██████▍   | 129/199 [00:00<00:00, 4804.17it/s, Materializing param=bert.encoder.layer.7.intermediate.dense.weight]Loading weights:  65%|██████▍   | 129/199 [00:00<00:00, 4794.34it/s, Materializing param=bert.encoder.layer.7.intermediate.dense.weight]Loading weights:  65%|██████▌   | 130/199 [00:00<00:00, 4810.66it/s, Materializing param=bert.encoder.layer.7.output.LayerNorm.bias]    Loading weights:  65%|██████▌   | 130/199 [00:00<00:00, 4801.00it/s, Materializing param=bert.encoder.layer.7.output.LayerNorm.bias]Loading weights:  66%|██████▌   | 131/199 [00:00<00:00, 4819.64it/s, Materializing param=bert.encoder.layer.7.output.LayerNorm.weight]Loading weights:  66%|██████▌   | 131/199 [00:00<00:00, 4807.33it/s, Materializing param=bert.encoder.layer.7.output.LayerNorm.weight]Loading weights:  66%|██████▋   | 132/199 [00:00<00:00, 4825.54it/s, Materializing param=bert.encoder.layer.7.output.dense.bias]      Loading weights:  66%|██████▋   | 132/199 [00:00<00:00, 4814.21it/s, Materializing param=bert.encoder.layer.7.output.dense.bias]Loading weights:  67%|██████▋   | 133/199 [00:00<00:00, 4832.90it/s, Materializing param=bert.encoder.layer.7.output.dense.weight]Loading weights:  67%|██████▋   | 133/199 [00:00<00:00, 4823.54it/s, Materializing param=bert.encoder.layer.7.output.dense.weight]Loading weights:  67%|██████▋   | 134/199 [00:00<00:00, 4841.10it/s, Materializing param=bert.encoder.layer.8.attention.output.LayerNorm.bias]Loading weights:  67%|██████▋   | 134/199 [00:00<00:00, 4831.07it/s, Materializing param=bert.encoder.layer.8.attention.output.LayerNorm.bias]Loading weights:  68%|██████▊   | 135/199 [00:00<00:00, 4848.37it/s, Materializing param=bert.encoder.layer.8.attention.output.LayerNorm.weight]Loading weights:  68%|██████▊   | 135/199 [00:00<00:00, 4838.55it/s, Materializing param=bert.encoder.layer.8.attention.output.LayerNorm.weight]Loading weights:  68%|██████▊   | 136/199 [00:00<00:00, 4855.88it/s, Materializing param=bert.encoder.layer.8.attention.output.dense.bias]      Loading weights:  68%|██████▊   | 136/199 [00:00<00:00, 4846.15it/s, Materializing param=bert.encoder.layer.8.attention.output.dense.bias]Loading weights:  69%|██████▉   | 137/199 [00:00<00:00, 4860.64it/s, Materializing param=bert.encoder.layer.8.attention.output.dense.weight]Loading weights:  69%|██████▉   | 137/199 [00:00<00:00, 4850.34it/s, Materializing param=bert.encoder.layer.8.attention.output.dense.weight]Loading weights:  69%|██████▉   | 138/199 [00:00<00:00, 4870.04it/s, Materializing param=bert.encoder.layer.8.attention.self.key.bias]      Loading weights:  69%|██████▉   | 138/199 [00:00<00:00, 4859.08it/s, Materializing param=bert.encoder.layer.8.attention.self.key.bias]Loading weights:  70%|██████▉   | 139/199 [00:00<00:00, 4878.04it/s, Materializing param=bert.encoder.layer.8.attention.self.key.weight]Loading weights:  70%|██████▉   | 139/199 [00:00<00:00, 4869.89it/s, Materializing param=bert.encoder.layer.8.attention.self.key.weight]Loading weights:  70%|███████   | 140/199 [00:00<00:00, 4889.77it/s, Materializing param=bert.encoder.layer.8.attention.self.query.bias]Loading weights:  70%|███████   | 140/199 [00:00<00:00, 4881.84it/s, Materializing param=bert.encoder.layer.8.attention.self.query.bias]Loading weights:  71%|███████   | 141/199 [00:00<00:00, 4902.00it/s, Materializing param=bert.encoder.layer.8.attention.self.query.weight]Loading weights:  71%|███████   | 141/199 [00:00<00:00, 4894.17it/s, Materializing param=bert.encoder.layer.8.attention.self.query.weight]Loading weights:  71%|███████▏  | 142/199 [00:00<00:00, 4914.12it/s, Materializing param=bert.encoder.layer.8.attention.self.value.bias]  Loading weights:  71%|███████▏  | 142/199 [00:00<00:00, 4906.39it/s, Materializing param=bert.encoder.layer.8.attention.self.value.bias]Loading weights:  72%|███████▏  | 143/199 [00:00<00:00, 4926.29it/s, Materializing param=bert.encoder.layer.8.attention.self.value.weight]Loading weights:  72%|███████▏  | 143/199 [00:00<00:00, 4918.53it/s, Materializing param=bert.encoder.layer.8.attention.self.value.weight]Loading weights:  72%|███████▏  | 144/199 [00:00<00:00, 4937.94it/s, Materializing param=bert.encoder.layer.8.intermediate.dense.bias]    Loading weights:  72%|███████▏  | 144/199 [00:00<00:00, 4927.11it/s, Materializing param=bert.encoder.layer.8.intermediate.dense.bias]Loading weights:  73%|███████▎  | 145/199 [00:00<00:00, 4945.47it/s, Materializing param=bert.encoder.layer.8.intermediate.dense.weight]Loading weights:  73%|███████▎  | 145/199 [00:00<00:00, 4936.36it/s, Materializing param=bert.encoder.layer.8.intermediate.dense.weight]Loading weights:  73%|███████▎  | 146/199 [00:00<00:00, 4955.16it/s, Materializing param=bert.encoder.layer.8.output.LayerNorm.bias]    Loading weights:  73%|███████▎  | 146/199 [00:00<00:00, 4947.35it/s, Materializing param=bert.encoder.layer.8.output.LayerNorm.bias]Loading weights:  74%|███████▍  | 147/199 [00:00<00:00, 4966.59it/s, Materializing param=bert.encoder.layer.8.output.LayerNorm.weight]Loading weights:  74%|███████▍  | 147/199 [00:00<00:00, 4958.92it/s, Materializing param=bert.encoder.layer.8.output.LayerNorm.weight]Loading weights:  74%|███████▍  | 148/199 [00:00<00:00, 4977.68it/s, Materializing param=bert.encoder.layer.8.output.dense.bias]      Loading weights:  74%|███████▍  | 148/199 [00:00<00:00, 4970.03it/s, Materializing param=bert.encoder.layer.8.output.dense.bias]Loading weights:  75%|███████▍  | 149/199 [00:00<00:00, 4989.39it/s, Materializing param=bert.encoder.layer.8.output.dense.weight]Loading weights:  75%|███████▍  | 149/199 [00:00<00:00, 4981.84it/s, Materializing param=bert.encoder.layer.8.output.dense.weight]Loading weights:  75%|███████▌  | 150/199 [00:00<00:00, 5000.80it/s, Materializing param=bert.encoder.layer.9.attention.output.LayerNorm.bias]Loading weights:  75%|███████▌  | 150/199 [00:00<00:00, 4992.94it/s, Materializing param=bert.encoder.layer.9.attention.output.LayerNorm.bias]Loading weights:  76%|███████▌  | 151/199 [00:00<00:00, 5010.96it/s, Materializing param=bert.encoder.layer.9.attention.output.LayerNorm.weight]Loading weights:  76%|███████▌  | 151/199 [00:00<00:00, 5002.88it/s, Materializing param=bert.encoder.layer.9.attention.output.LayerNorm.weight]Loading weights:  76%|███████▋  | 152/199 [00:00<00:00, 5018.26it/s, Materializing param=bert.encoder.layer.9.attention.output.dense.bias]      Loading weights:  76%|███████▋  | 152/199 [00:00<00:00, 5010.21it/s, Materializing param=bert.encoder.layer.9.attention.output.dense.bias]Loading weights:  77%|███████▋  | 153/199 [00:00<00:00, 5027.25it/s, Materializing param=bert.encoder.layer.9.attention.output.dense.weight]Loading weights:  77%|███████▋  | 153/199 [00:00<00:00, 5019.27it/s, Materializing param=bert.encoder.layer.9.attention.output.dense.weight]Loading weights:  77%|███████▋  | 154/199 [00:00<00:00, 5037.77it/s, Materializing param=bert.encoder.layer.9.attention.self.key.bias]      Loading weights:  77%|███████▋  | 154/199 [00:00<00:00, 5030.12it/s, Materializing param=bert.encoder.layer.9.attention.self.key.bias]Loading weights:  78%|███████▊  | 155/199 [00:00<00:00, 5048.51it/s, Materializing param=bert.encoder.layer.9.attention.self.key.weight]Loading weights:  78%|███████▊  | 155/199 [00:00<00:00, 5041.04it/s, Materializing param=bert.encoder.layer.9.attention.self.key.weight]Loading weights:  78%|███████▊  | 156/199 [00:00<00:00, 5059.71it/s, Materializing param=bert.encoder.layer.9.attention.self.query.bias]Loading weights:  78%|███████▊  | 156/199 [00:00<00:00, 5052.29it/s, Materializing param=bert.encoder.layer.9.attention.self.query.bias]Loading weights:  79%|███████▉  | 157/199 [00:00<00:00, 5070.30it/s, Materializing param=bert.encoder.layer.9.attention.self.query.weight]Loading weights:  79%|███████▉  | 157/199 [00:00<00:00, 5062.70it/s, Materializing param=bert.encoder.layer.9.attention.self.query.weight]Loading weights:  79%|███████▉  | 158/199 [00:00<00:00, 5080.93it/s, Materializing param=bert.encoder.layer.9.attention.self.value.bias]  Loading weights:  79%|███████▉  | 158/199 [00:00<00:00, 5073.46it/s, Materializing param=bert.encoder.layer.9.attention.self.value.bias]Loading weights:  80%|███████▉  | 159/199 [00:00<00:00, 5089.20it/s, Materializing param=bert.encoder.layer.9.attention.self.value.weight]Loading weights:  80%|███████▉  | 159/199 [00:00<00:00, 5081.10it/s, Materializing param=bert.encoder.layer.9.attention.self.value.weight]Loading weights:  80%|████████  | 160/199 [00:00<00:00, 5097.64it/s, Materializing param=bert.encoder.layer.9.intermediate.dense.bias]    Loading weights:  80%|████████  | 160/199 [00:00<00:00, 5089.90it/s, Materializing param=bert.encoder.layer.9.intermediate.dense.bias]Loading weights:  81%|████████  | 161/199 [00:00<00:00, 5107.73it/s, Materializing param=bert.encoder.layer.9.intermediate.dense.weight]Loading weights:  81%|████████  | 161/199 [00:00<00:00, 5100.32it/s, Materializing param=bert.encoder.layer.9.intermediate.dense.weight]Loading weights:  81%|████████▏ | 162/199 [00:00<00:00, 5118.63it/s, Materializing param=bert.encoder.layer.9.output.LayerNorm.bias]    Loading weights:  81%|████████▏ | 162/199 [00:00<00:00, 5111.23it/s, Materializing param=bert.encoder.layer.9.output.LayerNorm.bias]Loading weights:  82%|████████▏ | 163/199 [00:00<00:00, 5128.40it/s, Materializing param=bert.encoder.layer.9.output.LayerNorm.weight]Loading weights:  82%|████████▏ | 163/199 [00:00<00:00, 5120.98it/s, Materializing param=bert.encoder.layer.9.output.LayerNorm.weight]Loading weights:  82%|████████▏ | 164/199 [00:00<00:00, 5139.04it/s, Materializing param=bert.encoder.layer.9.output.dense.bias]      Loading weights:  82%|████████▏ | 164/199 [00:00<00:00, 5131.83it/s, Materializing param=bert.encoder.layer.9.output.dense.bias]Loading weights:  83%|████████▎ | 165/199 [00:00<00:00, 5149.64it/s, Materializing param=bert.encoder.layer.9.output.dense.weight]Loading weights:  83%|████████▎ | 165/199 [00:00<00:00, 5142.33it/s, Materializing param=bert.encoder.layer.9.output.dense.weight]Loading weights:  83%|████████▎ | 166/199 [00:00<00:00, 5160.15it/s, Materializing param=bert.encoder.layer.10.attention.output.LayerNorm.bias]Loading weights:  83%|████████▎ | 166/199 [00:00<00:00, 5150.46it/s, Materializing param=bert.encoder.layer.10.attention.output.LayerNorm.bias]Loading weights:  84%|████████▍ | 167/199 [00:00<00:00, 5166.39it/s, Materializing param=bert.encoder.layer.10.attention.output.LayerNorm.weight]Loading weights:  84%|████████▍ | 167/199 [00:00<00:00, 5157.41it/s, Materializing param=bert.encoder.layer.10.attention.output.LayerNorm.weight]Loading weights:  84%|████████▍ | 168/199 [00:00<00:00, 5174.16it/s, Materializing param=bert.encoder.layer.10.attention.output.dense.bias]      Loading weights:  84%|████████▍ | 168/199 [00:00<00:00, 5166.76it/s, Materializing param=bert.encoder.layer.10.attention.output.dense.bias]Loading weights:  85%|████████▍ | 169/199 [00:00<00:00, 5184.14it/s, Materializing param=bert.encoder.layer.10.attention.output.dense.weight]Loading weights:  85%|████████▍ | 169/199 [00:00<00:00, 5176.79it/s, Materializing param=bert.encoder.layer.10.attention.output.dense.weight]Loading weights:  85%|████████▌ | 170/199 [00:00<00:00, 5193.47it/s, Materializing param=bert.encoder.layer.10.attention.self.key.bias]      Loading weights:  85%|████████▌ | 170/199 [00:00<00:00, 5186.10it/s, Materializing param=bert.encoder.layer.10.attention.self.key.bias]Loading weights:  86%|████████▌ | 171/199 [00:00<00:00, 5202.87it/s, Materializing param=bert.encoder.layer.10.attention.self.key.weight]Loading weights:  86%|████████▌ | 171/199 [00:00<00:00, 5195.67it/s, Materializing param=bert.encoder.layer.10.attention.self.key.weight]Loading weights:  86%|████████▋ | 172/199 [00:00<00:00, 5212.46it/s, Materializing param=bert.encoder.layer.10.attention.self.query.bias]Loading weights:  86%|████████▋ | 172/199 [00:00<00:00, 5205.09it/s, Materializing param=bert.encoder.layer.10.attention.self.query.bias]Loading weights:  87%|████████▋ | 173/199 [00:00<00:00, 5221.60it/s, Materializing param=bert.encoder.layer.10.attention.self.query.weight]Loading weights:  87%|████████▋ | 173/199 [00:00<00:00, 5214.25it/s, Materializing param=bert.encoder.layer.10.attention.self.query.weight]Loading weights:  87%|████████▋ | 174/199 [00:00<00:00, 5228.19it/s, Materializing param=bert.encoder.layer.10.attention.self.value.bias]  Loading weights:  87%|████████▋ | 174/199 [00:00<00:00, 5220.68it/s, Materializing param=bert.encoder.layer.10.attention.self.value.bias]Loading weights:  88%|████████▊ | 175/199 [00:00<00:00, 5235.62it/s, Materializing param=bert.encoder.layer.10.attention.self.value.weight]Loading weights:  88%|████████▊ | 175/199 [00:00<00:00, 5228.35it/s, Materializing param=bert.encoder.layer.10.attention.self.value.weight]Loading weights:  88%|████████▊ | 176/199 [00:00<00:00, 5244.85it/s, Materializing param=bert.encoder.layer.10.intermediate.dense.bias]    Loading weights:  88%|████████▊ | 176/199 [00:00<00:00, 5237.63it/s, Materializing param=bert.encoder.layer.10.intermediate.dense.bias]Loading weights:  89%|████████▉ | 177/199 [00:00<00:00, 5253.97it/s, Materializing param=bert.encoder.layer.10.intermediate.dense.weight]Loading weights:  89%|████████▉ | 177/199 [00:00<00:00, 5246.81it/s, Materializing param=bert.encoder.layer.10.intermediate.dense.weight]Loading weights:  89%|████████▉ | 178/199 [00:00<00:00, 5262.32it/s, Materializing param=bert.encoder.layer.10.output.LayerNorm.bias]    Loading weights:  89%|████████▉ | 178/199 [00:00<00:00, 5254.91it/s, Materializing param=bert.encoder.layer.10.output.LayerNorm.bias]Loading weights:  90%|████████▉ | 179/199 [00:00<00:00, 5270.63it/s, Materializing param=bert.encoder.layer.10.output.LayerNorm.weight]Loading weights:  90%|████████▉ | 179/199 [00:00<00:00, 5263.43it/s, Materializing param=bert.encoder.layer.10.output.LayerNorm.weight]Loading weights:  90%|█████████ | 180/199 [00:00<00:00, 5279.65it/s, Materializing param=bert.encoder.layer.10.output.dense.bias]      Loading weights:  90%|█████████ | 180/199 [00:00<00:00, 5272.54it/s, Materializing param=bert.encoder.layer.10.output.dense.bias]Loading weights:  91%|█████████ | 181/199 [00:00<00:00, 5286.25it/s, Materializing param=bert.encoder.layer.10.output.dense.weight]Loading weights:  91%|█████████ | 181/199 [00:00<00:00, 5278.75it/s, Materializing param=bert.encoder.layer.10.output.dense.weight]Loading weights:  91%|█████████▏| 182/199 [00:00<00:00, 5293.52it/s, Materializing param=bert.encoder.layer.11.attention.output.LayerNorm.bias]Loading weights:  91%|█████████▏| 182/199 [00:00<00:00, 5286.01it/s, Materializing param=bert.encoder.layer.11.attention.output.LayerNorm.bias]Loading weights:  92%|█████████▏| 183/199 [00:00<00:00, 5300.45it/s, Materializing param=bert.encoder.layer.11.attention.output.LayerNorm.weight]Loading weights:  92%|█████████▏| 183/199 [00:00<00:00, 5293.10it/s, Materializing param=bert.encoder.layer.11.attention.output.LayerNorm.weight]Loading weights:  92%|█████████▏| 184/199 [00:00<00:00, 5308.26it/s, Materializing param=bert.encoder.layer.11.attention.output.dense.bias]      Loading weights:  92%|█████████▏| 184/199 [00:00<00:00, 5300.89it/s, Materializing param=bert.encoder.layer.11.attention.output.dense.bias]Loading weights:  93%|█████████▎| 185/199 [00:00<00:00, 5316.05it/s, Materializing param=bert.encoder.layer.11.attention.output.dense.weight]Loading weights:  93%|█████████▎| 185/199 [00:00<00:00, 5308.88it/s, Materializing param=bert.encoder.layer.11.attention.output.dense.weight]Loading weights:  93%|█████████▎| 186/199 [00:00<00:00, 5324.03it/s, Materializing param=bert.encoder.layer.11.attention.self.key.bias]      Loading weights:  93%|█████████▎| 186/199 [00:00<00:00, 5316.74it/s, Materializing param=bert.encoder.layer.11.attention.self.key.bias]Loading weights:  94%|█████████▍| 187/199 [00:00<00:00, 5331.77it/s, Materializing param=bert.encoder.layer.11.attention.self.key.weight]Loading weights:  94%|█████████▍| 187/199 [00:00<00:00, 5324.60it/s, Materializing param=bert.encoder.layer.11.attention.self.key.weight]Loading weights:  94%|█████████▍| 188/199 [00:00<00:00, 5337.85it/s, Materializing param=bert.encoder.layer.11.attention.self.query.bias]Loading weights:  94%|█████████▍| 188/199 [00:00<00:00, 5330.38it/s, Materializing param=bert.encoder.layer.11.attention.self.query.bias]Loading weights:  95%|█████████▍| 189/199 [00:00<00:00, 5345.04it/s, Materializing param=bert.encoder.layer.11.attention.self.query.weight]Loading weights:  95%|█████████▍| 189/199 [00:00<00:00, 5336.70it/s, Materializing param=bert.encoder.layer.11.attention.self.query.weight]Loading weights:  95%|█████████▌| 190/199 [00:00<00:00, 5351.35it/s, Materializing param=bert.encoder.layer.11.attention.self.value.bias]  Loading weights:  95%|█████████▌| 190/199 [00:00<00:00, 5344.28it/s, Materializing param=bert.encoder.layer.11.attention.self.value.bias]Loading weights:  96%|█████████▌| 191/199 [00:00<00:00, 5359.15it/s, Materializing param=bert.encoder.layer.11.attention.self.value.weight]Loading weights:  96%|█████████▌| 191/199 [00:00<00:00, 5352.09it/s, Materializing param=bert.encoder.layer.11.attention.self.value.weight]Loading weights:  96%|█████████▋| 192/199 [00:00<00:00, 5360.88it/s, Materializing param=bert.encoder.layer.11.intermediate.dense.bias]    Loading weights:  96%|█████████▋| 192/199 [00:00<00:00, 5352.58it/s, Materializing param=bert.encoder.layer.11.intermediate.dense.bias]Loading weights:  97%|█████████▋| 193/199 [00:00<00:00, 5363.88it/s, Materializing param=bert.encoder.layer.11.intermediate.dense.weight]Loading weights:  97%|█████████▋| 193/199 [00:00<00:00, 5355.68it/s, Materializing param=bert.encoder.layer.11.intermediate.dense.weight]Loading weights:  97%|█████████▋| 194/199 [00:00<00:00, 5368.37it/s, Materializing param=bert.encoder.layer.11.output.LayerNorm.bias]    Loading weights:  97%|█████████▋| 194/199 [00:00<00:00, 5360.17it/s, Materializing param=bert.encoder.layer.11.output.LayerNorm.bias]Loading weights:  98%|█████████▊| 195/199 [00:00<00:00, 5369.58it/s, Materializing param=bert.encoder.layer.11.output.LayerNorm.weight]Loading weights:  98%|█████████▊| 195/199 [00:00<00:00, 5360.12it/s, Materializing param=bert.encoder.layer.11.output.LayerNorm.weight]Loading weights:  98%|█████████▊| 196/199 [00:00<00:00, 5372.15it/s, Materializing param=bert.encoder.layer.11.output.dense.bias]      Loading weights:  98%|█████████▊| 196/199 [00:00<00:00, 5364.23it/s, Materializing param=bert.encoder.layer.11.output.dense.bias]Loading weights:  99%|█████████▉| 197/199 [00:00<00:00, 5377.10it/s, Materializing param=bert.encoder.layer.11.output.dense.weight]Loading weights:  99%|█████████▉| 197/199 [00:00<00:00, 5369.24it/s, Materializing param=bert.encoder.layer.11.output.dense.weight]Loading weights:  99%|█████████▉| 198/199 [00:00<00:00, 5382.26it/s, Materializing param=bert.pooler.dense.bias]                   Loading weights:  99%|█████████▉| 198/199 [00:00<00:00, 5374.56it/s, Materializing param=bert.pooler.dense.bias]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 5387.87it/s, Materializing param=bert.pooler.dense.weight]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 5380.26it/s, Materializing param=bert.pooler.dense.weight]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 5361.15it/s, Materializing param=bert.pooler.dense.weight]
+BertForEntity LOAD REPORT from: allenai/scibert_scivocab_uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.predictions.decoder.weight             | UNEXPECTED | 
+ner_classifier.1.bias                      | MISSING    | 
+ner_classifier.0.seq.{0, 3}.bias           | MISSING    | 
+ner_classifier.0.seq.{0, 3}.weight         | MISSING    | 
+width_embedding.weight                     | MISSING    | 
+ner_classifier.1.weight                    | MISSING    | 
+
+Notes:
+- UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+05/31/2026 06:22:59 - INFO - root - Moving to CUDA...
+05/31/2026 06:22:59 - INFO - httpx - HTTP Request: GET https://huggingface.co/api/models/allenai/scibert_scivocab_uncased/commits/refs%2Fpr%2F7 "HTTP/1.1 200 OK"
+05/31/2026 06:22:59 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/allenai/scibert_scivocab_uncased/resolve/refs%2Fpr%2F7/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+05/31/2026 06:22:59 - INFO - httpx - HTTP Request: HEAD https://huggingface.co/allenai/scibert_scivocab_uncased/resolve/refs%2Fpr%2F7/model.safetensors "HTTP/1.1 302 Found"
+05/31/2026 06:22:59 - INFO - root - # GPUs = 1
+05/31/2026 06:22:59 - INFO - root - # Overlap: 0
+05/31/2026 06:22:59 - INFO - root - Extracted 275 samples from 50 documents, with 811 NER labels, 23.713 avg input length, 68 max length
+05/31/2026 06:22:59 - INFO - root - Max Length: 68, max NER: 11
+05/31/2026 06:23:00 - INFO - root - # Overlap: 0
+05/31/2026 06:23:00 - INFO - root - Extracted 1861 samples from 350 documents, with 5598 NER labels, 24.402 avg input length, 101 max length
+05/31/2026 06:23:00 - INFO - root - Max Length: 101, max NER: 13
+  0%|          | 0/100 [00:00<?, ?it/s]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<01:50,  1.05it/s][A
+  2%|▏         | 2/117 [00:01<01:03,  1.80it/s][A
+  3%|▎         | 3/117 [00:01<00:40,  2.82it/s][A
+  3%|▎         | 4/117 [00:01<00:33,  3.38it/s][A
+  4%|▍         | 5/117 [00:01<00:27,  4.06it/s][A
+  5%|▌         | 6/117 [00:01<00:25,  4.38it/s][A
+  6%|▌         | 7/117 [00:02<00:21,  5.07it/s][A
+  7%|▋         | 8/117 [00:02<00:18,  5.96it/s][A
+  8%|▊         | 9/117 [00:02<00:18,  5.71it/s][A
+  9%|▊         | 10/117 [00:02<00:18,  5.86it/s][A
+  9%|▉         | 11/117 [00:02<00:17,  6.17it/s][A
+ 10%|█         | 12/117 [00:02<00:16,  6.36it/s][A
+ 11%|█         | 13/117 [00:02<00:16,  6.21it/s][A
+ 12%|█▏        | 14/117 [00:03<00:16,  6.27it/s][A
+ 13%|█▎        | 15/117 [00:03<00:15,  6.58it/s][A
+ 14%|█▎        | 16/117 [00:03<00:15,  6.47it/s][A
+ 15%|█▍        | 17/117 [00:03<00:15,  6.41it/s][A
+ 15%|█▌        | 18/117 [00:03<00:15,  6.24it/s][A
+ 16%|█▌        | 19/117 [00:04<00:19,  4.92it/s][A
+ 17%|█▋        | 20/117 [00:04<00:18,  5.19it/s][A
+ 18%|█▊        | 21/117 [00:04<00:18,  5.22it/s][A
+ 19%|█▉        | 22/117 [00:04<00:17,  5.36it/s][A
+ 20%|█▉        | 23/117 [00:04<00:17,  5.27it/s][A
+ 21%|██        | 24/117 [00:04<00:17,  5.30it/s][A
+ 21%|██▏       | 25/117 [00:05<00:17,  5.18it/s][A
+ 22%|██▏       | 26/117 [00:05<00:17,  5.23it/s][A
+ 23%|██▎       | 27/117 [00:05<00:16,  5.50it/s][A
+ 24%|██▍       | 28/117 [00:05<00:15,  5.75it/s][A
+ 25%|██▍       | 29/117 [00:05<00:14,  6.17it/s][A
+ 26%|██▌       | 30/117 [00:05<00:14,  6.19it/s][A
+ 26%|██▋       | 31/117 [00:06<00:13,  6.39it/s][A
+ 27%|██▋       | 32/117 [00:06<00:13,  6.36it/s][A
+ 28%|██▊       | 33/117 [00:06<00:12,  6.52it/s][A
+ 29%|██▉       | 34/117 [00:06<00:12,  6.41it/s][A
+ 30%|██▉       | 35/117 [00:06<00:14,  5.69it/s][A
+ 31%|███       | 36/117 [00:06<00:14,  5.42it/s][A
+ 32%|███▏      | 37/117 [00:07<00:13,  5.75it/s][A
+ 32%|███▏      | 38/117 [00:07<00:14,  5.27it/s][A
+ 33%|███▎      | 39/117 [00:07<00:15,  5.16it/s][A
+ 34%|███▍      | 40/117 [00:07<00:13,  5.80it/s][A
+ 35%|███▌      | 41/117 [00:07<00:12,  5.96it/s][A
+ 36%|███▌      | 42/117 [00:07<00:11,  6.34it/s][A
+ 37%|███▋      | 43/117 [00:08<00:11,  6.63it/s][A
+ 38%|███▊      | 44/117 [00:08<00:10,  6.85it/s][A
+ 38%|███▊      | 45/117 [00:08<00:10,  7.04it/s][A
+ 39%|███▉      | 46/117 [00:08<00:13,  5.37it/s][A
+ 40%|████      | 47/117 [00:08<00:13,  5.15it/s][A
+ 41%|████      | 48/117 [00:09<00:12,  5.47it/s][A
+ 42%|████▏     | 49/117 [00:09<00:13,  4.89it/s][A
+ 43%|████▎     | 50/117 [00:09<00:12,  5.50it/s][A
+ 44%|████▎     | 51/117 [00:09<00:10,  6.00it/s][A
+ 44%|████▍     | 52/117 [00:09<00:11,  5.90it/s][A
+ 45%|████▌     | 53/117 [00:09<00:10,  5.97it/s][A
+ 46%|████▌     | 54/117 [00:10<00:11,  5.44it/s][A
+ 47%|████▋     | 55/117 [00:10<00:12,  4.93it/s][A
+ 48%|████▊     | 56/117 [00:10<00:11,  5.24it/s][A
+ 49%|████▊     | 57/117 [00:10<00:10,  5.72it/s][A
+ 50%|████▉     | 58/117 [00:10<00:10,  5.62it/s][A
+ 50%|█████     | 59/117 [00:10<00:09,  6.28it/s][A
+ 51%|█████▏    | 60/117 [00:11<00:08,  6.60it/s][A
+ 52%|█████▏    | 61/117 [00:11<00:08,  6.50it/s][A
+ 53%|█████▎    | 62/117 [00:11<00:08,  6.80it/s][A
+ 54%|█████▍    | 63/117 [00:11<00:07,  6.87it/s][A
+ 55%|█████▍    | 64/117 [00:11<00:08,  6.35it/s][A
+ 56%|█████▌    | 65/117 [00:11<00:08,  6.23it/s][A
+ 56%|█████▋    | 66/117 [00:12<00:07,  6.38it/s][A
+ 57%|█████▋    | 67/117 [00:12<00:07,  6.82it/s][A
+ 58%|█████▊    | 68/117 [00:12<00:07,  6.55it/s][A
+ 59%|█████▉    | 69/117 [00:12<00:07,  6.45it/s][A
+ 60%|█████▉    | 70/117 [00:12<00:08,  5.43it/s][A
+ 61%|██████    | 71/117 [00:12<00:07,  5.85it/s][A
+ 62%|██████▏   | 72/117 [00:13<00:07,  5.82it/s][A
+ 62%|██████▏   | 73/117 [00:13<00:07,  5.50it/s][A
+ 63%|██████▎   | 74/117 [00:13<00:07,  5.58it/s][A
+ 64%|██████▍   | 75/117 [00:13<00:07,  5.71it/s][A
+ 65%|██████▍   | 76/117 [00:13<00:07,  5.44it/s][A
+ 66%|██████▌   | 77/117 [00:13<00:07,  5.53it/s][A
+ 67%|██████▋   | 78/117 [00:14<00:06,  6.00it/s][A
+ 68%|██████▊   | 79/117 [00:14<00:06,  6.21it/s][A
+ 68%|██████▊   | 80/117 [00:14<00:06,  5.71it/s][A
+ 69%|██████▉   | 81/117 [00:14<00:06,  5.44it/s][A
+ 70%|███████   | 82/117 [00:14<00:06,  5.55it/s][A
+ 71%|███████   | 83/117 [00:15<00:06,  5.42it/s][A
+ 72%|███████▏  | 84/117 [00:15<00:06,  5.25it/s][A
+ 73%|███████▎  | 85/117 [00:15<00:06,  5.25it/s][A
+ 74%|███████▎  | 86/117 [00:15<00:06,  5.12it/s][A
+ 74%|███████▍  | 87/117 [00:15<00:05,  5.41it/s][A
+ 75%|███████▌  | 88/117 [00:16<00:05,  4.87it/s][A
+ 76%|███████▌  | 89/117 [00:16<00:05,  5.25it/s][A
+ 77%|███████▋  | 90/117 [00:16<00:05,  5.29it/s][A
+ 78%|███████▊  | 91/117 [00:16<00:04,  5.93it/s][A
+ 79%|███████▊  | 92/117 [00:16<00:04,  5.14it/s][A
+ 79%|███████▉  | 93/117 [00:16<00:04,  5.40it/s][A
+ 80%|████████  | 94/117 [00:17<00:04,  5.08it/s][A
+ 81%|████████  | 95/117 [00:17<00:04,  5.41it/s][A
+ 82%|████████▏ | 96/117 [00:17<00:03,  5.89it/s][A
+ 83%|████████▎ | 97/117 [00:17<00:03,  6.16it/s][A
+ 84%|████████▍ | 98/117 [00:17<00:03,  5.74it/s][A
+ 85%|████████▍ | 99/117 [00:17<00:02,  6.01it/s][A05/31/2026 06:23:18 - INFO - root - Epoch=0, iter=99, loss=296.79802
+
+ 85%|████████▌ | 100/117 [00:18<00:02,  6.42it/s][A
+ 86%|████████▋ | 101/117 [00:18<00:03,  4.06it/s][A
+ 87%|████████▋ | 102/117 [00:18<00:03,  4.35it/s][A
+ 88%|████████▊ | 103/117 [00:18<00:03,  4.59it/s][A
+ 89%|████████▉ | 104/117 [00:19<00:02,  5.18it/s][A
+ 90%|████████▉ | 105/117 [00:19<00:02,  5.45it/s][A
+ 91%|█████████ | 106/117 [00:19<00:01,  5.57it/s][A
+ 91%|█████████▏| 107/117 [00:19<00:01,  5.03it/s][A
+ 92%|█████████▏| 108/117 [00:19<00:01,  4.88it/s][A
+ 93%|█████████▎| 109/117 [00:20<00:01,  5.18it/s][A
+ 94%|█████████▍| 110/117 [00:20<00:01,  4.79it/s][A
+ 95%|█████████▍| 111/117 [00:20<00:01,  5.04it/s][A
+ 96%|█████████▌| 112/117 [00:20<00:00,  5.60it/s][A
+ 97%|█████████▋| 113/117 [00:20<00:00,  5.40it/s][A
+ 97%|█████████▋| 114/117 [00:20<00:00,  5.62it/s][A
+ 98%|█████████▊| 115/117 [00:21<00:00,  6.30it/s][A
+ 99%|█████████▉| 116/117 [00:21<00:00,  5.33it/s][A05/31/2026 06:23:21 - INFO - root - Evaluating...
+05/31/2026 06:23:24 - INFO - root - Accuracy: 0.981875
+05/31/2026 06:23:24 - INFO - root - Cor: 0, Pred TOT: 0, Gold TOT: 811
+05/31/2026 06:23:24 - INFO - root - P: 0.00000, R: 0.00000, F1: 0.00000
+05/31/2026 06:23:24 - INFO - root - Used time: 2.774352
+
+100%|██████████| 117/117 [00:24<00:00,  1.00it/s][A100%|██████████| 117/117 [00:24<00:00,  4.84it/s]
+  1%|          | 1/100 [00:24<39:52, 24.17s/it]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<00:27,  4.18it/s][A
+  2%|▏         | 2/117 [00:00<00:30,  3.74it/s][A
+  3%|▎         | 3/117 [00:00<00:22,  5.00it/s][A
+  3%|▎         | 4/117 [00:00<00:22,  4.93it/s][A
+  4%|▍         | 5/117 [00:01<00:21,  5.32it/s][A
+  5%|▌         | 6/117 [00:01<00:21,  5.22it/s][A
+  6%|▌         | 7/117 [00:01<00:19,  5.73it/s][A
+  7%|▋         | 8/117 [00:01<00:16,  6.56it/s][A
+  8%|▊         | 9/117 [00:01<00:18,  5.99it/s][A
+  9%|▊         | 10/117 [00:01<00:17,  6.03it/s][A
+  9%|▉         | 11/117 [00:01<00:17,  6.22it/s][A
+ 10%|█         | 12/117 [00:02<00:16,  6.34it/s][A
+ 11%|█         | 13/117 [00:02<00:16,  6.14it/s][A
+ 12%|█▏        | 14/117 [00:02<00:16,  6.18it/s][A
+ 13%|█▎        | 15/117 [00:02<00:15,  6.45it/s][A
+ 14%|█▎        | 16/117 [00:02<00:16,  6.29it/s][A
+ 15%|█▍        | 17/117 [00:02<00:15,  6.33it/s][A
+ 15%|█▌        | 18/117 [00:03<00:16,  6.15it/s][A
+ 16%|█▌        | 19/117 [00:03<00:20,  4.85it/s][A
+ 17%|█▋        | 20/117 [00:03<00:19,  5.09it/s][A
+ 18%|█▊        | 21/117 [00:03<00:18,  5.12it/s][A
+ 19%|█▉        | 22/117 [00:03<00:17,  5.30it/s][A
+ 20%|█▉        | 23/117 [00:04<00:18,  5.17it/s][A
+ 21%|██        | 24/117 [00:04<00:17,  5.20it/s][A
+ 21%|██▏       | 25/117 [00:04<00:18,  5.08it/s][A
+ 22%|██▏       | 26/117 [00:04<00:17,  5.14it/s][A
+ 23%|██▎       | 27/117 [00:04<00:16,  5.42it/s][A
+ 24%|██▍       | 28/117 [00:05<00:15,  5.65it/s][A
+ 25%|██▍       | 29/117 [00:05<00:14,  6.07it/s][A
+ 26%|██▌       | 30/117 [00:05<00:14,  6.10it/s][A
+ 26%|██▋       | 31/117 [00:05<00:13,  6.23it/s][A
+ 27%|██▋       | 32/117 [00:05<00:13,  6.25it/s][A
+ 28%|██▊       | 33/117 [00:05<00:13,  6.39it/s][A
+ 29%|██▉       | 34/117 [00:05<00:13,  6.32it/s][A
+ 30%|██▉       | 35/117 [00:06<00:14,  5.60it/s][A
+ 31%|███       | 36/117 [00:06<00:15,  5.32it/s][A
+ 32%|███▏      | 37/117 [00:06<00:14,  5.65it/s][A
+ 32%|███▏      | 38/117 [00:06<00:15,  5.17it/s][A
+ 33%|███▎      | 39/117 [00:06<00:15,  5.07it/s][A
+ 34%|███▍      | 40/117 [00:07<00:13,  5.70it/s][A
+ 35%|███▌      | 41/117 [00:07<00:12,  5.85it/s][A
+ 36%|███▌      | 42/117 [00:07<00:12,  6.20it/s][A
+ 37%|███▋      | 43/117 [00:07<00:11,  6.48it/s][A
+ 38%|███▊      | 44/117 [00:07<00:10,  6.71it/s][A
+ 38%|███▊      | 45/117 [00:07<00:10,  6.89it/s][A
+ 39%|███▉      | 46/117 [00:08<00:13,  5.27it/s][A
+ 40%|████      | 47/117 [00:08<00:14,  4.95it/s][A
+ 41%|████      | 48/117 [00:08<00:13,  5.15it/s][A
+ 42%|████▏     | 49/117 [00:08<00:14,  4.65it/s][A
+ 43%|████▎     | 50/117 [00:08<00:12,  5.28it/s][A
+ 44%|████▎     | 51/117 [00:09<00:11,  5.77it/s][A
+ 44%|████▍     | 52/117 [00:09<00:11,  5.73it/s][A
+ 45%|████▌     | 53/117 [00:09<00:10,  6.00it/s][A
+ 46%|████▌     | 54/117 [00:09<00:11,  5.41it/s][A
+ 47%|████▋     | 55/117 [00:09<00:12,  4.88it/s][A
+ 48%|████▊     | 56/117 [00:10<00:11,  5.16it/s][A
+ 49%|████▊     | 57/117 [00:10<00:10,  5.63it/s][A
+ 50%|████▉     | 58/117 [00:10<00:10,  5.51it/s][A
+ 50%|█████     | 59/117 [00:10<00:09,  6.12it/s][A
+ 51%|█████▏    | 60/117 [00:10<00:08,  6.42it/s][A
+ 52%|█████▏    | 61/117 [00:10<00:08,  6.35it/s][A
+ 53%|█████▎    | 62/117 [00:10<00:08,  6.63it/s][A
+ 54%|█████▍    | 63/117 [00:11<00:08,  6.72it/s][A
+ 55%|█████▍    | 64/117 [00:11<00:08,  6.19it/s][A
+ 56%|█████▌    | 65/117 [00:11<00:08,  6.11it/s][A
+ 56%|█████▋    | 66/117 [00:11<00:08,  6.26it/s][A
+ 57%|█████▋    | 67/117 [00:11<00:07,  6.71it/s][A
+ 58%|█████▊    | 68/117 [00:11<00:07,  6.45it/s][A
+ 59%|█████▉    | 69/117 [00:12<00:07,  6.34it/s][A
+ 60%|█████▉    | 70/117 [00:12<00:08,  5.34it/s][A
+ 61%|██████    | 71/117 [00:12<00:07,  5.76it/s][A
+ 62%|██████▏   | 72/117 [00:12<00:07,  5.72it/s][A
+ 62%|██████▏   | 73/117 [00:12<00:08,  5.37it/s][A
+ 63%|██████▎   | 74/117 [00:12<00:07,  5.44it/s][A
+ 64%|██████▍   | 75/117 [00:13<00:07,  5.54it/s][A
+ 65%|██████▍   | 76/117 [00:13<00:07,  5.28it/s][A
+ 66%|██████▌   | 77/117 [00:13<00:07,  5.42it/s][A
+ 67%|██████▋   | 78/117 [00:13<00:06,  5.90it/s][A
+ 68%|██████▊   | 79/117 [00:13<00:06,  6.12it/s][A
+ 68%|██████▊   | 80/117 [00:14<00:06,  5.59it/s][A
+ 69%|██████▉   | 81/117 [00:14<00:06,  5.31it/s][A
+ 70%|███████   | 82/117 [00:14<00:06,  5.41it/s][A05/31/2026 06:23:39 - INFO - root - Epoch=1, iter=82, loss=36.72773
+
+ 71%|███████   | 83/117 [00:14<00:06,  5.25it/s][A
+ 72%|███████▏  | 84/117 [00:14<00:06,  5.06it/s][A
+ 73%|███████▎  | 85/117 [00:15<00:06,  5.05it/s][A
+ 74%|███████▎  | 86/117 [00:15<00:06,  4.93it/s][A
+ 74%|███████▍  | 87/117 [00:15<00:05,  5.24it/s][A
+ 75%|███████▌  | 88/117 [00:15<00:06,  4.73it/s][A
+ 76%|███████▌  | 89/117 [00:15<00:05,  5.12it/s][A
+ 77%|███████▋  | 90/117 [00:16<00:05,  5.14it/s][A
+ 78%|███████▊  | 91/117 [00:16<00:04,  5.77it/s][A
+ 79%|███████▊  | 92/117 [00:16<00:04,  5.03it/s][A
+ 79%|███████▉  | 93/117 [00:16<00:04,  5.27it/s][A
+ 80%|████████  | 94/117 [00:16<00:04,  4.96it/s][A
+ 81%|████████  | 95/117 [00:16<00:04,  5.29it/s][A
+ 82%|████████▏ | 96/117 [00:17<00:03,  5.73it/s][A
+ 83%|████████▎ | 97/117 [00:17<00:03,  5.99it/s][A
+ 84%|████████▍ | 98/117 [00:17<00:03,  5.59it/s][A
+ 85%|████████▍ | 99/117 [00:17<00:03,  5.87it/s][A
+ 85%|████████▌ | 100/117 [00:17<00:02,  6.25it/s][A
+ 86%|████████▋ | 101/117 [00:18<00:03,  5.05it/s][A
+ 87%|████████▋ | 102/117 [00:18<00:02,  5.09it/s][A
+ 88%|████████▊ | 103/117 [00:18<00:02,  5.08it/s][A
+ 89%|████████▉ | 104/117 [00:18<00:02,  5.56it/s][A
+ 90%|████████▉ | 105/117 [00:18<00:02,  5.71it/s][A
+ 91%|█████████ | 106/117 [00:18<00:01,  5.73it/s][A
+ 91%|█████████▏| 107/117 [00:19<00:01,  5.08it/s][A
+ 92%|█████████▏| 108/117 [00:19<00:01,  4.82it/s][A
+ 93%|█████████▎| 109/117 [00:19<00:01,  5.07it/s][A
+ 94%|█████████▍| 110/117 [00:19<00:01,  4.68it/s][A
+ 95%|█████████▍| 111/117 [00:20<00:01,  4.93it/s][A
+ 96%|█████████▌| 112/117 [00:20<00:00,  5.49it/s][A
+ 97%|█████████▋| 113/117 [00:20<00:00,  5.26it/s][A
+ 97%|█████████▋| 114/117 [00:20<00:00,  5.50it/s][A
+ 98%|█████████▊| 115/117 [00:20<00:00,  6.16it/s][A
+ 99%|█████████▉| 116/117 [00:20<00:00,  5.22it/s][A05/31/2026 06:23:45 - INFO - root - Evaluating...
+05/31/2026 06:23:48 - INFO - root - Accuracy: 0.981875
+05/31/2026 06:23:48 - INFO - root - Cor: 0, Pred TOT: 0, Gold TOT: 811
+05/31/2026 06:23:48 - INFO - root - P: 0.00000, R: 0.00000, F1: 0.00000
+05/31/2026 06:23:48 - INFO - root - Used time: 2.762469
+
+100%|██████████| 117/117 [00:23<00:00,  1.01it/s][A100%|██████████| 117/117 [00:23<00:00,  4.93it/s]
+  2%|▏         | 2/100 [00:47<39:03, 23.91s/it]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<00:28,  4.06it/s][A
+  2%|▏         | 2/117 [00:00<00:31,  3.65it/s][A
+  3%|▎         | 3/117 [00:00<00:23,  4.91it/s][A
+  3%|▎         | 4/117 [00:00<00:23,  4.82it/s][A
+  4%|▍         | 5/117 [00:01<00:21,  5.21it/s][A
+  5%|▌         | 6/117 [00:01<00:21,  5.10it/s][A
+  6%|▌         | 7/117 [00:01<00:19,  5.63it/s][A
+  7%|▋         | 8/117 [00:01<00:16,  6.41it/s][A
+  8%|▊         | 9/117 [00:01<00:18,  5.88it/s][A
+  9%|▊         | 10/117 [00:01<00:18,  5.91it/s][A
+  9%|▉         | 11/117 [00:02<00:17,  6.16it/s][A
+ 10%|█         | 12/117 [00:02<00:16,  6.27it/s][A
+ 11%|█         | 13/117 [00:02<00:17,  5.99it/s][A
+ 12%|█▏        | 14/117 [00:02<00:17,  5.99it/s][A
+ 13%|█▎        | 15/117 [00:02<00:16,  6.28it/s][A
+ 14%|█▎        | 16/117 [00:02<00:16,  6.15it/s][A
+ 15%|█▍        | 17/117 [00:02<00:16,  6.13it/s][A
+ 15%|█▌        | 18/117 [00:03<00:16,  5.98it/s][A
+ 16%|█▌        | 19/117 [00:03<00:20,  4.70it/s][A
+ 17%|█▋        | 20/117 [00:03<00:19,  4.92it/s][A
+ 18%|█▊        | 21/117 [00:03<00:19,  4.96it/s][A
+ 19%|█▉        | 22/117 [00:04<00:18,  5.11it/s][A
+ 20%|█▉        | 23/117 [00:04<00:18,  5.01it/s][A
+ 21%|██        | 24/117 [00:04<00:18,  5.04it/s][A
+ 21%|██▏       | 25/117 [00:04<00:18,  4.94it/s][A
+ 22%|██▏       | 26/117 [00:04<00:18,  5.01it/s][A
+ 23%|██▎       | 27/117 [00:05<00:17,  5.29it/s][A
+ 24%|██▍       | 28/117 [00:05<00:16,  5.51it/s][A
+ 25%|██▍       | 29/117 [00:05<00:14,  5.94it/s][A
+ 26%|██▌       | 30/117 [00:05<00:14,  5.96it/s][A
+ 26%|██▋       | 31/117 [00:05<00:13,  6.16it/s][A
+ 27%|██▋       | 32/117 [00:05<00:13,  6.14it/s][A
+ 28%|██▊       | 33/117 [00:05<00:13,  6.28it/s][A
+ 29%|██▉       | 34/117 [00:06<00:13,  6.18it/s][A
+ 30%|██▉       | 35/117 [00:06<00:14,  5.47it/s][A
+ 31%|███       | 36/117 [00:06<00:15,  5.17it/s][A
+ 32%|███▏      | 37/117 [00:06<00:14,  5.53it/s][A
+ 32%|███▏      | 38/117 [00:06<00:15,  5.04it/s][A
+ 33%|███▎      | 39/117 [00:07<00:15,  4.93it/s][A
+ 34%|███▍      | 40/117 [00:07<00:13,  5.55it/s][A
+ 35%|███▌      | 41/117 [00:07<00:13,  5.71it/s][A
+ 36%|███▌      | 42/117 [00:07<00:12,  6.08it/s][A
+ 37%|███▋      | 43/117 [00:07<00:11,  6.33it/s][A
+ 38%|███▊      | 44/117 [00:07<00:11,  6.58it/s][A
+ 38%|███▊      | 45/117 [00:08<00:10,  6.72it/s][A
+ 39%|███▉      | 46/117 [00:08<00:13,  5.15it/s][A
+ 40%|████      | 47/117 [00:08<00:14,  4.84it/s][A
+ 41%|████      | 48/117 [00:08<00:13,  5.01it/s][A
+ 42%|████▏     | 49/117 [00:09<00:14,  4.56it/s][A
+ 43%|████▎     | 50/117 [00:09<00:13,  5.14it/s][A
+ 44%|████▎     | 51/117 [00:09<00:11,  5.62it/s][A
+ 44%|████▍     | 52/117 [00:09<00:11,  5.61it/s][A
+ 45%|████▌     | 53/117 [00:09<00:11,  5.67it/s][A
+ 46%|████▌     | 54/117 [00:09<00:12,  5.19it/s][A
+ 47%|████▋     | 55/117 [00:10<00:13,  4.69it/s][A
+ 48%|████▊     | 56/117 [00:10<00:12,  4.98it/s][A
+ 49%|████▊     | 57/117 [00:10<00:11,  5.44it/s][A
+ 50%|████▉     | 58/117 [00:10<00:11,  5.31it/s][A
+ 50%|█████     | 59/117 [00:10<00:09,  5.98it/s][A
+ 51%|█████▏    | 60/117 [00:10<00:09,  6.27it/s][A
+ 52%|█████▏    | 61/117 [00:11<00:08,  6.22it/s][A
+ 53%|█████▎    | 62/117 [00:11<00:08,  6.52it/s][A
+ 54%|█████▍    | 63/117 [00:11<00:08,  6.55it/s][A
+ 55%|█████▍    | 64/117 [00:11<00:08,  6.04it/s][A
+ 56%|█████▌    | 65/117 [00:11<00:08,  5.96it/s][A05/31/2026 06:24:00 - INFO - root - Epoch=2, iter=65, loss=19.73597
+
+ 56%|█████▋    | 66/117 [00:11<00:08,  6.15it/s][A
+ 57%|█████▋    | 67/117 [00:11<00:07,  6.61it/s][A
+ 58%|█████▊    | 68/117 [00:12<00:07,  6.36it/s][A
+ 59%|█████▉    | 69/117 [00:12<00:07,  6.22it/s][A
+ 60%|█████▉    | 70/117 [00:12<00:09,  5.20it/s][A
+ 61%|██████    | 71/117 [00:12<00:08,  5.63it/s][A
+ 62%|██████▏   | 72/117 [00:12<00:08,  5.62it/s][A
+ 62%|██████▏   | 73/117 [00:13<00:08,  5.29it/s][A
+ 63%|██████▎   | 74/117 [00:13<00:08,  5.37it/s][A
+ 64%|██████▍   | 75/117 [00:13<00:07,  5.46it/s][A
+ 65%|██████▍   | 76/117 [00:13<00:07,  5.22it/s][A
+ 66%|██████▌   | 77/117 [00:13<00:07,  5.32it/s][A
+ 67%|██████▋   | 78/117 [00:14<00:06,  5.78it/s][A
+ 68%|██████▊   | 79/117 [00:14<00:06,  5.97it/s][A
+ 68%|██████▊   | 80/117 [00:14<00:06,  5.47it/s][A
+ 69%|██████▉   | 81/117 [00:14<00:06,  5.20it/s][A
+ 70%|███████   | 82/117 [00:14<00:06,  5.31it/s][A
+ 71%|███████   | 83/117 [00:14<00:06,  5.15it/s][A
+ 72%|███████▏  | 84/117 [00:15<00:06,  5.00it/s][A
+ 73%|███████▎  | 85/117 [00:15<00:06,  5.00it/s][A
+ 74%|███████▎  | 86/117 [00:15<00:06,  4.86it/s][A
+ 74%|███████▍  | 87/117 [00:15<00:05,  5.13it/s][A
+ 75%|███████▌  | 88/117 [00:16<00:06,  4.62it/s][A
+ 76%|███████▌  | 89/117 [00:16<00:05,  4.97it/s][A
+ 77%|███████▋  | 90/117 [00:16<00:05,  4.98it/s][A
+ 78%|███████▊  | 91/117 [00:16<00:04,  5.59it/s][A
+ 79%|███████▊  | 92/117 [00:16<00:05,  4.89it/s][A
+ 79%|███████▉  | 93/117 [00:16<00:04,  5.14it/s][A
+ 80%|████████  | 94/117 [00:17<00:04,  4.84it/s][A
+ 81%|████████  | 95/117 [00:17<00:04,  5.13it/s][A
+ 82%|████████▏ | 96/117 [00:17<00:03,  5.58it/s][A
+ 83%|████████▎ | 97/117 [00:17<00:03,  5.81it/s][A
+ 84%|████████▍ | 98/117 [00:17<00:03,  5.49it/s][A
+ 85%|████████▍ | 99/117 [00:18<00:03,  5.78it/s][A
+ 85%|████████▌ | 100/117 [00:18<00:02,  6.16it/s][A
+ 86%|████████▋ | 101/117 [00:18<00:03,  4.92it/s][A
+ 87%|████████▋ | 102/117 [00:18<00:03,  4.96it/s][A
+ 88%|████████▊ | 103/117 [00:18<00:02,  4.96it/s][A
+ 89%|████████▉ | 104/117 [00:19<00:02,  5.44it/s][A
+ 90%|████████▉ | 105/117 [00:19<00:02,  5.58it/s][A
+ 91%|█████████ | 106/117 [00:19<00:01,  5.57it/s][A
+ 91%|█████████▏| 107/117 [00:19<00:02,  4.93it/s][A
+ 92%|█████████▏| 108/117 [00:19<00:01,  4.68it/s][A
+ 93%|█████████▎| 109/117 [00:20<00:01,  4.95it/s][A
+ 94%|█████████▍| 110/117 [00:20<00:01,  4.57it/s][A
+ 95%|█████████▍| 111/117 [00:20<00:01,  4.81it/s][A
+ 96%|█████████▌| 112/117 [00:20<00:00,  5.36it/s][A
+ 97%|█████████▋| 113/117 [00:20<00:00,  5.15it/s][A
+ 97%|█████████▋| 114/117 [00:21<00:00,  5.34it/s][A
+ 98%|█████████▊| 115/117 [00:21<00:00,  6.00it/s][A
+ 99%|█████████▉| 116/117 [00:21<00:00,  5.10it/s][A05/31/2026 06:24:09 - INFO - root - Evaluating...
+05/31/2026 06:24:12 - INFO - root - Accuracy: 0.981875
+05/31/2026 06:24:12 - INFO - root - Cor: 0, Pred TOT: 0, Gold TOT: 811
+05/31/2026 06:24:12 - INFO - root - P: 0.00000, R: 0.00000, F1: 0.00000
+05/31/2026 06:24:12 - INFO - root - Used time: 2.814889
+
+100%|██████████| 117/117 [00:24<00:00,  1.01s/it][A100%|██████████| 117/117 [00:24<00:00,  4.81it/s]
+  3%|▎         | 3/100 [01:12<38:56, 24.09s/it]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<00:28,  4.00it/s][A
+  2%|▏         | 2/117 [00:00<00:32,  3.55it/s][A
+  3%|▎         | 3/117 [00:00<00:23,  4.76it/s][A
+  3%|▎         | 4/117 [00:00<00:24,  4.70it/s][A
+  4%|▍         | 5/117 [00:01<00:22,  5.09it/s][A
+  5%|▌         | 6/117 [00:01<00:22,  4.98it/s][A
+  6%|▌         | 7/117 [00:01<00:20,  5.49it/s][A
+  7%|▋         | 8/117 [00:01<00:17,  6.27it/s][A
+  8%|▊         | 9/117 [00:01<00:18,  5.75it/s][A
+  9%|▊         | 10/117 [00:01<00:18,  5.79it/s][A
+  9%|▉         | 11/117 [00:02<00:17,  5.99it/s][A
+ 10%|█         | 12/117 [00:02<00:17,  6.13it/s][A
+ 11%|█         | 13/117 [00:02<00:17,  5.93it/s][A
+ 12%|█▏        | 14/117 [00:02<00:17,  5.91it/s][A
+ 13%|█▎        | 15/117 [00:02<00:16,  6.17it/s][A
+ 14%|█▎        | 16/117 [00:02<00:16,  6.02it/s][A
+ 15%|█▍        | 17/117 [00:03<00:16,  6.01it/s][A
+ 15%|█▌        | 18/117 [00:03<00:16,  5.82it/s][A
+ 16%|█▌        | 19/117 [00:03<00:21,  4.57it/s][A
+ 17%|█▋        | 20/117 [00:03<00:20,  4.80it/s][A
+ 18%|█▊        | 21/117 [00:03<00:19,  4.85it/s][A
+ 19%|█▉        | 22/117 [00:04<00:19,  4.99it/s][A
+ 20%|█▉        | 23/117 [00:04<00:19,  4.87it/s][A
+ 21%|██        | 24/117 [00:04<00:19,  4.88it/s][A
+ 21%|██▏       | 25/117 [00:04<00:19,  4.76it/s][A
+ 22%|██▏       | 26/117 [00:04<00:18,  4.83it/s][A
+ 23%|██▎       | 27/117 [00:05<00:17,  5.10it/s][A
+ 24%|██▍       | 28/117 [00:05<00:16,  5.32it/s][A
+ 25%|██▍       | 29/117 [00:05<00:15,  5.74it/s][A
+ 26%|██▌       | 30/117 [00:05<00:15,  5.78it/s][A
+ 26%|██▋       | 31/117 [00:05<00:14,  5.95it/s][A
+ 27%|██▋       | 32/117 [00:05<00:14,  5.92it/s][A
+ 28%|██▊       | 33/117 [00:06<00:13,  6.02it/s][A
+ 29%|██▉       | 34/117 [00:06<00:13,  5.98it/s][A
+ 30%|██▉       | 35/117 [00:06<00:15,  5.30it/s][A
+ 31%|███       | 36/117 [00:06<00:16,  5.03it/s][A
+ 32%|███▏      | 37/117 [00:06<00:14,  5.36it/s][A
+ 32%|███▏      | 38/117 [00:07<00:16,  4.88it/s][A
+ 33%|███▎      | 39/117 [00:07<00:16,  4.79it/s][A
+ 34%|███▍      | 40/117 [00:07<00:14,  5.39it/s][A
+ 35%|███▌      | 41/117 [00:07<00:13,  5.53it/s][A
+ 36%|███▌      | 42/117 [00:07<00:12,  5.92it/s][A
+ 37%|███▋      | 43/117 [00:07<00:11,  6.18it/s][A
+ 38%|███▊      | 44/117 [00:08<00:11,  6.41it/s][A
+ 38%|███▊      | 45/117 [00:08<00:10,  6.56it/s][A
+ 39%|███▉      | 46/117 [00:08<00:14,  5.00it/s][A
+ 40%|████      | 47/117 [00:08<00:14,  4.71it/s][A
+ 41%|████      | 48/117 [00:08<00:14,  4.91it/s][A05/31/2026 06:24:21 - INFO - root - Epoch=3, iter=48, loss=17.24142
+
+ 42%|████▏     | 49/117 [00:09<00:15,  4.44it/s][A
+ 43%|████▎     | 50/117 [00:09<00:13,  5.04it/s][A
+ 44%|████▎     | 51/117 [00:09<00:11,  5.51it/s][A
+ 44%|████▍     | 52/117 [00:09<00:11,  5.45it/s][A
+ 45%|████▌     | 53/117 [00:09<00:11,  5.49it/s][A
+ 46%|████▌     | 54/117 [00:10<00:12,  5.01it/s][A
+ 47%|████▋     | 55/117 [00:10<00:13,  4.55it/s][A
+ 48%|████▊     | 56/117 [00:10<00:12,  4.82it/s][A
+ 49%|████▊     | 57/117 [00:10<00:11,  5.28it/s][A
+ 50%|████▉     | 58/117 [00:10<00:11,  5.19it/s][A
+ 50%|█████     | 59/117 [00:11<00:09,  5.82it/s][A
+ 51%|█████▏    | 60/117 [00:11<00:09,  6.11it/s][A
+ 52%|█████▏    | 61/117 [00:11<00:09,  6.02it/s][A
+ 53%|█████▎    | 62/117 [00:11<00:08,  6.31it/s][A
+ 54%|█████▍    | 63/117 [00:11<00:08,  6.38it/s][A
+ 55%|█████▍    | 64/117 [00:11<00:08,  5.89it/s][A
+ 56%|█████▌    | 65/117 [00:12<00:08,  5.80it/s][A
+ 56%|█████▋    | 66/117 [00:12<00:08,  5.99it/s][A
+ 57%|█████▋    | 67/117 [00:12<00:07,  6.42it/s][A
+ 58%|█████▊    | 68/117 [00:12<00:07,  6.15it/s][A
+ 59%|█████▉    | 69/117 [00:12<00:07,  6.07it/s][A
+ 60%|█████▉    | 70/117 [00:12<00:09,  5.06it/s][A
+ 61%|██████    | 71/117 [00:13<00:08,  5.49it/s][A
+ 62%|██████▏   | 72/117 [00:13<00:08,  5.43it/s][A
+ 62%|██████▏   | 73/117 [00:13<00:08,  5.12it/s][A
+ 63%|██████▎   | 74/117 [00:13<00:08,  5.19it/s][A
+ 64%|██████▍   | 75/117 [00:13<00:07,  5.28it/s][A
+ 65%|██████▍   | 76/117 [00:14<00:08,  5.04it/s][A
+ 66%|██████▌   | 77/117 [00:14<00:07,  5.15it/s][A
+ 67%|██████▋   | 78/117 [00:14<00:06,  5.61it/s][A
+ 68%|██████▊   | 79/117 [00:14<00:06,  5.76it/s][A
+ 68%|██████▊   | 80/117 [00:14<00:07,  5.28it/s][A
+ 69%|██████▉   | 81/117 [00:15<00:07,  5.01it/s][A
+ 70%|███████   | 82/117 [00:15<00:06,  5.12it/s][A
+ 71%|███████   | 83/117 [00:15<00:06,  4.96it/s][A
+ 72%|███████▏  | 84/117 [00:15<00:06,  4.73it/s][A
+ 73%|███████▎  | 85/117 [00:15<00:06,  4.78it/s][A
+ 74%|███████▎  | 86/117 [00:16<00:06,  4.68it/s][A
+ 74%|███████▍  | 87/117 [00:16<00:06,  4.97it/s][A
+ 75%|███████▌  | 88/117 [00:16<00:06,  4.49it/s][A
+ 76%|███████▌  | 89/117 [00:16<00:05,  4.83it/s][A
+ 77%|███████▋  | 90/117 [00:16<00:05,  4.84it/s][A
+ 78%|███████▊  | 91/117 [00:17<00:04,  5.44it/s][A
+ 79%|███████▊  | 92/117 [00:17<00:05,  4.72it/s][A
+ 79%|███████▉  | 93/117 [00:17<00:04,  4.94it/s][A
+ 80%|████████  | 94/117 [00:17<00:04,  4.64it/s][A
+ 81%|████████  | 95/117 [00:17<00:04,  4.95it/s][A
+ 82%|████████▏ | 96/117 [00:18<00:03,  5.40it/s][A
+ 83%|████████▎ | 97/117 [00:18<00:03,  5.67it/s][A
+ 84%|████████▍ | 98/117 [00:18<00:03,  5.30it/s][A
+ 85%|████████▍ | 99/117 [00:18<00:03,  5.54it/s][A
+ 85%|████████▌ | 100/117 [00:18<00:02,  5.93it/s][A
+ 86%|████████▋ | 101/117 [00:19<00:03,  4.77it/s][A
+ 87%|████████▋ | 102/117 [00:19<00:03,  4.81it/s][A
+ 88%|████████▊ | 103/117 [00:19<00:02,  4.81it/s][A
+ 89%|████████▉ | 104/117 [00:19<00:02,  5.24it/s][A
+ 90%|████████▉ | 105/117 [00:19<00:02,  5.40it/s][A
+ 91%|█████████ | 106/117 [00:19<00:02,  5.41it/s][A
+ 91%|█████████▏| 107/117 [00:20<00:02,  4.78it/s][A
+ 92%|█████████▏| 108/117 [00:20<00:01,  4.52it/s][A
+ 93%|█████████▎| 109/117 [00:20<00:01,  4.81it/s][A
+ 94%|█████████▍| 110/117 [00:20<00:01,  4.43it/s][A
+ 95%|█████████▍| 111/117 [00:21<00:01,  4.68it/s][A
+ 96%|█████████▌| 112/117 [00:21<00:00,  5.23it/s][A
+ 97%|█████████▋| 113/117 [00:21<00:00,  5.02it/s][A
+ 97%|█████████▋| 114/117 [00:21<00:00,  5.21it/s][A
+ 98%|█████████▊| 115/117 [00:21<00:00,  5.82it/s][A
+ 99%|█████████▉| 116/117 [00:22<00:00,  4.94it/s][A05/31/2026 06:24:34 - INFO - root - Evaluating...
+05/31/2026 06:24:37 - INFO - root - Accuracy: 0.981875
+05/31/2026 06:24:37 - INFO - root - Cor: 0, Pred TOT: 0, Gold TOT: 811
+05/31/2026 06:24:37 - INFO - root - P: 0.00000, R: 0.00000, F1: 0.00000
+05/31/2026 06:24:37 - INFO - root - Used time: 3.058171
+
+100%|██████████| 117/117 [00:25<00:00,  1.09s/it][A100%|██████████| 117/117 [00:25<00:00,  4.64it/s]
+  4%|▍         | 4/100 [01:37<39:14, 24.53s/it]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<00:29,  3.89it/s][A
+  2%|▏         | 2/117 [00:00<00:33,  3.45it/s][A
+  3%|▎         | 3/117 [00:00<00:24,  4.66it/s][A
+  3%|▎         | 4/117 [00:00<00:24,  4.57it/s][A
+  4%|▍         | 5/117 [00:01<00:22,  4.94it/s][A
+  5%|▌         | 6/117 [00:01<00:22,  4.83it/s][A
+  6%|▌         | 7/117 [00:01<00:20,  5.34it/s][A
+  7%|▋         | 8/117 [00:01<00:17,  6.11it/s][A
+  8%|▊         | 9/117 [00:01<00:19,  5.58it/s][A
+  9%|▊         | 10/117 [00:01<00:19,  5.60it/s][A
+  9%|▉         | 11/117 [00:02<00:18,  5.83it/s][A
+ 10%|█         | 12/117 [00:02<00:17,  5.98it/s][A
+ 11%|█         | 13/117 [00:02<00:18,  5.74it/s][A
+ 12%|█▏        | 14/117 [00:02<00:17,  5.77it/s][A
+ 13%|█▎        | 15/117 [00:02<00:16,  6.00it/s][A
+ 14%|█▎        | 16/117 [00:02<00:17,  5.90it/s][A
+ 15%|█▍        | 17/117 [00:03<00:17,  5.84it/s][A
+ 15%|█▌        | 18/117 [00:03<00:17,  5.67it/s][A
+ 16%|█▌        | 19/117 [00:03<00:22,  4.43it/s][A
+ 17%|█▋        | 20/117 [00:03<00:20,  4.64it/s][A
+ 18%|█▊        | 21/117 [00:04<00:20,  4.68it/s][A
+ 19%|█▉        | 22/117 [00:04<00:19,  4.82it/s][A
+ 20%|█▉        | 23/117 [00:04<00:19,  4.71it/s][A
+ 21%|██        | 24/117 [00:04<00:19,  4.72it/s][A
+ 21%|██▏       | 25/117 [00:04<00:19,  4.63it/s][A
+ 22%|██▏       | 26/117 [00:05<00:19,  4.67it/s][A
+ 23%|██▎       | 27/117 [00:05<00:18,  4.94it/s][A
+ 24%|██▍       | 28/117 [00:05<00:17,  5.14it/s][A
+ 25%|██▍       | 29/117 [00:05<00:15,  5.55it/s][A
+ 26%|██▌       | 30/117 [00:05<00:15,  5.58it/s][A
+ 26%|██▋       | 31/117 [00:05<00:14,  5.76it/s][A05/31/2026 06:24:43 - INFO - root - Epoch=4, iter=31, loss=13.05898
+
+ 27%|██▋       | 32/117 [00:06<00:14,  5.76it/s][A
+ 28%|██▊       | 33/117 [00:06<00:14,  5.88it/s][A
+ 29%|██▉       | 34/117 [00:06<00:14,  5.80it/s][A
+ 30%|██▉       | 35/117 [00:06<00:15,  5.15it/s][A
+ 31%|███       | 36/117 [00:06<00:16,  4.86it/s][A
+ 32%|███▏      | 37/117 [00:07<00:15,  5.19it/s][A
+ 32%|███▏      | 38/117 [00:07<00:16,  4.74it/s][A
+ 33%|███▎      | 39/117 [00:07<00:16,  4.64it/s][A
+ 34%|███▍      | 40/117 [00:07<00:14,  5.23it/s][A
+ 35%|███▌      | 41/117 [00:07<00:14,  5.38it/s][A
+ 36%|███▌      | 42/117 [00:08<00:13,  5.72it/s][A
+ 37%|███▋      | 43/117 [00:08<00:12,  5.98it/s][A
+ 38%|███▊      | 44/117 [00:08<00:11,  6.23it/s][A
+ 38%|███▊      | 45/117 [00:08<00:11,  6.38it/s][A
+ 39%|███▉      | 46/117 [00:08<00:14,  4.86it/s][A
+ 40%|████      | 47/117 [00:09<00:15,  4.56it/s][A
+ 41%|████      | 48/117 [00:09<00:14,  4.75it/s][A
+ 42%|████▏     | 49/117 [00:09<00:15,  4.30it/s][A
+ 43%|████▎     | 50/117 [00:09<00:13,  4.86it/s][A
+ 44%|████▎     | 51/117 [00:09<00:12,  5.33it/s][A
+ 44%|████▍     | 52/117 [00:10<00:12,  5.30it/s][A
+ 45%|████▌     | 53/117 [00:10<00:11,  5.34it/s][A
+ 46%|████▌     | 54/117 [00:10<00:12,  4.85it/s][A
+ 47%|████▋     | 55/117 [00:10<00:14,  4.42it/s][A
+ 48%|████▊     | 56/117 [00:10<00:12,  4.69it/s][A
+ 49%|████▊     | 57/117 [00:11<00:11,  5.12it/s][A
+ 50%|████▉     | 58/117 [00:11<00:11,  5.03it/s][A
+ 50%|█████     | 59/117 [00:11<00:10,  5.67it/s][A
+ 51%|█████▏    | 60/117 [00:11<00:09,  5.95it/s][A
+ 52%|█████▏    | 61/117 [00:11<00:09,  5.84it/s][A
+ 53%|█████▎    | 62/117 [00:11<00:08,  6.11it/s][A
+ 54%|█████▍    | 63/117 [00:12<00:08,  6.18it/s][A
+ 55%|█████▍    | 64/117 [00:12<00:09,  5.70it/s][A
+ 56%|█████▌    | 65/117 [00:12<00:09,  5.61it/s][A
+ 56%|█████▋    | 66/117 [00:12<00:08,  5.77it/s][A
+ 57%|█████▋    | 67/117 [00:12<00:08,  6.21it/s][A
+ 58%|█████▊    | 68/117 [00:12<00:08,  5.99it/s][A
+ 59%|█████▉    | 69/117 [00:13<00:08,  5.89it/s][A
+ 60%|█████▉    | 70/117 [00:13<00:09,  4.90it/s][A
+ 61%|██████    | 71/117 [00:13<00:08,  5.30it/s][A
+ 62%|██████▏   | 72/117 [00:13<00:08,  5.27it/s][A
+ 62%|██████▏   | 73/117 [00:13<00:08,  4.97it/s][A
+ 63%|██████▎   | 74/117 [00:14<00:08,  5.06it/s][A
+ 64%|██████▍   | 75/117 [00:14<00:08,  5.13it/s][A
+ 65%|██████▍   | 76/117 [00:14<00:08,  4.89it/s][A
+ 66%|██████▌   | 77/117 [00:14<00:07,  5.01it/s][A
+ 67%|██████▋   | 78/117 [00:14<00:07,  5.46it/s][A
+ 68%|██████▊   | 79/117 [00:15<00:06,  5.63it/s][A
+ 68%|██████▊   | 80/117 [00:15<00:07,  5.14it/s][A
+ 69%|██████▉   | 81/117 [00:15<00:07,  4.90it/s][A
+ 70%|███████   | 82/117 [00:15<00:07,  4.99it/s][A
+ 71%|███████   | 83/117 [00:15<00:07,  4.82it/s][A
+ 72%|███████▏  | 84/117 [00:16<00:07,  4.68it/s][A
+ 73%|███████▎  | 85/117 [00:16<00:06,  4.66it/s][A
+ 74%|███████▎  | 86/117 [00:16<00:06,  4.55it/s][A
+ 74%|███████▍  | 87/117 [00:16<00:06,  4.81it/s][A
+ 75%|███████▌  | 88/117 [00:17<00:06,  4.33it/s][A
+ 76%|███████▌  | 89/117 [00:17<00:06,  4.66it/s][A
+ 77%|███████▋  | 90/117 [00:17<00:05,  4.69it/s][A
+ 78%|███████▊  | 91/117 [00:17<00:04,  5.30it/s][A
+ 79%|███████▊  | 92/117 [00:17<00:05,  4.59it/s][A
+ 79%|███████▉  | 93/117 [00:18<00:04,  4.82it/s][A
+ 80%|████████  | 94/117 [00:18<00:05,  4.53it/s][A
+ 81%|████████  | 95/117 [00:18<00:04,  4.84it/s][A
+ 82%|████████▏ | 96/117 [00:18<00:03,  5.26it/s][A
+ 83%|████████▎ | 97/117 [00:18<00:03,  5.50it/s][A
+ 84%|████████▍ | 98/117 [00:18<00:03,  5.14it/s][A
+ 85%|████████▍ | 99/117 [00:19<00:03,  5.40it/s][A
+ 85%|████████▌ | 100/117 [00:19<00:02,  5.80it/s][A
+ 86%|████████▋ | 101/117 [00:19<00:03,  4.62it/s][A
+ 87%|████████▋ | 102/117 [00:19<00:03,  4.66it/s][A
+ 88%|████████▊ | 103/117 [00:20<00:02,  4.67it/s][A
+ 89%|████████▉ | 104/117 [00:20<00:02,  5.12it/s][A
+ 90%|████████▉ | 105/117 [00:20<00:02,  5.21it/s][A
+ 91%|█████████ | 106/117 [00:20<00:02,  5.21it/s][A
+ 91%|█████████▏| 107/117 [00:20<00:02,  4.62it/s][A
+ 92%|█████████▏| 108/117 [00:21<00:02,  4.38it/s][A
+ 93%|█████████▎| 109/117 [00:21<00:01,  4.61it/s][A
+ 94%|█████████▍| 110/117 [00:21<00:01,  4.26it/s][A
+ 95%|█████████▍| 111/117 [00:21<00:01,  4.49it/s][A
+ 96%|█████████▌| 112/117 [00:21<00:00,  5.01it/s][A
+ 97%|█████████▋| 113/117 [00:22<00:00,  4.82it/s][A
+ 97%|█████████▋| 114/117 [00:22<00:00,  5.04it/s][A
+ 98%|█████████▊| 115/117 [00:22<00:00,  5.66it/s][A
+ 99%|█████████▉| 116/117 [00:22<00:00,  4.80it/s][A05/31/2026 06:25:00 - INFO - root - Evaluating...
+05/31/2026 06:25:03 - INFO - root - Accuracy: 0.981875
+05/31/2026 06:25:03 - INFO - root - Cor: 0, Pred TOT: 0, Gold TOT: 811
+05/31/2026 06:25:03 - INFO - root - P: 0.00000, R: 0.00000, F1: 0.00000
+05/31/2026 06:25:03 - INFO - root - Used time: 2.908522
+
+100%|██████████| 117/117 [00:25<00:00,  1.05s/it][A100%|██████████| 117/117 [00:25<00:00,  4.55it/s]
+  5%|▌         | 5/100 [02:03<39:30, 24.96s/it]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<00:31,  3.72it/s][A
+  2%|▏         | 2/117 [00:00<00:34,  3.32it/s][A
+  3%|▎         | 3/117 [00:00<00:25,  4.50it/s][A
+  3%|▎         | 4/117 [00:00<00:25,  4.37it/s][A
+  4%|▍         | 5/117 [00:01<00:23,  4.77it/s][A
+  5%|▌         | 6/117 [00:01<00:23,  4.66it/s][A
+  6%|▌         | 7/117 [00:01<00:21,  5.16it/s][A
+  7%|▋         | 8/117 [00:01<00:18,  5.92it/s][A
+  8%|▊         | 9/117 [00:01<00:19,  5.40it/s][A
+  9%|▊         | 10/117 [00:02<00:19,  5.44it/s][A
+  9%|▉         | 11/117 [00:02<00:18,  5.66it/s][A
+ 10%|█         | 12/117 [00:02<00:18,  5.79it/s][A
+ 11%|█         | 13/117 [00:02<00:18,  5.54it/s][A
+ 12%|█▏        | 14/117 [00:02<00:18,  5.53it/s][A05/31/2026 06:25:06 - INFO - root - Epoch=5, iter=14, loss=10.54990
+
+ 13%|█▎        | 15/117 [00:02<00:17,  5.77it/s][A
+ 14%|█▎        | 16/117 [00:03<00:17,  5.64it/s][A
+ 15%|█▍        | 17/117 [00:03<00:17,  5.58it/s][A
+ 15%|█▌        | 18/117 [00:03<00:18,  5.45it/s][A
+ 16%|█▌        | 19/117 [00:03<00:22,  4.26it/s][A
+ 17%|█▋        | 20/117 [00:04<00:21,  4.48it/s][A
+ 18%|█▊        | 21/117 [00:04<00:21,  4.54it/s][A
+ 19%|█▉        | 22/117 [00:04<00:20,  4.70it/s][A
+ 20%|█▉        | 23/117 [00:04<00:20,  4.59it/s][A
+ 21%|██        | 24/117 [00:04<00:20,  4.62it/s][A
+ 21%|██▏       | 25/117 [00:05<00:20,  4.51it/s][A
+ 22%|██▏       | 26/117 [00:05<00:19,  4.56it/s][A
+ 23%|██▎       | 27/117 [00:05<00:18,  4.81it/s][A
+ 24%|██▍       | 28/117 [00:05<00:17,  5.00it/s][A
+ 25%|██▍       | 29/117 [00:05<00:16,  5.40it/s][A
+ 26%|██▌       | 30/117 [00:05<00:15,  5.44it/s][A
+ 26%|██▋       | 31/117 [00:06<00:15,  5.59it/s][A
+ 27%|██▋       | 32/117 [00:06<00:15,  5.60it/s][A
+ 28%|██▊       | 33/117 [00:06<00:14,  5.74it/s][A
+ 29%|██▉       | 34/117 [00:06<00:14,  5.68it/s][A
+ 30%|██▉       | 35/117 [00:06<00:16,  5.01it/s][A
+ 31%|███       | 36/117 [00:07<00:17,  4.76it/s][A
+ 32%|███▏      | 37/117 [00:07<00:15,  5.07it/s][A
+ 32%|███▏      | 38/117 [00:07<00:17,  4.63it/s][A
+ 33%|███▎      | 39/117 [00:07<00:17,  4.52it/s][A
+ 34%|███▍      | 40/117 [00:07<00:15,  5.11it/s][A
+ 35%|███▌      | 41/117 [00:08<00:14,  5.23it/s][A
+ 36%|███▌      | 42/117 [00:08<00:13,  5.58it/s][A
+ 37%|███▋      | 43/117 [00:08<00:12,  5.86it/s][A
+ 38%|███▊      | 44/117 [00:08<00:11,  6.12it/s][A
+ 38%|███▊      | 45/117 [00:08<00:11,  6.23it/s][A
+ 39%|███▉      | 46/117 [00:09<00:15,  4.73it/s][A
+ 40%|████      | 47/117 [00:09<00:15,  4.43it/s][A
+ 41%|████      | 48/117 [00:09<00:14,  4.62it/s][A
+ 42%|████▏     | 49/117 [00:09<00:16,  4.18it/s][A
+ 43%|████▎     | 50/117 [00:09<00:14,  4.75it/s][A
+ 44%|████▎     | 51/117 [00:10<00:12,  5.23it/s][A
+ 44%|████▍     | 52/117 [00:10<00:12,  5.18it/s][A
+ 45%|████▌     | 53/117 [00:10<00:12,  5.20it/s][A
+ 46%|████▌     | 54/117 [00:10<00:13,  4.76it/s][A
+ 47%|████▋     | 55/117 [00:11<00:14,  4.31it/s][A
+ 48%|████▊     | 56/117 [00:11<00:13,  4.55it/s][A
+ 49%|████▊     | 57/117 [00:11<00:11,  5.00it/s][A
+ 50%|████▉     | 58/117 [00:11<00:12,  4.91it/s][A
+ 50%|█████     | 59/117 [00:11<00:10,  5.52it/s][A
+ 51%|█████▏    | 60/117 [00:11<00:09,  5.82it/s][A
+ 52%|█████▏    | 61/117 [00:12<00:09,  5.74it/s][A
+ 53%|█████▎    | 62/117 [00:12<00:09,  6.02it/s][A
+ 54%|█████▍    | 63/117 [00:12<00:08,  6.05it/s][A
+ 55%|█████▍    | 64/117 [00:12<00:09,  5.56it/s][A
+ 56%|█████▌    | 65/117 [00:12<00:09,  5.48it/s][A
+ 56%|█████▋    | 66/117 [00:12<00:09,  5.65it/s][A
+ 57%|█████▋    | 67/117 [00:13<00:08,  6.10it/s][A
+ 58%|█████▊    | 68/117 [00:13<00:08,  5.86it/s][A
+ 59%|█████▉    | 69/117 [00:13<00:08,  5.77it/s][A
+ 60%|█████▉    | 70/117 [00:13<00:09,  4.80it/s][A
+ 61%|██████    | 71/117 [00:13<00:08,  5.21it/s][A
+ 62%|██████▏   | 72/117 [00:14<00:08,  5.19it/s][A
+ 62%|██████▏   | 73/117 [00:14<00:08,  4.91it/s][A
+ 63%|██████▎   | 74/117 [00:14<00:08,  4.93it/s][A
+ 64%|██████▍   | 75/117 [00:14<00:08,  5.02it/s][A
+ 65%|██████▍   | 76/117 [00:14<00:08,  4.80it/s][A
+ 66%|██████▌   | 77/117 [00:15<00:08,  4.93it/s][A
+ 67%|██████▋   | 78/117 [00:15<00:07,  5.39it/s][A
+ 68%|██████▊   | 79/117 [00:15<00:06,  5.61it/s][A
+ 68%|██████▊   | 80/117 [00:15<00:07,  5.12it/s][A
+ 69%|██████▉   | 81/117 [00:15<00:07,  4.86it/s][A
+ 70%|███████   | 82/117 [00:16<00:07,  4.93it/s][A
+ 71%|███████   | 83/117 [00:16<00:07,  4.79it/s][A
+ 72%|███████▏  | 84/117 [00:16<00:07,  4.64it/s][A
+ 73%|███████▎  | 85/117 [00:16<00:06,  4.65it/s][A
+ 74%|███████▎  | 86/117 [00:16<00:06,  4.55it/s][A
+ 74%|███████▍  | 87/117 [00:17<00:06,  4.81it/s][A
+ 75%|███████▌  | 88/117 [00:17<00:06,  4.36it/s][A
+ 76%|███████▌  | 89/117 [00:17<00:05,  4.70it/s][A
+ 77%|███████▋  | 90/117 [00:17<00:05,  4.71it/s][A
+ 78%|███████▊  | 91/117 [00:17<00:04,  5.30it/s][A
+ 79%|███████▊  | 92/117 [00:18<00:05,  4.60it/s][A
+ 79%|███████▉  | 93/117 [00:18<00:04,  4.83it/s][A
+ 80%|████████  | 94/117 [00:18<00:05,  4.54it/s][A
+ 81%|████████  | 95/117 [00:18<00:04,  4.83it/s][A
+ 82%|████████▏ | 96/117 [00:19<00:03,  5.27it/s][A
+ 83%|████████▎ | 97/117 [00:19<00:03,  5.53it/s][A
+ 84%|████████▍ | 98/117 [00:19<00:03,  5.15it/s][A
+ 85%|████████▍ | 99/117 [00:19<00:03,  5.37it/s][A
+ 85%|████████▌ | 100/117 [00:19<00:02,  5.73it/s][A
+ 86%|████████▋ | 101/117 [00:20<00:03,  4.62it/s][A
+ 87%|████████▋ | 102/117 [00:20<00:03,  4.66it/s][A
+ 88%|████████▊ | 103/117 [00:20<00:02,  4.68it/s][A
+ 89%|████████▉ | 104/117 [00:20<00:02,  5.14it/s][A
+ 90%|████████▉ | 105/117 [00:20<00:02,  5.24it/s][A
+ 91%|█████████ | 106/117 [00:20<00:02,  5.26it/s][A
+ 91%|█████████▏| 107/117 [00:21<00:02,  4.67it/s][A
+ 92%|█████████▏| 108/117 [00:21<00:02,  4.40it/s][A
+ 93%|█████████▎| 109/117 [00:21<00:01,  4.70it/s][A
+ 94%|█████████▍| 110/117 [00:21<00:01,  4.33it/s][A
+ 95%|█████████▍| 111/117 [00:22<00:01,  4.54it/s][A
+ 96%|█████████▌| 112/117 [00:22<00:00,  5.07it/s][A
+ 97%|█████████▋| 113/117 [00:22<00:00,  4.87it/s][A
+ 97%|█████████▋| 114/117 [00:22<00:00,  5.07it/s][A05/31/2026 06:25:26 - INFO - root - Epoch=5, iter=114, loss=8.99373
+
+ 98%|█████████▊| 115/117 [00:22<00:00,  5.69it/s][A
+ 99%|█████████▉| 116/117 [00:23<00:00,  4.84it/s][A05/31/2026 06:25:26 - INFO - root - Evaluating...
+05/31/2026 06:25:29 - INFO - root - Accuracy: 0.985473
+05/31/2026 06:25:29 - INFO - root - Cor: 229, Pred TOT: 454, Gold TOT: 811
+05/31/2026 06:25:29 - INFO - root - P: 0.50441, R: 0.28237, F1: 0.36206
+05/31/2026 06:25:29 - INFO - root - Used time: 2.884235
+05/31/2026 06:25:29 - INFO - root - !!! Best valid (epoch=5): 36.21
+05/31/2026 06:25:29 - INFO - root - Saving model to /content/scierc_pure_project/models/fine_tuned/entity...
+
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.35s/it][A[AWriting model shards: 100%|██████████| 1/1 [00:01<00:00,  1.35s/it]
+
+100%|██████████| 117/117 [00:27<00:00,  1.45s/it][A100%|██████████| 117/117 [00:27<00:00,  4.27it/s]
+  6%|▌         | 6/100 [02:30<40:25, 25.80s/it]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<00:33,  3.52it/s][A
+  2%|▏         | 2/117 [00:00<00:35,  3.26it/s][A
+  3%|▎         | 3/117 [00:00<00:25,  4.42it/s][A
+  3%|▎         | 4/117 [00:00<00:25,  4.39it/s][A
+  4%|▍         | 5/117 [00:01<00:23,  4.76it/s][A
+  5%|▌         | 6/117 [00:01<00:23,  4.69it/s][A
+  6%|▌         | 7/117 [00:01<00:21,  5.19it/s][A
+  7%|▋         | 8/117 [00:01<00:18,  5.94it/s][A
+  8%|▊         | 9/117 [00:01<00:19,  5.46it/s][A
+  9%|▊         | 10/117 [00:02<00:19,  5.51it/s][A
+  9%|▉         | 11/117 [00:02<00:18,  5.73it/s][A
+ 10%|█         | 12/117 [00:02<00:17,  5.86it/s][A
+ 11%|█         | 13/117 [00:02<00:18,  5.66it/s][A
+ 12%|█▏        | 14/117 [00:02<00:18,  5.69it/s][A
+ 13%|█▎        | 15/117 [00:02<00:17,  5.97it/s][A
+ 14%|█▎        | 16/117 [00:03<00:17,  5.85it/s][A
+ 15%|█▍        | 17/117 [00:03<00:17,  5.79it/s][A
+ 15%|█▌        | 18/117 [00:03<00:17,  5.62it/s][A
+ 16%|█▌        | 19/117 [00:03<00:22,  4.40it/s][A
+ 17%|█▋        | 20/117 [00:03<00:20,  4.64it/s][A
+ 18%|█▊        | 21/117 [00:04<00:20,  4.68it/s][A
+ 19%|█▉        | 22/117 [00:04<00:19,  4.84it/s][A
+ 20%|█▉        | 23/117 [00:04<00:19,  4.72it/s][A
+ 21%|██        | 24/117 [00:04<00:19,  4.75it/s][A
+ 21%|██▏       | 25/117 [00:04<00:19,  4.63it/s][A
+ 22%|██▏       | 26/117 [00:05<00:19,  4.69it/s][A
+ 23%|██▎       | 27/117 [00:05<00:18,  4.94it/s][A
+ 24%|██▍       | 28/117 [00:05<00:17,  5.17it/s][A
+ 25%|██▍       | 29/117 [00:05<00:15,  5.58it/s][A
+ 26%|██▌       | 30/117 [00:05<00:15,  5.62it/s][A
+ 26%|██▋       | 31/117 [00:06<00:14,  5.77it/s][A
+ 27%|██▋       | 32/117 [00:06<00:14,  5.75it/s][A
+ 28%|██▊       | 33/117 [00:06<00:14,  5.90it/s][A
+ 29%|██▉       | 34/117 [00:06<00:14,  5.81it/s][A
+ 30%|██▉       | 35/117 [00:06<00:15,  5.14it/s][A
+ 31%|███       | 36/117 [00:07<00:16,  4.88it/s][A
+ 32%|███▏      | 37/117 [00:07<00:15,  5.21it/s][A
+ 32%|███▏      | 38/117 [00:07<00:16,  4.76it/s][A
+ 33%|███▎      | 39/117 [00:07<00:16,  4.65it/s][A
+ 34%|███▍      | 40/117 [00:07<00:14,  5.25it/s][A
+ 35%|███▌      | 41/117 [00:07<00:14,  5.38it/s][A
+ 36%|███▌      | 42/117 [00:08<00:13,  5.76it/s][A
+ 37%|███▋      | 43/117 [00:08<00:12,  6.02it/s][A
+ 38%|███▊      | 44/117 [00:08<00:11,  6.24it/s][A
+ 38%|███▊      | 45/117 [00:08<00:11,  6.41it/s][A
+ 39%|███▉      | 46/117 [00:08<00:14,  4.87it/s][A
+ 40%|████      | 47/117 [00:09<00:15,  4.56it/s][A
+ 41%|████      | 48/117 [00:09<00:14,  4.76it/s][A
+ 42%|████▏     | 49/117 [00:09<00:15,  4.31it/s][A
+ 43%|████▎     | 50/117 [00:09<00:13,  4.89it/s][A
+ 44%|████▎     | 51/117 [00:09<00:12,  5.34it/s][A
+ 44%|████▍     | 52/117 [00:10<00:12,  5.30it/s][A
+ 45%|████▌     | 53/117 [00:10<00:11,  5.35it/s][A
+ 46%|████▌     | 54/117 [00:10<00:12,  4.89it/s][A
+ 47%|████▋     | 55/117 [00:10<00:13,  4.44it/s][A
+ 48%|████▊     | 56/117 [00:10<00:12,  4.70it/s][A
+ 49%|████▊     | 57/117 [00:11<00:11,  5.16it/s][A
+ 50%|████▉     | 58/117 [00:11<00:11,  5.06it/s][A
+ 50%|█████     | 59/117 [00:11<00:10,  5.68it/s][A
+ 51%|█████▏    | 60/117 [00:11<00:09,  5.97it/s][A
+ 52%|█████▏    | 61/117 [00:11<00:09,  5.88it/s][A
+ 53%|█████▎    | 62/117 [00:11<00:08,  6.19it/s][A
+ 54%|█████▍    | 63/117 [00:12<00:08,  6.26it/s][A
+ 55%|█████▍    | 64/117 [00:12<00:09,  5.72it/s][A
+ 56%|█████▌    | 65/117 [00:12<00:09,  5.68it/s][A
+ 56%|█████▋    | 66/117 [00:12<00:08,  5.83it/s][A
+ 57%|█████▋    | 67/117 [00:12<00:08,  6.24it/s][A
+ 58%|█████▊    | 68/117 [00:12<00:08,  5.94it/s][A
+ 59%|█████▉    | 69/117 [00:13<00:08,  5.84it/s][A
+ 60%|█████▉    | 70/117 [00:13<00:09,  4.88it/s][A
+ 61%|██████    | 71/117 [00:13<00:08,  5.31it/s][A
+ 62%|██████▏   | 72/117 [00:13<00:08,  5.30it/s][A
+ 62%|██████▏   | 73/117 [00:13<00:08,  5.01it/s][A
+ 63%|██████▎   | 74/117 [00:14<00:08,  5.08it/s][A
+ 64%|██████▍   | 75/117 [00:14<00:08,  5.15it/s][A
+ 65%|██████▍   | 76/117 [00:14<00:08,  4.91it/s][A
+ 66%|██████▌   | 77/117 [00:14<00:07,  5.04it/s][A
+ 67%|██████▋   | 78/117 [00:14<00:07,  5.52it/s][A
+ 68%|██████▊   | 79/117 [00:15<00:06,  5.73it/s][A
+ 68%|██████▊   | 80/117 [00:15<00:07,  5.25it/s][A
+ 69%|██████▉   | 81/117 [00:15<00:07,  4.99it/s][A
+ 70%|███████   | 82/117 [00:15<00:06,  5.07it/s][A
+ 71%|███████   | 83/117 [00:15<00:06,  4.92it/s][A
+ 72%|███████▏  | 84/117 [00:16<00:06,  4.75it/s][A
+ 73%|███████▎  | 85/117 [00:16<00:06,  4.76it/s][A
+ 74%|███████▎  | 86/117 [00:16<00:06,  4.65it/s][A
+ 74%|███████▍  | 87/117 [00:16<00:06,  4.94it/s][A
+ 75%|███████▌  | 88/117 [00:17<00:06,  4.45it/s][A
+ 76%|███████▌  | 89/117 [00:17<00:05,  4.76it/s][A
+ 77%|███████▋  | 90/117 [00:17<00:05,  4.78it/s][A
+ 78%|███████▊  | 91/117 [00:17<00:04,  5.38it/s][A
+ 79%|███████▊  | 92/117 [00:17<00:05,  4.65it/s][A
+ 79%|███████▉  | 93/117 [00:18<00:04,  4.90it/s][A
+ 80%|████████  | 94/117 [00:18<00:04,  4.61it/s][A
+ 81%|████████  | 95/117 [00:18<00:04,  4.90it/s][A
+ 82%|████████▏ | 96/117 [00:18<00:03,  5.34it/s][A
+ 83%|████████▎ | 97/117 [00:18<00:03,  5.57it/s][A05/31/2026 06:25:49 - INFO - root - Epoch=6, iter=97, loss=7.75637
+
+ 84%|████████▍ | 98/117 [00:18<00:03,  5.19it/s][A
+ 85%|████████▍ | 99/117 [00:19<00:03,  5.46it/s][A
+ 85%|████████▌ | 100/117 [00:19<00:02,  5.81it/s][A
+ 86%|████████▋ | 101/117 [00:19<00:03,  4.70it/s][A
+ 87%|████████▋ | 102/117 [00:19<00:03,  4.72it/s][A
+ 88%|████████▊ | 103/117 [00:19<00:02,  4.73it/s][A
+ 89%|████████▉ | 104/117 [00:20<00:02,  5.19it/s][A
+ 90%|████████▉ | 105/117 [00:20<00:02,  5.30it/s][A
+ 91%|█████████ | 106/117 [00:20<00:02,  5.32it/s][A
+ 91%|█████████▏| 107/117 [00:20<00:02,  4.72it/s][A
+ 92%|█████████▏| 108/117 [00:21<00:02,  4.46it/s][A
+ 93%|█████████▎| 109/117 [00:21<00:01,  4.71it/s][A
+ 94%|█████████▍| 110/117 [00:21<00:01,  4.34it/s][A
+ 95%|█████████▍| 111/117 [00:21<00:01,  4.60it/s][A
+ 96%|█████████▌| 112/117 [00:21<00:00,  5.14it/s][A
+ 97%|█████████▋| 113/117 [00:22<00:00,  4.94it/s][A
+ 97%|█████████▋| 114/117 [00:22<00:00,  5.17it/s][A
+ 98%|█████████▊| 115/117 [00:22<00:00,  5.79it/s][A
+ 99%|█████████▉| 116/117 [00:22<00:00,  4.90it/s][A05/31/2026 06:25:53 - INFO - root - Evaluating...
+05/31/2026 06:25:56 - INFO - root - Accuracy: 0.986327
+05/31/2026 06:25:56 - INFO - root - Cor: 312, Pred TOT: 581, Gold TOT: 811
+05/31/2026 06:25:56 - INFO - root - P: 0.53701, R: 0.38471, F1: 0.44828
+05/31/2026 06:25:56 - INFO - root - Used time: 3.084475
+05/31/2026 06:25:56 - INFO - root - !!! Best valid (epoch=6): 44.83
+05/31/2026 06:25:56 - INFO - root - Saving model to /content/scierc_pure_project/models/fine_tuned/entity...
+
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Writing model shards: 100%|██████████| 1/1 [00:06<00:00,  6.47s/it][A[AWriting model shards: 100%|██████████| 1/1 [00:06<00:00,  6.47s/it]
+
+100%|██████████| 117/117 [00:32<00:00,  3.04s/it][A100%|██████████| 117/117 [00:32<00:00,  3.62it/s]
+  7%|▋         | 7/100 [03:02<43:16, 27.92s/it]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<00:37,  3.10it/s][A
+  2%|▏         | 2/117 [00:00<00:36,  3.16it/s][A
+  3%|▎         | 3/117 [00:00<00:26,  4.37it/s][A
+  3%|▎         | 4/117 [00:00<00:25,  4.39it/s][A
+  4%|▍         | 5/117 [00:01<00:23,  4.81it/s][A
+  5%|▌         | 6/117 [00:01<00:23,  4.78it/s][A
+  6%|▌         | 7/117 [00:01<00:20,  5.29it/s][A
+  7%|▋         | 8/117 [00:01<00:18,  6.01it/s][A
+  8%|▊         | 9/117 [00:01<00:19,  5.56it/s][A
+  9%|▊         | 10/117 [00:02<00:19,  5.58it/s][A
+  9%|▉         | 11/117 [00:02<00:18,  5.82it/s][A
+ 10%|█         | 12/117 [00:02<00:17,  5.97it/s][A
+ 11%|█         | 13/117 [00:02<00:18,  5.75it/s][A
+ 12%|█▏        | 14/117 [00:02<00:17,  5.78it/s][A
+ 13%|█▎        | 15/117 [00:02<00:16,  6.05it/s][A
+ 14%|█▎        | 16/117 [00:03<00:17,  5.90it/s][A
+ 15%|█▍        | 17/117 [00:03<00:17,  5.84it/s][A
+ 15%|█▌        | 18/117 [00:03<00:17,  5.69it/s][A
+ 16%|█▌        | 19/117 [00:03<00:22,  4.45it/s][A
+ 17%|█▋        | 20/117 [00:03<00:20,  4.68it/s][A
+ 18%|█▊        | 21/117 [00:04<00:20,  4.72it/s][A
+ 19%|█▉        | 22/117 [00:04<00:19,  4.89it/s][A
+ 20%|█▉        | 23/117 [00:04<00:19,  4.76it/s][A
+ 21%|██        | 24/117 [00:04<00:19,  4.78it/s][A
+ 21%|██▏       | 25/117 [00:04<00:19,  4.66it/s][A
+ 22%|██▏       | 26/117 [00:05<00:19,  4.71it/s][A
+ 23%|██▎       | 27/117 [00:05<00:18,  4.96it/s][A
+ 24%|██▍       | 28/117 [00:05<00:17,  5.16it/s][A
+ 25%|██▍       | 29/117 [00:05<00:15,  5.54it/s][A
+ 26%|██▌       | 30/117 [00:05<00:15,  5.57it/s][A
+ 26%|██▋       | 31/117 [00:06<00:14,  5.75it/s][A
+ 27%|██▋       | 32/117 [00:06<00:14,  5.76it/s][A
+ 28%|██▊       | 33/117 [00:06<00:14,  5.86it/s][A
+ 29%|██▉       | 34/117 [00:06<00:14,  5.78it/s][A
+ 30%|██▉       | 35/117 [00:06<00:16,  5.10it/s][A
+ 31%|███       | 36/117 [00:07<00:16,  4.81it/s][A
+ 32%|███▏      | 37/117 [00:07<00:15,  5.11it/s][A
+ 32%|███▏      | 38/117 [00:07<00:16,  4.69it/s][A
+ 33%|███▎      | 39/117 [00:07<00:16,  4.61it/s][A
+ 34%|███▍      | 40/117 [00:07<00:14,  5.21it/s][A
+ 35%|███▌      | 41/117 [00:07<00:14,  5.35it/s][A
+ 36%|███▌      | 42/117 [00:08<00:13,  5.73it/s][A
+ 37%|███▋      | 43/117 [00:08<00:12,  5.99it/s][A
+ 38%|███▊      | 44/117 [00:08<00:11,  6.25it/s][A
+ 38%|███▊      | 45/117 [00:08<00:11,  6.41it/s][A
+ 39%|███▉      | 46/117 [00:08<00:14,  4.85it/s][A
+ 40%|████      | 47/117 [00:09<00:15,  4.57it/s][A
+ 41%|████      | 48/117 [00:09<00:14,  4.76it/s][A
+ 42%|████▏     | 49/117 [00:09<00:15,  4.30it/s][A
+ 43%|████▎     | 50/117 [00:09<00:13,  4.86it/s][A
+ 44%|████▎     | 51/117 [00:09<00:12,  5.32it/s][A
+ 44%|████▍     | 52/117 [00:10<00:12,  5.30it/s][A
+ 45%|████▌     | 53/117 [00:10<00:11,  5.36it/s][A
+ 46%|████▌     | 54/117 [00:10<00:12,  4.87it/s][A
+ 47%|████▋     | 55/117 [00:10<00:14,  4.41it/s][A
+ 48%|████▊     | 56/117 [00:10<00:12,  4.70it/s][A
+ 49%|████▊     | 57/117 [00:11<00:11,  5.15it/s][A
+ 50%|████▉     | 58/117 [00:11<00:11,  5.05it/s][A
+ 50%|█████     | 59/117 [00:11<00:10,  5.66it/s][A
+ 51%|█████▏    | 60/117 [00:11<00:09,  5.95it/s][A
+ 52%|█████▏    | 61/117 [00:11<00:09,  5.84it/s][A
+ 53%|█████▎    | 62/117 [00:11<00:09,  6.10it/s][A
+ 54%|█████▍    | 63/117 [00:12<00:08,  6.15it/s][A
+ 55%|█████▍    | 64/117 [00:12<00:09,  5.71it/s][A
+ 56%|█████▌    | 65/117 [00:12<00:09,  5.61it/s][A
+ 56%|█████▋    | 66/117 [00:12<00:08,  5.78it/s][A
+ 57%|█████▋    | 67/117 [00:12<00:08,  6.22it/s][A
+ 58%|█████▊    | 68/117 [00:12<00:08,  5.99it/s][A
+ 59%|█████▉    | 69/117 [00:13<00:08,  5.89it/s][A
+ 60%|█████▉    | 70/117 [00:13<00:09,  4.90it/s][A
+ 61%|██████    | 71/117 [00:13<00:08,  5.30it/s][A
+ 62%|██████▏   | 72/117 [00:13<00:08,  5.26it/s][A
+ 62%|██████▏   | 73/117 [00:13<00:08,  4.96it/s][A
+ 63%|██████▎   | 74/117 [00:14<00:08,  5.04it/s][A
+ 64%|██████▍   | 75/117 [00:14<00:08,  5.13it/s][A
+ 65%|██████▍   | 76/117 [00:14<00:08,  4.86it/s][A
+ 66%|██████▌   | 77/117 [00:14<00:08,  4.98it/s][A
+ 67%|██████▋   | 78/117 [00:14<00:07,  5.44it/s][A
+ 68%|██████▊   | 79/117 [00:15<00:06,  5.63it/s][A
+ 68%|██████▊   | 80/117 [00:15<00:07,  5.13it/s][A05/31/2026 06:26:18 - INFO - root - Epoch=7, iter=80, loss=6.63842
+
+ 69%|██████▉   | 81/117 [00:15<00:07,  4.88it/s][A
+ 70%|███████   | 82/117 [00:15<00:07,  4.97it/s][A
+ 71%|███████   | 83/117 [00:15<00:07,  4.84it/s][A
+ 72%|███████▏  | 84/117 [00:16<00:07,  4.70it/s][A
+ 73%|███████▎  | 85/117 [00:16<00:06,  4.70it/s][A
+ 74%|███████▎  | 86/117 [00:16<00:06,  4.58it/s][A
+ 74%|███████▍  | 87/117 [00:16<00:06,  4.85it/s][A
+ 75%|███████▌  | 88/117 [00:17<00:06,  4.37it/s][A
+ 76%|███████▌  | 89/117 [00:17<00:05,  4.69it/s][A
+ 77%|███████▋  | 90/117 [00:17<00:05,  4.71it/s][A
+ 78%|███████▊  | 91/117 [00:17<00:04,  5.30it/s][A
+ 79%|███████▊  | 92/117 [00:17<00:05,  4.55it/s][A
+ 79%|███████▉  | 93/117 [00:18<00:05,  4.78it/s][A
+ 80%|████████  | 94/117 [00:18<00:05,  4.50it/s][A
+ 81%|████████  | 95/117 [00:18<00:04,  4.81it/s][A
+ 82%|████████▏ | 96/117 [00:18<00:04,  5.25it/s][A
+ 83%|████████▎ | 97/117 [00:18<00:03,  5.49it/s][A
+ 84%|████████▍ | 98/117 [00:19<00:03,  5.11it/s][A
+ 85%|████████▍ | 99/117 [00:19<00:03,  5.34it/s][A
+ 85%|████████▌ | 100/117 [00:19<00:02,  5.69it/s][A
+ 86%|████████▋ | 101/117 [00:19<00:03,  4.57it/s][A
+ 87%|████████▋ | 102/117 [00:19<00:03,  4.56it/s][A
+ 88%|████████▊ | 103/117 [00:20<00:03,  4.58it/s][A
+ 89%|████████▉ | 104/117 [00:20<00:02,  5.07it/s][A
+ 90%|████████▉ | 105/117 [00:20<00:02,  5.20it/s][A
+ 91%|█████████ | 106/117 [00:20<00:02,  5.21it/s][A
+ 91%|█████████▏| 107/117 [00:20<00:02,  4.62it/s][A
+ 92%|█████████▏| 108/117 [00:21<00:02,  4.37it/s][A
+ 93%|█████████▎| 109/117 [00:21<00:01,  4.61it/s][A
+ 94%|█████████▍| 110/117 [00:21<00:01,  4.27it/s][A
+ 95%|█████████▍| 111/117 [00:21<00:01,  4.49it/s][A
+ 96%|█████████▌| 112/117 [00:21<00:00,  5.01it/s][A
+ 97%|█████████▋| 113/117 [00:22<00:00,  4.81it/s][A
+ 97%|█████████▋| 114/117 [00:22<00:00,  5.00it/s][A
+ 98%|█████████▊| 115/117 [00:22<00:00,  5.60it/s][A
+ 99%|█████████▉| 116/117 [00:22<00:00,  4.77it/s][A05/31/2026 06:26:25 - INFO - root - Evaluating...
+05/31/2026 06:26:29 - INFO - root - Accuracy: 0.988599
+05/31/2026 06:26:29 - INFO - root - Cor: 421, Pred TOT: 656, Gold TOT: 811
+05/31/2026 06:26:29 - INFO - root - P: 0.64177, R: 0.51911, F1: 0.57396
+05/31/2026 06:26:29 - INFO - root - Used time: 3.117809
+05/31/2026 06:26:29 - INFO - root - !!! Best valid (epoch=7): 57.40
+05/31/2026 06:26:29 - INFO - root - Saving model to /content/scierc_pure_project/models/fine_tuned/entity...
+
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.72s/it][A[AWriting model shards: 100%|██████████| 1/1 [00:01<00:00,  1.72s/it]
+
+100%|██████████| 117/117 [00:27<00:00,  1.63s/it][A100%|██████████| 117/117 [00:27<00:00,  4.22it/s]
+  8%|▊         | 8/100 [03:30<42:43, 27.87s/it]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<00:37,  3.09it/s][A
+  2%|▏         | 2/117 [00:00<00:37,  3.09it/s][A
+  3%|▎         | 3/117 [00:00<00:26,  4.25it/s][A
+  3%|▎         | 4/117 [00:01<00:26,  4.28it/s][A
+  4%|▍         | 5/117 [00:01<00:24,  4.62it/s][A
+  5%|▌         | 6/117 [00:01<00:24,  4.58it/s][A
+  6%|▌         | 7/117 [00:01<00:21,  5.09it/s][A
+  7%|▋         | 8/117 [00:01<00:18,  5.88it/s][A
+  8%|▊         | 9/117 [00:01<00:20,  5.37it/s][A
+  9%|▊         | 10/117 [00:02<00:19,  5.38it/s][A
+  9%|▉         | 11/117 [00:02<00:18,  5.59it/s][A
+ 10%|█         | 12/117 [00:02<00:18,  5.67it/s][A
+ 11%|█         | 13/117 [00:02<00:19,  5.47it/s][A
+ 12%|█▏        | 14/117 [00:02<00:18,  5.49it/s][A
+ 13%|█▎        | 15/117 [00:02<00:17,  5.77it/s][A
+ 14%|█▎        | 16/117 [00:03<00:17,  5.64it/s][A
+ 15%|█▍        | 17/117 [00:03<00:17,  5.60it/s][A
+ 15%|█▌        | 18/117 [00:03<00:18,  5.43it/s][A
+ 16%|█▌        | 19/117 [00:03<00:23,  4.25it/s][A
+ 17%|█▋        | 20/117 [00:04<00:21,  4.48it/s][A
+ 18%|█▊        | 21/117 [00:04<00:21,  4.52it/s][A
+ 19%|█▉        | 22/117 [00:04<00:20,  4.67it/s][A
+ 20%|█▉        | 23/117 [00:04<00:20,  4.56it/s][A
+ 21%|██        | 24/117 [00:04<00:20,  4.58it/s][A
+ 21%|██▏       | 25/117 [00:05<00:20,  4.49it/s][A
+ 22%|██▏       | 26/117 [00:05<00:20,  4.55it/s][A
+ 23%|██▎       | 27/117 [00:05<00:18,  4.81it/s][A
+ 24%|██▍       | 28/117 [00:05<00:17,  5.01it/s][A
+ 25%|██▍       | 29/117 [00:05<00:16,  5.41it/s][A
+ 26%|██▌       | 30/117 [00:06<00:16,  5.42it/s][A
+ 26%|██▋       | 31/117 [00:06<00:15,  5.58it/s][A
+ 27%|██▋       | 32/117 [00:06<00:15,  5.57it/s][A
+ 28%|██▊       | 33/117 [00:06<00:14,  5.70it/s][A
+ 29%|██▉       | 34/117 [00:06<00:14,  5.62it/s][A
+ 30%|██▉       | 35/117 [00:07<00:16,  4.96it/s][A
+ 31%|███       | 36/117 [00:07<00:17,  4.74it/s][A
+ 32%|███▏      | 37/117 [00:07<00:15,  5.04it/s][A
+ 32%|███▏      | 38/117 [00:07<00:17,  4.61it/s][A
+ 33%|███▎      | 39/117 [00:07<00:17,  4.51it/s][A
+ 34%|███▍      | 40/117 [00:08<00:15,  5.10it/s][A
+ 35%|███▌      | 41/117 [00:08<00:14,  5.21it/s][A
+ 36%|███▌      | 42/117 [00:08<00:13,  5.58it/s][A
+ 37%|███▋      | 43/117 [00:08<00:12,  5.82it/s][A
+ 38%|███▊      | 44/117 [00:08<00:12,  6.05it/s][A
+ 38%|███▊      | 45/117 [00:08<00:11,  6.20it/s][A
+ 39%|███▉      | 46/117 [00:09<00:15,  4.72it/s][A
+ 40%|████      | 47/117 [00:09<00:15,  4.42it/s][A
+ 41%|████      | 48/117 [00:09<00:14,  4.60it/s][A
+ 42%|████▏     | 49/117 [00:09<00:16,  4.17it/s][A
+ 43%|████▎     | 50/117 [00:10<00:14,  4.73it/s][A
+ 44%|████▎     | 51/117 [00:10<00:12,  5.17it/s][A
+ 44%|████▍     | 52/117 [00:10<00:12,  5.12it/s][A
+ 45%|████▌     | 53/117 [00:10<00:12,  5.16it/s][A
+ 46%|████▌     | 54/117 [00:10<00:13,  4.74it/s][A
+ 47%|████▋     | 55/117 [00:11<00:14,  4.30it/s][A
+ 48%|████▊     | 56/117 [00:11<00:13,  4.56it/s][A
+ 49%|████▊     | 57/117 [00:11<00:11,  5.02it/s][A
+ 50%|████▉     | 58/117 [00:11<00:11,  4.93it/s][A
+ 50%|█████     | 59/117 [00:11<00:10,  5.52it/s][A
+ 51%|█████▏    | 60/117 [00:11<00:09,  5.82it/s][A
+ 52%|█████▏    | 61/117 [00:12<00:09,  5.73it/s][A
+ 53%|█████▎    | 62/117 [00:12<00:09,  5.98it/s][A
+ 54%|█████▍    | 63/117 [00:12<00:08,  6.07it/s][A05/31/2026 06:26:43 - INFO - root - Epoch=8, iter=63, loss=5.58182
+
+ 55%|█████▍    | 64/117 [00:12<00:09,  5.59it/s][A
+ 56%|█████▌    | 65/117 [00:12<00:09,  5.51it/s][A
+ 56%|█████▋    | 66/117 [00:13<00:09,  5.66it/s][A
+ 57%|█████▋    | 67/117 [00:13<00:08,  6.09it/s][A
+ 58%|█████▊    | 68/117 [00:13<00:08,  5.82it/s][A
+ 59%|█████▉    | 69/117 [00:13<00:08,  5.74it/s][A
+ 60%|█████▉    | 70/117 [00:13<00:09,  4.81it/s][A
+ 61%|██████    | 71/117 [00:13<00:08,  5.21it/s][A
+ 62%|██████▏   | 72/117 [00:14<00:08,  5.19it/s][A
+ 62%|██████▏   | 73/117 [00:14<00:08,  4.90it/s][A
+ 63%|██████▎   | 74/117 [00:14<00:08,  4.97it/s][A
+ 64%|██████▍   | 75/117 [00:14<00:08,  5.07it/s][A
+ 65%|██████▍   | 76/117 [00:15<00:08,  4.83it/s][A
+ 66%|██████▌   | 77/117 [00:15<00:08,  4.91it/s][A
+ 67%|██████▋   | 78/117 [00:15<00:07,  5.36it/s][A
+ 68%|██████▊   | 79/117 [00:15<00:06,  5.55it/s][A
+ 68%|██████▊   | 80/117 [00:15<00:07,  5.07it/s][A
+ 69%|██████▉   | 81/117 [00:15<00:07,  4.81it/s][A
+ 70%|███████   | 82/117 [00:16<00:07,  4.89it/s][A
+ 71%|███████   | 83/117 [00:16<00:07,  4.78it/s][A
+ 72%|███████▏  | 84/117 [00:16<00:07,  4.63it/s][A
+ 73%|███████▎  | 85/117 [00:16<00:06,  4.60it/s][A
+ 74%|███████▎  | 86/117 [00:17<00:06,  4.50it/s][A
+ 74%|███████▍  | 87/117 [00:17<00:06,  4.78it/s][A
+ 75%|███████▌  | 88/117 [00:17<00:06,  4.31it/s][A
+ 76%|███████▌  | 89/117 [00:17<00:06,  4.62it/s][A
+ 77%|███████▋  | 90/117 [00:17<00:05,  4.66it/s][A
+ 78%|███████▊  | 91/117 [00:18<00:04,  5.25it/s][A
+ 79%|███████▊  | 92/117 [00:18<00:05,  4.55it/s][A
+ 79%|███████▉  | 93/117 [00:18<00:05,  4.80it/s][A
+ 80%|████████  | 94/117 [00:18<00:05,  4.51it/s][A
+ 81%|████████  | 95/117 [00:18<00:04,  4.79it/s][A
+ 82%|████████▏ | 96/117 [00:19<00:04,  5.23it/s][A
+ 83%|████████▎ | 97/117 [00:19<00:03,  5.45it/s][A
+ 84%|████████▍ | 98/117 [00:19<00:03,  5.10it/s][A
+ 85%|████████▍ | 99/117 [00:19<00:03,  5.35it/s][A
+ 85%|████████▌ | 100/117 [00:19<00:02,  5.75it/s][A
+ 86%|████████▋ | 101/117 [00:20<00:03,  4.62it/s][A
+ 87%|████████▋ | 102/117 [00:20<00:03,  4.63it/s][A
+ 88%|████████▊ | 103/117 [00:20<00:03,  4.66it/s][A
+ 89%|████████▉ | 104/117 [00:20<00:02,  5.13it/s][A
+ 90%|████████▉ | 105/117 [00:20<00:02,  5.23it/s][A
+ 91%|█████████ | 106/117 [00:21<00:02,  5.23it/s][A
+ 91%|█████████▏| 107/117 [00:21<00:02,  4.63it/s][A
+ 92%|█████████▏| 108/117 [00:21<00:02,  4.38it/s][A
+ 93%|█████████▎| 109/117 [00:21<00:01,  4.64it/s][A
+ 94%|█████████▍| 110/117 [00:22<00:01,  4.30it/s][A
+ 95%|█████████▍| 111/117 [00:22<00:01,  4.53it/s][A
+ 96%|█████████▌| 112/117 [00:22<00:00,  5.05it/s][A
+ 97%|█████████▋| 113/117 [00:22<00:00,  4.85it/s][A
+ 97%|█████████▋| 114/117 [00:22<00:00,  5.07it/s][A
+ 98%|█████████▊| 115/117 [00:22<00:00,  5.69it/s][A
+ 99%|█████████▉| 116/117 [00:23<00:00,  4.84it/s][A05/31/2026 06:26:54 - INFO - root - Evaluating...
+05/31/2026 06:26:57 - INFO - root - Accuracy: 0.989611
+05/31/2026 06:26:57 - INFO - root - Cor: 475, Pred TOT: 686, Gold TOT: 811
+05/31/2026 06:26:57 - INFO - root - P: 0.69242, R: 0.58570, F1: 0.63460
+05/31/2026 06:26:57 - INFO - root - Used time: 2.909782
+05/31/2026 06:26:57 - INFO - root - !!! Best valid (epoch=8): 63.46
+05/31/2026 06:26:57 - INFO - root - Saving model to /content/scierc_pure_project/models/fine_tuned/entity...
+
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.68s/it][A[AWriting model shards: 100%|██████████| 1/1 [00:01<00:00,  1.68s/it]
+
+100%|██████████| 117/117 [00:27<00:00,  1.55s/it][A100%|██████████| 117/117 [00:27<00:00,  4.19it/s]
+  9%|▉         | 9/100 [03:58<42:17, 27.89s/it]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<00:43,  2.67it/s][A
+  2%|▏         | 2/117 [00:00<00:39,  2.91it/s][A
+  3%|▎         | 3/117 [00:00<00:27,  4.10it/s][A
+  3%|▎         | 4/117 [00:01<00:27,  4.17it/s][A
+  4%|▍         | 5/117 [00:01<00:24,  4.62it/s][A
+  5%|▌         | 6/117 [00:01<00:24,  4.61it/s][A
+  6%|▌         | 7/117 [00:01<00:21,  5.12it/s][A
+  7%|▋         | 8/117 [00:01<00:18,  5.87it/s][A
+  8%|▊         | 9/117 [00:01<00:20,  5.37it/s][A
+  9%|▊         | 10/117 [00:02<00:19,  5.38it/s][A
+  9%|▉         | 11/117 [00:02<00:18,  5.64it/s][A
+ 10%|█         | 12/117 [00:02<00:18,  5.82it/s][A
+ 11%|█         | 13/117 [00:02<00:18,  5.62it/s][A
+ 12%|█▏        | 14/117 [00:02<00:18,  5.65it/s][A
+ 13%|█▎        | 15/117 [00:02<00:17,  5.94it/s][A
+ 14%|█▎        | 16/117 [00:03<00:17,  5.81it/s][A
+ 15%|█▍        | 17/117 [00:03<00:17,  5.75it/s][A
+ 15%|█▌        | 18/117 [00:03<00:17,  5.60it/s][A
+ 16%|█▌        | 19/117 [00:03<00:22,  4.38it/s][A
+ 17%|█▋        | 20/117 [00:04<00:21,  4.61it/s][A
+ 18%|█▊        | 21/117 [00:04<00:20,  4.65it/s][A
+ 19%|█▉        | 22/117 [00:04<00:19,  4.82it/s][A
+ 20%|█▉        | 23/117 [00:04<00:20,  4.69it/s][A
+ 21%|██        | 24/117 [00:04<00:19,  4.72it/s][A
+ 21%|██▏       | 25/117 [00:05<00:19,  4.60it/s][A
+ 22%|██▏       | 26/117 [00:05<00:19,  4.65it/s][A
+ 23%|██▎       | 27/117 [00:05<00:18,  4.94it/s][A
+ 24%|██▍       | 28/117 [00:05<00:17,  5.14it/s][A
+ 25%|██▍       | 29/117 [00:05<00:15,  5.56it/s][A
+ 26%|██▌       | 30/117 [00:05<00:15,  5.58it/s][A
+ 26%|██▋       | 31/117 [00:06<00:14,  5.77it/s][A
+ 27%|██▋       | 32/117 [00:06<00:14,  5.78it/s][A
+ 28%|██▊       | 33/117 [00:06<00:14,  5.89it/s][A
+ 29%|██▉       | 34/117 [00:06<00:14,  5.79it/s][A
+ 30%|██▉       | 35/117 [00:06<00:16,  5.10it/s][A
+ 31%|███       | 36/117 [00:07<00:16,  4.86it/s][A
+ 32%|███▏      | 37/117 [00:07<00:15,  5.19it/s][A
+ 32%|███▏      | 38/117 [00:07<00:16,  4.73it/s][A
+ 33%|███▎      | 39/117 [00:07<00:16,  4.64it/s][A
+ 34%|███▍      | 40/117 [00:07<00:14,  5.23it/s][A
+ 35%|███▌      | 41/117 [00:08<00:14,  5.35it/s][A
+ 36%|███▌      | 42/117 [00:08<00:13,  5.72it/s][A
+ 37%|███▋      | 43/117 [00:08<00:12,  5.97it/s][A
+ 38%|███▊      | 44/117 [00:08<00:11,  6.20it/s][A
+ 38%|███▊      | 45/117 [00:08<00:11,  6.36it/s][A
+ 39%|███▉      | 46/117 [00:09<00:14,  4.85it/s][A05/31/2026 06:27:08 - INFO - root - Epoch=9, iter=46, loss=4.84254
+
+ 40%|████      | 47/117 [00:09<00:15,  4.54it/s][A
+ 41%|████      | 48/117 [00:09<00:14,  4.71it/s][A
+ 42%|████▏     | 49/117 [00:09<00:15,  4.29it/s][A
+ 43%|████▎     | 50/117 [00:09<00:13,  4.88it/s][A
+ 44%|████▎     | 51/117 [00:10<00:12,  5.32it/s][A
+ 44%|████▍     | 52/117 [00:10<00:12,  5.29it/s][A
+ 45%|████▌     | 53/117 [00:10<00:11,  5.35it/s][A
+ 46%|████▌     | 54/117 [00:10<00:12,  4.90it/s][A
+ 47%|████▋     | 55/117 [00:10<00:14,  4.42it/s][A
+ 48%|████▊     | 56/117 [00:11<00:13,  4.68it/s][A
+ 49%|████▊     | 57/117 [00:11<00:11,  5.13it/s][A
+ 50%|████▉     | 58/117 [00:11<00:11,  5.05it/s][A
+ 50%|█████     | 59/117 [00:11<00:10,  5.65it/s][A
+ 51%|█████▏    | 60/117 [00:11<00:09,  5.93it/s][A
+ 52%|█████▏    | 61/117 [00:11<00:09,  5.89it/s][A
+ 53%|█████▎    | 62/117 [00:12<00:08,  6.15it/s][A
+ 54%|█████▍    | 63/117 [00:12<00:08,  6.19it/s][A
+ 55%|█████▍    | 64/117 [00:12<00:09,  5.73it/s][A
+ 56%|█████▌    | 65/117 [00:12<00:09,  5.63it/s][A
+ 56%|█████▋    | 66/117 [00:12<00:08,  5.77it/s][A
+ 57%|█████▋    | 67/117 [00:12<00:08,  6.22it/s][A
+ 58%|█████▊    | 68/117 [00:13<00:08,  5.95it/s][A
+ 59%|█████▉    | 69/117 [00:13<00:08,  5.81it/s][A
+ 60%|█████▉    | 70/117 [00:13<00:09,  4.86it/s][A
+ 61%|██████    | 71/117 [00:13<00:08,  5.30it/s][A
+ 62%|██████▏   | 72/117 [00:13<00:08,  5.28it/s][A
+ 62%|██████▏   | 73/117 [00:14<00:08,  4.99it/s][A
+ 63%|██████▎   | 74/117 [00:14<00:08,  5.06it/s][A
+ 64%|██████▍   | 75/117 [00:14<00:08,  5.15it/s][A
+ 65%|██████▍   | 76/117 [00:14<00:08,  4.90it/s][A
+ 66%|██████▌   | 77/117 [00:14<00:07,  5.00it/s][A
+ 67%|██████▋   | 78/117 [00:15<00:07,  5.42it/s][A
+ 68%|██████▊   | 79/117 [00:15<00:06,  5.66it/s][A
+ 68%|██████▊   | 80/117 [00:15<00:07,  5.21it/s][A
+ 69%|██████▉   | 81/117 [00:15<00:07,  4.96it/s][A
+ 70%|███████   | 82/117 [00:15<00:06,  5.04it/s][A
+ 71%|███████   | 83/117 [00:16<00:06,  4.90it/s][A
+ 72%|███████▏  | 84/117 [00:16<00:06,  4.73it/s][A
+ 73%|███████▎  | 85/117 [00:16<00:06,  4.76it/s][A
+ 74%|███████▎  | 86/117 [00:16<00:06,  4.65it/s][A
+ 74%|███████▍  | 87/117 [00:16<00:06,  4.93it/s][A
+ 75%|███████▌  | 88/117 [00:17<00:06,  4.44it/s][A
+ 76%|███████▌  | 89/117 [00:17<00:05,  4.75it/s][A
+ 77%|███████▋  | 90/117 [00:17<00:05,  4.78it/s][A
+ 78%|███████▊  | 91/117 [00:17<00:04,  5.37it/s][A
+ 79%|███████▊  | 92/117 [00:17<00:05,  4.67it/s][A
+ 79%|███████▉  | 93/117 [00:18<00:04,  4.91it/s][A
+ 80%|████████  | 94/117 [00:18<00:04,  4.61it/s][A
+ 81%|████████  | 95/117 [00:18<00:04,  4.89it/s][A
+ 82%|████████▏ | 96/117 [00:18<00:03,  5.34it/s][A
+ 83%|████████▎ | 97/117 [00:18<00:03,  5.56it/s][A
+ 84%|████████▍ | 98/117 [00:19<00:03,  5.19it/s][A
+ 85%|████████▍ | 99/117 [00:19<00:03,  5.42it/s][A
+ 85%|████████▌ | 100/117 [00:19<00:02,  5.83it/s][A
+ 86%|████████▋ | 101/117 [00:19<00:03,  4.70it/s][A
+ 87%|████████▋ | 102/117 [00:19<00:03,  4.73it/s][A
+ 88%|████████▊ | 103/117 [00:20<00:02,  4.73it/s][A
+ 89%|████████▉ | 104/117 [00:20<00:02,  5.19it/s][A
+ 90%|████████▉ | 105/117 [00:20<00:02,  5.31it/s][A
+ 91%|█████████ | 106/117 [00:20<00:02,  5.33it/s][A
+ 91%|█████████▏| 107/117 [00:20<00:02,  4.71it/s][A
+ 92%|█████████▏| 108/117 [00:21<00:02,  4.44it/s][A
+ 93%|█████████▎| 109/117 [00:21<00:01,  4.72it/s][A
+ 94%|█████████▍| 110/117 [00:21<00:01,  4.36it/s][A
+ 95%|█████████▍| 111/117 [00:21<00:01,  4.59it/s][A
+ 96%|█████████▌| 112/117 [00:21<00:00,  5.12it/s][A
+ 97%|█████████▋| 113/117 [00:22<00:00,  4.90it/s][A
+ 97%|█████████▋| 114/117 [00:22<00:00,  5.12it/s][A
+ 98%|█████████▊| 115/117 [00:22<00:00,  5.74it/s][A
+ 99%|█████████▉| 116/117 [00:22<00:00,  4.87it/s][A05/31/2026 06:27:21 - INFO - root - Evaluating...
+05/31/2026 06:27:24 - INFO - root - Accuracy: 0.989678
+05/31/2026 06:27:24 - INFO - root - Cor: 473, Pred TOT: 665, Gold TOT: 811
+05/31/2026 06:27:24 - INFO - root - P: 0.71128, R: 0.58323, F1: 0.64092
+05/31/2026 06:27:24 - INFO - root - Used time: 2.961669
+05/31/2026 06:27:24 - INFO - root - !!! Best valid (epoch=9): 64.09
+05/31/2026 06:27:24 - INFO - root - Saving model to /content/scierc_pure_project/models/fine_tuned/entity...
+
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.59s/it][A[AWriting model shards: 100%|██████████| 1/1 [00:01<00:00,  1.59s/it]
+
+100%|██████████| 117/117 [00:27<00:00,  1.55s/it][A100%|██████████| 117/117 [00:27<00:00,  4.26it/s]
+ 10%|█         | 10/100 [04:25<41:37, 27.75s/it]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<00:38,  3.01it/s][A
+  2%|▏         | 2/117 [00:00<00:37,  3.10it/s][A
+  3%|▎         | 3/117 [00:00<00:26,  4.30it/s][A
+  3%|▎         | 4/117 [00:01<00:26,  4.34it/s][A
+  4%|▍         | 5/117 [00:01<00:23,  4.74it/s][A
+  5%|▌         | 6/117 [00:01<00:23,  4.69it/s][A
+  6%|▌         | 7/117 [00:01<00:21,  5.20it/s][A
+  7%|▋         | 8/117 [00:01<00:18,  5.99it/s][A
+  8%|▊         | 9/117 [00:01<00:19,  5.51it/s][A
+  9%|▊         | 10/117 [00:02<00:19,  5.54it/s][A
+  9%|▉         | 11/117 [00:02<00:18,  5.76it/s][A
+ 10%|█         | 12/117 [00:02<00:17,  5.89it/s][A
+ 11%|█         | 13/117 [00:02<00:18,  5.69it/s][A
+ 12%|█▏        | 14/117 [00:02<00:18,  5.70it/s][A
+ 13%|█▎        | 15/117 [00:02<00:17,  5.98it/s][A
+ 14%|█▎        | 16/117 [00:03<00:17,  5.84it/s][A
+ 15%|█▍        | 17/117 [00:03<00:17,  5.78it/s][A
+ 15%|█▌        | 18/117 [00:03<00:17,  5.62it/s][A
+ 16%|█▌        | 19/117 [00:03<00:22,  4.41it/s][A
+ 17%|█▋        | 20/117 [00:03<00:20,  4.64it/s][A
+ 18%|█▊        | 21/117 [00:04<00:20,  4.68it/s][A
+ 19%|█▉        | 22/117 [00:04<00:19,  4.84it/s][A
+ 20%|█▉        | 23/117 [00:04<00:19,  4.72it/s][A
+ 21%|██        | 24/117 [00:04<00:19,  4.76it/s][A
+ 21%|██▏       | 25/117 [00:05<00:19,  4.64it/s][A
+ 22%|██▏       | 26/117 [00:05<00:19,  4.70it/s][A
+ 23%|██▎       | 27/117 [00:05<00:18,  4.93it/s][A
+ 24%|██▍       | 28/117 [00:05<00:17,  5.17it/s][A
+ 25%|██▍       | 29/117 [00:05<00:15,  5.56it/s][A05/31/2026 06:27:32 - INFO - root - Epoch=10, iter=29, loss=4.03688
+
+ 26%|██▌       | 30/117 [00:05<00:15,  5.60it/s][A
+ 26%|██▋       | 31/117 [00:06<00:14,  5.74it/s][A
+ 27%|██▋       | 32/117 [00:06<00:14,  5.74it/s][A
+ 28%|██▊       | 33/117 [00:06<00:14,  5.89it/s][A
+ 29%|██▉       | 34/117 [00:06<00:14,  5.83it/s][A
+ 30%|██▉       | 35/117 [00:06<00:15,  5.15it/s][A
+ 31%|███       | 36/117 [00:07<00:16,  4.89it/s][A
+ 32%|███▏      | 37/117 [00:07<00:15,  5.23it/s][A
+ 32%|███▏      | 38/117 [00:07<00:16,  4.76it/s][A
+ 33%|███▎      | 39/117 [00:07<00:16,  4.64it/s][A
+ 34%|███▍      | 40/117 [00:07<00:14,  5.23it/s][A
+ 35%|███▌      | 41/117 [00:07<00:14,  5.36it/s][A
+ 36%|███▌      | 42/117 [00:08<00:13,  5.73it/s][A
+ 37%|███▋      | 43/117 [00:08<00:12,  5.96it/s][A
+ 38%|███▊      | 44/117 [00:08<00:11,  6.20it/s][A
+ 38%|███▊      | 45/117 [00:08<00:11,  6.37it/s][A
+ 39%|███▉      | 46/117 [00:08<00:14,  4.85it/s][A
+ 40%|████      | 47/117 [00:09<00:15,  4.53it/s][A
+ 41%|████      | 48/117 [00:09<00:14,  4.71it/s][A
+ 42%|████▏     | 49/117 [00:09<00:15,  4.27it/s][A
+ 43%|████▎     | 50/117 [00:09<00:13,  4.83it/s][A
+ 44%|████▎     | 51/117 [00:09<00:12,  5.27it/s][A
+ 44%|████▍     | 52/117 [00:10<00:12,  5.25it/s][A
+ 45%|████▌     | 53/117 [00:10<00:12,  5.25it/s][A
+ 46%|████▌     | 54/117 [00:10<00:13,  4.82it/s][A
+ 47%|████▋     | 55/117 [00:10<00:14,  4.35it/s][A
+ 48%|████▊     | 56/117 [00:11<00:13,  4.65it/s][A
+ 49%|████▊     | 57/117 [00:11<00:11,  5.09it/s][A
+ 50%|████▉     | 58/117 [00:11<00:11,  5.00it/s][A
+ 50%|█████     | 59/117 [00:11<00:10,  5.63it/s][A
+ 51%|█████▏    | 60/117 [00:11<00:09,  5.92it/s][A
+ 52%|█████▏    | 61/117 [00:11<00:09,  5.81it/s][A
+ 53%|█████▎    | 62/117 [00:11<00:09,  6.10it/s][A
+ 54%|█████▍    | 63/117 [00:12<00:08,  6.13it/s][A
+ 55%|█████▍    | 64/117 [00:12<00:09,  5.64it/s][A
+ 56%|█████▌    | 65/117 [00:12<00:09,  5.57it/s][A
+ 56%|█████▋    | 66/117 [00:12<00:08,  5.75it/s][A
+ 57%|█████▋    | 67/117 [00:12<00:08,  6.16it/s][A
+ 58%|█████▊    | 68/117 [00:13<00:08,  5.96it/s][A
+ 59%|█████▉    | 69/117 [00:13<00:08,  5.84it/s][A
+ 60%|█████▉    | 70/117 [00:13<00:09,  4.89it/s][A
+ 61%|██████    | 71/117 [00:13<00:08,  5.30it/s][A
+ 62%|██████▏   | 72/117 [00:13<00:08,  5.28it/s][A
+ 62%|██████▏   | 73/117 [00:14<00:08,  4.98it/s][A
+ 63%|██████▎   | 74/117 [00:14<00:08,  5.06it/s][A
+ 64%|██████▍   | 75/117 [00:14<00:08,  5.16it/s][A
+ 65%|██████▍   | 76/117 [00:14<00:08,  4.93it/s][A
+ 66%|██████▌   | 77/117 [00:14<00:07,  5.02it/s][A
+ 67%|██████▋   | 78/117 [00:14<00:07,  5.45it/s][A
+ 68%|██████▊   | 79/117 [00:15<00:06,  5.65it/s][A
+ 68%|██████▊   | 80/117 [00:15<00:07,  5.16it/s][A
+ 69%|██████▉   | 81/117 [00:15<00:07,  4.90it/s][A
+ 70%|███████   | 82/117 [00:15<00:07,  4.99it/s][A
+ 71%|███████   | 83/117 [00:16<00:07,  4.86it/s][A
+ 72%|███████▏  | 84/117 [00:16<00:07,  4.70it/s][A
+ 73%|███████▎  | 85/117 [00:16<00:06,  4.71it/s][A
+ 74%|███████▎  | 86/117 [00:16<00:06,  4.60it/s][A
+ 74%|███████▍  | 87/117 [00:16<00:06,  4.86it/s][A
+ 75%|███████▌  | 88/117 [00:17<00:06,  4.39it/s][A
+ 76%|███████▌  | 89/117 [00:17<00:05,  4.70it/s][A
+ 77%|███████▋  | 90/117 [00:17<00:05,  4.74it/s][A
+ 78%|███████▊  | 91/117 [00:17<00:04,  5.34it/s][A
+ 79%|███████▊  | 92/117 [00:17<00:05,  4.62it/s][A
+ 79%|███████▉  | 93/117 [00:18<00:04,  4.87it/s][A
+ 80%|████████  | 94/117 [00:18<00:05,  4.56it/s][A
+ 81%|████████  | 95/117 [00:18<00:04,  4.88it/s][A
+ 82%|████████▏ | 96/117 [00:18<00:03,  5.30it/s][A
+ 83%|████████▎ | 97/117 [00:18<00:03,  5.54it/s][A
+ 84%|████████▍ | 98/117 [00:19<00:03,  5.17it/s][A
+ 85%|████████▍ | 99/117 [00:19<00:03,  5.43it/s][A
+ 85%|████████▌ | 100/117 [00:19<00:02,  5.83it/s][A
+ 86%|████████▋ | 101/117 [00:19<00:03,  4.66it/s][A
+ 87%|████████▋ | 102/117 [00:19<00:03,  4.66it/s][A
+ 88%|████████▊ | 103/117 [00:20<00:02,  4.67it/s][A
+ 89%|████████▉ | 104/117 [00:20<00:02,  5.13it/s][A
+ 90%|████████▉ | 105/117 [00:20<00:02,  5.26it/s][A
+ 91%|█████████ | 106/117 [00:20<00:02,  5.30it/s][A
+ 91%|█████████▏| 107/117 [00:20<00:02,  4.68it/s][A
+ 92%|█████████▏| 108/117 [00:21<00:02,  4.43it/s][A
+ 93%|█████████▎| 109/117 [00:21<00:01,  4.69it/s][A
+ 94%|█████████▍| 110/117 [00:21<00:01,  4.32it/s][A
+ 95%|█████████▍| 111/117 [00:21<00:01,  4.55it/s][A
+ 96%|█████████▌| 112/117 [00:21<00:00,  5.08it/s][A
+ 97%|█████████▋| 113/117 [00:22<00:00,  4.87it/s][A
+ 97%|█████████▋| 114/117 [00:22<00:00,  5.05it/s][A
+ 98%|█████████▊| 115/117 [00:22<00:00,  5.67it/s][A
+ 99%|█████████▉| 116/117 [00:22<00:00,  4.81it/s][A05/31/2026 06:27:49 - INFO - root - Evaluating...
+05/31/2026 06:27:52 - INFO - root - Accuracy: 0.990150
+05/31/2026 06:27:52 - INFO - root - Cor: 504, Pred TOT: 703, Gold TOT: 811
+05/31/2026 06:27:52 - INFO - root - P: 0.71693, R: 0.62145, F1: 0.66579
+05/31/2026 06:27:52 - INFO - root - Used time: 3.430385
+05/31/2026 06:27:52 - INFO - root - !!! Best valid (epoch=10): 66.58
+05/31/2026 06:27:52 - INFO - root - Saving model to /content/scierc_pure_project/models/fine_tuned/entity...
+
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Writing model shards: 100%|██████████| 1/1 [00:07<00:00,  7.27s/it][A[AWriting model shards: 100%|██████████| 1/1 [00:07<00:00,  7.27s/it]
+
+100%|██████████| 117/117 [00:33<00:00,  3.39s/it][A100%|██████████| 117/117 [00:33<00:00,  3.48it/s]
+ 11%|█         | 11/100 [04:59<43:49, 29.54s/it]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<00:39,  2.92it/s][A
+  2%|▏         | 2/117 [00:00<00:37,  3.08it/s][A
+  3%|▎         | 3/117 [00:00<00:26,  4.27it/s][A
+  3%|▎         | 4/117 [00:01<00:26,  4.33it/s][A
+  4%|▍         | 5/117 [00:01<00:23,  4.76it/s][A
+  5%|▌         | 6/117 [00:01<00:23,  4.71it/s][A
+  6%|▌         | 7/117 [00:01<00:21,  5.22it/s][A
+  7%|▋         | 8/117 [00:01<00:18,  6.00it/s][A
+  8%|▊         | 9/117 [00:01<00:19,  5.52it/s][A
+  9%|▊         | 10/117 [00:02<00:19,  5.52it/s][A
+  9%|▉         | 11/117 [00:02<00:18,  5.72it/s][A
+ 10%|█         | 12/117 [00:02<00:18,  5.82it/s][A05/31/2026 06:28:02 - INFO - root - Epoch=11, iter=12, loss=3.44532
+
+ 11%|█         | 13/117 [00:02<00:18,  5.55it/s][A
+ 12%|█▏        | 14/117 [00:02<00:18,  5.58it/s][A
+ 13%|█▎        | 15/117 [00:02<00:17,  5.89it/s][A
+ 14%|█▎        | 16/117 [00:03<00:17,  5.76it/s][A
+ 15%|█▍        | 17/117 [00:03<00:17,  5.73it/s][A
+ 15%|█▌        | 18/117 [00:03<00:17,  5.58it/s][A
+ 16%|█▌        | 19/117 [00:03<00:22,  4.39it/s][A
+ 17%|█▋        | 20/117 [00:03<00:21,  4.59it/s][A
+ 18%|█▊        | 21/117 [00:04<00:20,  4.63it/s][A
+ 19%|█▉        | 22/117 [00:04<00:19,  4.81it/s][A
+ 20%|█▉        | 23/117 [00:04<00:20,  4.68it/s][A
+ 21%|██        | 24/117 [00:04<00:19,  4.73it/s][A
+ 21%|██▏       | 25/117 [00:05<00:19,  4.62it/s][A
+ 22%|██▏       | 26/117 [00:05<00:19,  4.69it/s][A
+ 23%|██▎       | 27/117 [00:05<00:18,  4.94it/s][A
+ 24%|██▍       | 28/117 [00:05<00:17,  5.12it/s][A
+ 25%|██▍       | 29/117 [00:05<00:15,  5.54it/s][A
+ 26%|██▌       | 30/117 [00:05<00:15,  5.57it/s][A
+ 26%|██▋       | 31/117 [00:06<00:14,  5.75it/s][A
+ 27%|██▋       | 32/117 [00:06<00:14,  5.77it/s][A
+ 28%|██▊       | 33/117 [00:06<00:14,  5.89it/s][A
+ 29%|██▉       | 34/117 [00:06<00:14,  5.79it/s][A
+ 30%|██▉       | 35/117 [00:06<00:15,  5.13it/s][A
+ 31%|███       | 36/117 [00:07<00:16,  4.88it/s][A
+ 32%|███▏      | 37/117 [00:07<00:15,  5.18it/s][A
+ 32%|███▏      | 38/117 [00:07<00:16,  4.75it/s][A
+ 33%|███▎      | 39/117 [00:07<00:16,  4.63it/s][A
+ 34%|███▍      | 40/117 [00:07<00:14,  5.22it/s][A
+ 35%|███▌      | 41/117 [00:08<00:14,  5.37it/s][A
+ 36%|███▌      | 42/117 [00:08<00:13,  5.72it/s][A
+ 37%|███▋      | 43/117 [00:08<00:12,  5.97it/s][A
+ 38%|███▊      | 44/117 [00:08<00:11,  6.21it/s][A
+ 38%|███▊      | 45/117 [00:08<00:11,  6.36it/s][A
+ 39%|███▉      | 46/117 [00:08<00:14,  4.83it/s][A
+ 40%|████      | 47/117 [00:09<00:15,  4.52it/s][A
+ 41%|████      | 48/117 [00:09<00:14,  4.72it/s][A
+ 42%|████▏     | 49/117 [00:09<00:15,  4.28it/s][A
+ 43%|████▎     | 50/117 [00:09<00:13,  4.84it/s][A
+ 44%|████▎     | 51/117 [00:09<00:12,  5.31it/s][A
+ 44%|████▍     | 52/117 [00:10<00:12,  5.28it/s][A
+ 45%|████▌     | 53/117 [00:10<00:12,  5.31it/s][A
+ 46%|████▌     | 54/117 [00:10<00:13,  4.84it/s][A
+ 47%|████▋     | 55/117 [00:10<00:14,  4.40it/s][A
+ 48%|████▊     | 56/117 [00:11<00:13,  4.65it/s][A
+ 49%|████▊     | 57/117 [00:11<00:11,  5.10it/s][A
+ 50%|████▉     | 58/117 [00:11<00:11,  5.01it/s][A
+ 50%|█████     | 59/117 [00:11<00:10,  5.63it/s][A
+ 51%|█████▏    | 60/117 [00:11<00:09,  5.92it/s][A
+ 52%|█████▏    | 61/117 [00:11<00:09,  5.82it/s][A
+ 53%|█████▎    | 62/117 [00:12<00:08,  6.11it/s][A
+ 54%|█████▍    | 63/117 [00:12<00:08,  6.19it/s][A
+ 55%|█████▍    | 64/117 [00:12<00:09,  5.70it/s][A
+ 56%|█████▌    | 65/117 [00:12<00:09,  5.59it/s][A
+ 56%|█████▋    | 66/117 [00:12<00:08,  5.75it/s][A
+ 57%|█████▋    | 67/117 [00:12<00:08,  6.18it/s][A
+ 58%|█████▊    | 68/117 [00:13<00:08,  5.94it/s][A
+ 59%|█████▉    | 69/117 [00:13<00:08,  5.81it/s][A
+ 60%|█████▉    | 70/117 [00:13<00:09,  5.05it/s][A
+ 61%|██████    | 71/117 [00:13<00:08,  5.41it/s][A
+ 62%|██████▏   | 72/117 [00:13<00:08,  5.43it/s][A
+ 62%|██████▏   | 73/117 [00:14<00:08,  5.07it/s][A
+ 63%|██████▎   | 74/117 [00:14<00:08,  5.10it/s][A
+ 64%|██████▍   | 75/117 [00:14<00:08,  5.19it/s][A
+ 65%|██████▍   | 76/117 [00:14<00:08,  4.93it/s][A
+ 66%|██████▌   | 77/117 [00:14<00:08,  5.00it/s][A
+ 67%|██████▋   | 78/117 [00:14<00:07,  5.41it/s][A
+ 68%|██████▊   | 79/117 [00:15<00:06,  5.59it/s][A
+ 68%|██████▊   | 80/117 [00:15<00:07,  5.11it/s][A
+ 69%|██████▉   | 81/117 [00:15<00:07,  4.86it/s][A
+ 70%|███████   | 82/117 [00:15<00:07,  4.94it/s][A
+ 71%|███████   | 83/117 [00:16<00:07,  4.80it/s][A
+ 72%|███████▏  | 84/117 [00:16<00:07,  4.66it/s][A
+ 73%|███████▎  | 85/117 [00:16<00:06,  4.65it/s][A
+ 74%|███████▎  | 86/117 [00:16<00:06,  4.55it/s][A
+ 74%|███████▍  | 87/117 [00:16<00:06,  4.80it/s][A
+ 75%|███████▌  | 88/117 [00:17<00:06,  4.34it/s][A
+ 76%|███████▌  | 89/117 [00:17<00:06,  4.65it/s][A
+ 77%|███████▋  | 90/117 [00:17<00:05,  4.68it/s][A
+ 78%|███████▊  | 91/117 [00:17<00:04,  5.27it/s][A
+ 79%|███████▊  | 92/117 [00:17<00:05,  4.56it/s][A
+ 79%|███████▉  | 93/117 [00:18<00:05,  4.79it/s][A
+ 80%|████████  | 94/117 [00:18<00:05,  4.51it/s][A
+ 81%|████████  | 95/117 [00:18<00:04,  4.81it/s][A
+ 82%|████████▏ | 96/117 [00:18<00:04,  5.22it/s][A
+ 83%|████████▎ | 97/117 [00:18<00:03,  5.47it/s][A
+ 84%|████████▍ | 98/117 [00:19<00:03,  5.11it/s][A
+ 85%|████████▍ | 99/117 [00:19<00:03,  5.38it/s][A
+ 85%|████████▌ | 100/117 [00:19<00:02,  5.73it/s][A
+ 86%|████████▋ | 101/117 [00:19<00:03,  4.60it/s][A
+ 87%|████████▋ | 102/117 [00:19<00:03,  4.64it/s][A
+ 88%|████████▊ | 103/117 [00:20<00:03,  4.64it/s][A
+ 89%|████████▉ | 104/117 [00:20<00:02,  5.07it/s][A
+ 90%|████████▉ | 105/117 [00:20<00:02,  5.19it/s][A
+ 91%|█████████ | 106/117 [00:20<00:02,  5.17it/s][A
+ 91%|█████████▏| 107/117 [00:21<00:02,  4.60it/s][A
+ 92%|█████████▏| 108/117 [00:21<00:02,  4.34it/s][A
+ 93%|█████████▎| 109/117 [00:21<00:01,  4.60it/s][A
+ 94%|█████████▍| 110/117 [00:21<00:01,  4.24it/s][A
+ 95%|█████████▍| 111/117 [00:21<00:01,  4.45it/s][A
+ 96%|█████████▌| 112/117 [00:22<00:01,  4.97it/s][A05/31/2026 06:28:22 - INFO - root - Epoch=11, iter=112, loss=2.96663
+
+ 97%|█████████▋| 113/117 [00:22<00:00,  4.77it/s][A
+ 97%|█████████▋| 114/117 [00:22<00:00,  4.97it/s][A
+ 98%|█████████▊| 115/117 [00:22<00:00,  5.57it/s][A
+ 99%|█████████▉| 116/117 [00:22<00:00,  4.74it/s][A05/31/2026 06:28:22 - INFO - root - Evaluating...
+05/31/2026 06:28:25 - INFO - root - Accuracy: 0.989993
+05/31/2026 06:28:25 - INFO - root - Cor: 549, Pred TOT: 809, Gold TOT: 811
+05/31/2026 06:28:25 - INFO - root - P: 0.67862, R: 0.67694, F1: 0.67778
+05/31/2026 06:28:25 - INFO - root - Used time: 3.126125
+05/31/2026 06:28:25 - INFO - root - !!! Best valid (epoch=11): 67.78
+05/31/2026 06:28:25 - INFO - root - Saving model to /content/scierc_pure_project/models/fine_tuned/entity...
+
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A[A
+
+Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.60s/it][A[AWriting model shards: 100%|██████████| 1/1 [00:01<00:00,  1.60s/it]
+
+100%|██████████| 117/117 [00:27<00:00,  1.60s/it][A100%|██████████| 117/117 [00:27<00:00,  4.22it/s]
+ 12%|█▏        | 12/100 [05:27<42:31, 28.99s/it]
+  0%|          | 0/117 [00:00<?, ?it/s][A
+  1%|          | 1/117 [00:00<00:43,  2.69it/s][A
+  2%|▏         | 2/117 [00:00<00:39,  2.90it/s][A
+  3%|▎         | 3/117 [00:00<00:28,  4.05it/s][A
+  3%|▎         | 4/117 [00:01<00:27,  4.13it/s][A
+  4%|▍         | 5/117 [00:01<00:24,  4.53it/s][A
+  5%|▌         | 6/117 [00:01<00:24,  4.50it/s][A
+  6%|▌         | 7/117 [00:01<00:21,  5.00it/s][A
+  7%|▋         | 8/117 [00:01<00:18,  5.74it/s][A
+  8%|▊         | 9/117 [00:01<00:20,  5.31it/s][A
+  9%|▊         | 10/117 [00:02<00:19,  5.38it/s][A
+  9%|▉         | 11/117 [00:02<00:18,  5.64it/s][A
+ 10%|█         | 12/117 [00:02<00:18,  5.78it/s][A
+ 11%|█         | 13/117 [00:02<00:18,  5.56it/s][A
+ 12%|█▏        | 14/117 [00:02<00:18,  5.57it/s][A
+ 13%|█▎        | 15/117 [00:02<00:17,  5.85it/s][A
+ 14%|█▎        | 16/117 [00:03<00:17,  5.72it/s][A
+ 15%|█▍        | 17/117 [00:03<00:17,  5.66it/s][A
+ 15%|█▌        | 18/117 [00:03<00:17,  5.53it/s][A
+ 16%|█▌        | 19/117 [00:03<00:22,  4.31it/s][A
+ 17%|█▋        | 20/117 [00:04<00:21,  4.53it/s][A
+ 18%|█▊        | 21/117 [00:04<00:20,  4.57it/s][A
+ 19%|█▉        | 22/117 [00:04<00:20,  4.73it/s][A
+ 20%|█▉        | 23/117 [00:04<00:20,  4.63it/s][A
+ 21%|██        | 24/117 [00:04<00:19,  4.66it/s][A
+ 21%|██▏       | 25/117 [00:05<00:20,  4.54it/s][A
+ 22%|██▏       | 26/117 [00:05<00:19,  4.61it/s][A
+ 23%|██▎       | 27/117 [00:05<00:18,  4.86it/s][A
+ 24%|██▍       | 28/117 [00:05<00:17,  5.05it/s][A
+ 25%|██▍       | 29/117 [00:05<00:16,  5.44it/s][A
+ 26%|██▌       | 30/117 [00:06<00:15,  5.50it/s][A
+ 26%|██▋       | 31/117 [00:06<00:15,  5.67it/s][A
+ 27%|██▋       | 32/117 [00:06<00:15,  5.66it/s][A
+ 28%|██▊       | 33/117 [00:06<00:14,  5.77it/s][A
+ 29%|██▉       | 34/117 [00:06<00:14,  5.68it/s][A
+ 30%|██▉       | 35/117 [00:07<00:16,  5.04it/s][A
+ 31%|███       | 36/117 [00:07<00:16,  4.79it/s][A
+ 32%|███▏      | 37/117 [00:07<00:15,  5.09it/s][A
+ 32%|███▏      | 38/117 [00:07<00:16,  4.66it/s][A
+ 33%|███▎      | 39/117 [00:07<00:17,  4.57it/s][A
+ 34%|███▍      | 40/117 [00:08<00:14,  5.17it/s][A
+ 35%|███▌      | 41/117 [00:08<00:14,  5.27it/s][A
+ 36%|███▌      | 42/117 [00:08<00:13,  5.63it/s][A
+ 37%|███▋      | 43/117 [00:08<00:12,  5.90it/s][A
+ 38%|███▊      | 44/117 [00:08<00:11,  6.12it/s][A
+ 38%|███▊      | 45/117 [00:08<00:11,  6.26it/s][A
+ 39%|███▉      | 46/117 [00:09<00:14,  4.77it/s][A
+ 40%|████      | 47/117 [00:09<00:15,  4.48it/s][A
+ 41%|████      | 48/117 [00:09<00:14,  4.67it/s][A
+ 42%|████▏     | 49/117 [00:09<00:16,  4.21it/s][A
+ 43%|████▎     | 50/117 [00:10<00:13,  4.80it/s][A
+ 44%|████▎     | 51/117 [00:10<00:12,  5.26it/s][A
+ 44%|████▍     | 52/117 [00:10<00:12,  5.23it/s][A
+ 45%|████▌     | 53/117 [00:10<00:12,  5.26it/s][A
+ 46%|████▌     | 54/117 [00:10<00:13,  4.81it/s][A
+ 47%|████▋     | 55/117 [00:11<00:14,  4.37it/s][A
+ 48%|████▊     | 56/117 [00:11<00:13,  4.63it/s][A
+ 49%|████▊     | 57/117 [00:11<00:11,  5.08it/s][A
+ 50%|████▉     | 58/117 [00:11<00:11,  4.98it/s][A
+ 50%|█████     | 59/117 [00:11<00:10,  5.59it/s][A
+ 51%|█████▏    | 60/117 [00:11<00:09,  5.84it/s][A
+ 52%|█████▏    | 61/117 [00:12<00:09,  5.80it/s][A
+ 53%|█████▎    | 62/117 [00:12<00:09,  6.02it/s][A
+ 54%|█████▍    | 63/117 [00:12<00:08,  6.01it/s][A
+ 55%|█████▍    | 64/117 [00:12<00:09,  5.53it/s][A
+ 56%|█████▌    | 65/117 [00:12<00:09,  5.48it/s][A
+ 56%|█████▋    | 66/117 [00:12<00:09,  5.66it/s][A
+ 57%|█████▋    | 67/117 [00:13<00:08,  6.11it/s][A
+ 58%|█████▊    | 68/117 [00:13<00:08,  5.86it/s][A
+ 59%|█████▉    | 69/117 [00:13<00:08,  5.76it/s][A
+ 60%|█████▉    | 70/117 [00:13<00:09,  4.82it/s][A
+ 61%|██████    | 71/117 [00:13<00:08,  5.24it/s][A
+ 62%|██████▏   | 72/117 [00:14<00:08,  5.17it/s][A
+ 62%|██████▏   | 73/117 [00:14<00:08,  4.90it/s][A
+ 63%|██████▎   | 74/117 [00:14<00:08,  4.96it/s][A
+ 64%|██████▍   | 75/117 [00:14<00:08,  5.07it/s][A
+ 65%|██████▍   | 76/117 [00:14<00:08,  4.85it/s][A
+ 66%|██████▌   | 77/117 [00:15<00:08,  4.96it/s][A
+ 67%|██████▋   | 78/117 [00:15<00:07,  5.40it/s][A
+ 68%|██████▊   | 79/117 [00:15<00:06,  5.61it/s][A
+ 68%|██████▊   | 80/117 [00:15<00:07,  5.17it/s][A
+ 69%|██████▉   | 81/117 [00:15<00:07,  4.90it/s][A
+ 70%|███████   | 82/117 [00:16<00:07,  5.00it/s][A
+ 71%|███████   | 83/117 [00:16<00:06,  4.86it/s][A
+ 72%|███████▏  | 84/117 [00:16<00:07,  4.69it/s][A
+ 73%|███████▎  | 85/117 [00:16<00:06,  4.71it/s][A
+ 74%|███████▎  | 86/117 [00:16<00:06,  4.59it/s][A
+ 74%|███████▍  | 87/117 [00:17<00:06,  4.86it/s][A
+ 75%|███████▌  | 88/117 [00:17<00:06,  4.39it/s][A
+ 76%|███████▌  | 89/117 [00:17<00:05,  4.70it/s][A
+ 77%|███████▋  | 90/117 [00:17<00:05,  4.72it/s][A
+ 78%|███████▊  | 91/117 [00:17<00:04,  5.32it/s][A
+ 79%|███████▊  | 92/117 [00:18<00:05,  4.61it/s][A
+ 79%|███████▉  | 93/117 [00:18<00:04,  4.88it/s][A
+ 80%|████████  | 94/117 [00:18<00:05,  4.60it/s][A
+ 81%|████████  | 95/117 [00:18<00:04,  4.90it/s][A05/31/2026 06:28:46 - INFO - root - Epoch=12, iter=95, loss=2.56928
+
+ 82%|████████▏ | 96/117 [00:18<00:03,  5.31it/s][A
+ 83%|████████▎ | 97/117 [00:19<00:03,  5.54it/s][A
+ 84%|████████▍ | 98/117 [00:19<00:03,  5.18it/s][A
+ 85%|████████▍ | 99/117 [00:19<00:03,  5.44it/s][A
+ 85%|████████▌ | 100/117 [00:19<00:02,  5.82it/s][A
+ 86%|████████▋ | 101/117 [00:19<00:03,  4.67it/s][A
+ 87%|████████▋ | 102/117 [00:20<00:03,  4.68it/s][A
+ 88%|████████▊ | 103/117 [00:20<00:02,  4.68it/s][A
+ 89%|████████▉ | 104/117 [00:20<00:02,  5.14it/s][A
+ 90%|████████▉ | 105/117 [00:20<00:02,  5.26it/s][A
+ 91%|█████████ | 106/117 [00:20<00:02,  5.27it/s][A
+ 91%|█████████▏| 107/117 [00:21<00:02,  4.68it/s][A
+ 92%|█████████▏| 108/117 [00:21<00:02,  4.42it/s][A
+ 93%|█████████▎| 109/117 [00:21<00:01,  4.67it/s][A
+ 94%|█████████▍| 110/117 [00:21<00:01,  4.33it/s][A
+ 95%|█████████▍| 111/117 [00:22<00:01,  4.58it/s][A
+ 96%|█████████▌| 112/117 [00:22<00:00,  5.09it/s][A
+ 97%|█████████▋| 113/117 [00:22<00:00,  4.88it/s][A
+ 97%|█████████▋| 114/117 [00:22<00:00,  5.07it/s][A
+ 98%|█████████▊| 115/117 [00:22<00:00,  5.68it/s][A

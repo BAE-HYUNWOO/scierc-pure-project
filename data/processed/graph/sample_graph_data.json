@@ -1,0 +1,1675 @@
+{
+  "nodes": [
+    {
+      "id": "63b63813de30",
+      "label": "method",
+      "entity_type": "Generic",
+      "support_count": 6,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "ea43579483fc",
+      "label": "devices",
+      "entity_type": "Generic",
+      "support_count": 3,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "66ef2c1c125e",
+      "label": "domains",
+      "entity_type": "Generic",
+      "support_count": 3,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "f5923a533e15",
+      "label": "fish twisting",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 3,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "1a79867a172a",
+      "label": "intrinsic object structure",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 3,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "f3fff57d6783",
+      "label": "it",
+      "entity_type": "Generic",
+      "support_count": 3,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "ecf9a3bb595a",
+      "label": "machine translation evaluation measures",
+      "entity_type": "Metric",
+      "support_count": 3,
+      "color": "#54A24B"
+    },
+    {
+      "id": "f4b11679df3e",
+      "label": "paraphrase",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 3,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "58df2a30e2cb",
+      "label": "paraphrases",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 3,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "f1289277e3a8",
+      "label": "real-time statistical voice conversion -LRB- VC -RRB-",
+      "entity_type": "Method",
+      "support_count": 3,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "03a405a863b6",
+      "label": "real-time VC",
+      "entity_type": "Method",
+      "support_count": 3,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "8abeed823ba1",
+      "label": "speech enhancement systems",
+      "entity_type": "Method",
+      "support_count": 3,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "41116e29f265",
+      "label": "subcategorization dictionary",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 3,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "5be384a33503",
+      "label": "system",
+      "entity_type": "Generic",
+      "support_count": 3,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "43ccde70b0f1",
+      "label": "alaryngeal speech",
+      "entity_type": "Material",
+      "support_count": 2,
+      "color": "#B279A2"
+    },
+    {
+      "id": "e539b76849f0",
+      "label": "BLEU",
+      "entity_type": "Metric",
+      "support_count": 2,
+      "color": "#54A24B"
+    },
+    {
+      "id": "5ed51c4ec8c4",
+      "label": "computational cost",
+      "entity_type": "Metric",
+      "support_count": 2,
+      "color": "#54A24B"
+    },
+    {
+      "id": "ed5938cc654a",
+      "label": "conversion accuracy",
+      "entity_type": "Metric",
+      "support_count": 2,
+      "color": "#54A24B"
+    },
+    {
+      "id": "eb27a3d718a7",
+      "label": "DSP",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 2,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "68dffd6d21a6",
+      "label": "dynamical model",
+      "entity_type": "Method",
+      "support_count": 2,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "5cafd7b7f2bc",
+      "label": "electrolaryngeal speech enhancement",
+      "entity_type": "Task",
+      "support_count": 2,
+      "color": "#F58518"
+    },
+    {
+      "id": "3b7adbef408f",
+      "label": "entailment",
+      "entity_type": "Method",
+      "support_count": 2,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "5d5ebc8dcecf",
+      "label": "equivalence in meaning",
+      "entity_type": "Metric",
+      "support_count": 2,
+      "color": "#54A24B"
+    },
+    {
+      "id": "3f9b6345a354",
+      "label": "genetic algorithm",
+      "entity_type": "Generic",
+      "support_count": 2,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "1d4f4e34b3e7",
+      "label": "image registration methods",
+      "entity_type": "Method",
+      "support_count": 2,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "742e5fb9023f",
+      "label": "InfoMagnets",
+      "entity_type": "Method",
+      "support_count": 2,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "e663cf40826c",
+      "label": "inter-frame lip motion",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 2,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "deb703953f64",
+      "label": "joint intensity distributions",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 2,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "fc609d7630ba",
+      "label": "kernel density estimate",
+      "entity_type": "Method",
+      "support_count": 2,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "2781dde847a4",
+      "label": "languages",
+      "entity_type": "Material",
+      "support_count": 2,
+      "color": "#B279A2"
+    },
+    {
+      "id": "db31d38471d2",
+      "label": "meaning equivalence",
+      "entity_type": "Method",
+      "support_count": 2,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "dd669307a669",
+      "label": "methods",
+      "entity_type": "Generic",
+      "support_count": 2,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "266854221e7e",
+      "label": "NIST",
+      "entity_type": "Metric",
+      "support_count": 2,
+      "color": "#54A24B"
+    },
+    {
+      "id": "dab7453ab60c",
+      "label": "on-line communities",
+      "entity_type": "Material",
+      "support_count": 2,
+      "color": "#B279A2"
+    },
+    {
+      "id": "2eb246d30d63",
+      "label": "one",
+      "entity_type": "Generic",
+      "support_count": 2,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "84917f0d5123",
+      "label": "other",
+      "entity_type": "Generic",
+      "support_count": 2,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "1049ca477c8c",
+      "label": "parser",
+      "entity_type": "Method",
+      "support_count": 2,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "7444ae795251",
+      "label": "particle-filter style tracker",
+      "entity_type": "Method",
+      "support_count": 2,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "1b0ebc27e4a5",
+      "label": "scheme",
+      "entity_type": "Generic",
+      "support_count": 2,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "f84d6b442627",
+      "label": "self-occlusion",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 2,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "2bcb9d4bcd72",
+      "label": "silent speech enhancement",
+      "entity_type": "Task",
+      "support_count": 2,
+      "color": "#F58518"
+    },
+    {
+      "id": "31332066a0c0",
+      "label": "speaking method",
+      "entity_type": "Method",
+      "support_count": 2,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "f856290e656c",
+      "label": "statistically learned prior knowledge",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 2,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "8177f96b7c1b",
+      "label": "tracker",
+      "entity_type": "Generic",
+      "support_count": 2,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "5f09916863c6",
+      "label": "trackers",
+      "entity_type": "Generic",
+      "support_count": 2,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "45910dca0671",
+      "label": "tracking of complex non-rigid motions",
+      "entity_type": "Task",
+      "support_count": 2,
+      "color": "#F58518"
+    },
+    {
+      "id": "e771d4218b6e",
+      "label": "tutorial dialogue",
+      "entity_type": "Material",
+      "support_count": 2,
+      "color": "#B279A2"
+    },
+    {
+      "id": "a4ce944f2300",
+      "label": "accuracy",
+      "entity_type": "Metric",
+      "support_count": 1,
+      "color": "#54A24B"
+    },
+    {
+      "id": "cdb3f9ad3970",
+      "label": "Bayesian framework",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "a01dab09d75d",
+      "label": "class-dependent interpolation of N-grams",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "4270d60777ba",
+      "label": "complex non-rigid motions",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "416a8a035ec3",
+      "label": "conversational speech",
+      "entity_type": "Material",
+      "support_count": 1,
+      "color": "#B279A2"
+    },
+    {
+      "id": "1b4a2112db01",
+      "label": "cyclic structures",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "8aaf95855057",
+      "label": "digital signal processor -LRB- DSP -RRB- implementation",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "263bd55b021b",
+      "label": "dimensionality reduction and density estimation algorithm",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "8623aebe02d9",
+      "label": "early copying",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "ac5aa92a65eb",
+      "label": "educational tool",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "fec583b43274",
+      "label": "Electrolaryngeal speech",
+      "entity_type": "Material",
+      "support_count": 1,
+      "color": "#B279A2"
+    },
+    {
+      "id": "dbd726f39a6f",
+      "label": "exploratory corpus analysis",
+      "entity_type": "Task",
+      "support_count": 1,
+      "color": "#F58518"
+    },
+    {
+      "id": "604b758c245e",
+      "label": "facade textures",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "72c79ff10f9d",
+      "label": "facades",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "757281be9e70",
+      "label": "French",
+      "entity_type": "Material",
+      "support_count": 1,
+      "color": "#B279A2"
+    },
+    {
+      "id": "3635b14da96d",
+      "label": "grammatical gender",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "db0f5692aa33",
+      "label": "grammaticality",
+      "entity_type": "Metric",
+      "support_count": 1,
+      "color": "#54A24B"
+    },
+    {
+      "id": "58caca10ba42",
+      "label": "Graph unification",
+      "entity_type": "Task",
+      "support_count": 1,
+      "color": "#F58518"
+    },
+    {
+      "id": "83c4527bc21b",
+      "label": "hand-produced sets",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "8e33a7b735f6",
+      "label": "inpainted parts",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "9fcc602cdedd",
+      "label": "intensity correspondences",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "b1501522f7ed",
+      "label": "interactive corpus exploration tool",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "f80e448bc8f2",
+      "label": "internal lexical and syntactical variation",
+      "entity_type": "Metric",
+      "support_count": 1,
+      "color": "#54A24B"
+    },
+    {
+      "id": "9fe55655cb41",
+      "label": "intrinsic representation",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "183c4394a909",
+      "label": "it",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "02a7e6ec1541",
+      "label": "joint intensity distribution",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "ba6428eca37b",
+      "label": "language modeling",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "78eff9a31791",
+      "label": "laryngectomees",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "681089f5888c",
+      "label": "limited computational resources",
+      "entity_type": "Material",
+      "support_count": 1,
+      "color": "#B279A2"
+    },
+    {
+      "id": "f02526a7aad4",
+      "label": "low dimensional manifold",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "9afeaa63d450",
+      "label": "low-level criterion",
+      "entity_type": "Metric",
+      "support_count": 1,
+      "color": "#54A24B"
+    },
+    {
+      "id": "8ac58992f529",
+      "label": "maximum mutual information",
+      "entity_type": "Metric",
+      "support_count": 1,
+      "color": "#54A24B"
+    },
+    {
+      "id": "e104f84319a1",
+      "label": "method",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "04a1065ef0d2",
+      "label": "missing low-level information",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "1679b9dbdd9f",
+      "label": "multiple standard datasets",
+      "entity_type": "Generic",
+      "support_count": 1,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "0a0ec5f27a47",
+      "label": "NAM and electrolaryngeal speech",
+      "entity_type": "Material",
+      "support_count": 1,
+      "color": "#B279A2"
+    },
+    {
+      "id": "6322ee75889a",
+      "label": "nouns",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "3b3f2a4b5286",
+      "label": "occluded parts inpainted",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "86604c489be6",
+      "label": "over copying",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "07f3895ab3ea",
+      "label": "parameterized object state",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "b55bc0b864da",
+      "label": "pre-registered image pairs",
+      "entity_type": "Material",
+      "support_count": 1,
+      "color": "#B279A2"
+    },
+    {
+      "id": "3e9f9b2c64bd",
+      "label": "prior",
+      "entity_type": "Generic",
+      "support_count": 1,
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "cca8507a3d62",
+      "label": "protocol analysis",
+      "entity_type": "Task",
+      "support_count": 1,
+      "color": "#F58518"
+    },
+    {
+      "id": "00de01e41008",
+      "label": "quasi-destructive scheme 's ability",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "4283b527a9c3",
+      "label": "recognition task",
+      "entity_type": "Task",
+      "support_count": 1,
+      "color": "#F58518"
+    },
+    {
+      "id": "99e2125ea561",
+      "label": "reflexive pronouns",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "5879a235b86b",
+      "label": "registration criteria",
+      "entity_type": "Metric",
+      "support_count": 1,
+      "color": "#54A24B"
+    },
+    {
+      "id": "b414cca31cd8",
+      "label": "registration process",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "142655817aec",
+      "label": "robust visual tracking",
+      "entity_type": "Task",
+      "support_count": 1,
+      "color": "#F58518"
+    },
+    {
+      "id": "10208690f3b3",
+      "label": "semantic components",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "e3848289cd64",
+      "label": "sound quality",
+      "entity_type": "Metric",
+      "support_count": 1,
+      "color": "#54A24B"
+    },
+    {
+      "id": "7fe2673abdd4",
+      "label": "speed-up element",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "5c2d6089284e",
+      "label": "structure-sharing",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "893a3a60963c",
+      "label": "sufficient computational resources",
+      "entity_type": "Material",
+      "support_count": 1,
+      "color": "#B279A2"
+    },
+    {
+      "id": "e7306022cdd0",
+      "label": "synthesizing complex , photo-realistic facade images",
+      "entity_type": "Task",
+      "support_count": 1,
+      "color": "#F58518"
+    },
+    {
+      "id": "649ca3294f00",
+      "label": "textual corpora",
+      "entity_type": "Material",
+      "support_count": 1,
+      "color": "#B279A2"
+    },
+    {
+      "id": "0761e4128945",
+      "label": "tiling",
+      "entity_type": "OtherScientificTerm",
+      "support_count": 1,
+      "color": "#72B7B2"
+    },
+    {
+      "id": "39ee5629a37e",
+      "label": "tracking problems",
+      "entity_type": "Task",
+      "support_count": 1,
+      "color": "#F58518"
+    },
+    {
+      "id": "29cca56ea800",
+      "label": "unification algorithms",
+      "entity_type": "Method",
+      "support_count": 1,
+      "color": "#4C78A8"
+    },
+    {
+      "id": "f341b2f59359",
+      "label": "unification-based grammar parsing",
+      "entity_type": "Task",
+      "support_count": 1,
+      "color": "#F58518"
+    },
+    {
+      "id": "7d323395a013",
+      "label": "unsupervised learning of object intrinsic representation",
+      "entity_type": "Task",
+      "support_count": 1,
+      "color": "#F58518"
+    }
+  ],
+  "edges": [
+    {
+      "source": "eb27a3d718a7",
+      "target": "03a405a863b6",
+      "relation": "USED-FOR",
+      "support_count": 2,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 3.197,
+      "color": "#4C78A8",
+      "title": "DSP --USED-FOR--> real-time VC<br>support_count=2<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=In this paper we further implement real-time VC on a DSP ."
+    },
+    {
+      "source": "63b63813de30",
+      "target": "f4b11679df3e",
+      "relation": "USED-FOR",
+      "support_count": 2,
+      "paper_count": 1,
+      "papers": "I05-5008",
+      "width": 3.197,
+      "color": "#4C78A8",
+      "title": "method --USED-FOR--> paraphrase<br>support_count=2<br>paper_count=1<br>papers=I05-5008<br>example=We propose a method that automatically generates paraphrase sets from seed sentences to be used as reference sets in objective machine translation evaluation measures like BLEU and NIST ."
+    },
+    {
+      "source": "5be384a33503",
+      "target": "41116e29f265",
+      "relation": "USED-FOR",
+      "support_count": 2,
+      "paper_count": 1,
+      "papers": "A97-1052",
+      "width": 3.197,
+      "color": "#4C78A8",
+      "title": "system --USED-FOR--> subcategorization dictionary<br>support_count=2<br>paper_count=1<br>papers=A97-1052<br>example=We describe a novel technique and implemented system for constructing a subcategorization dictionary from textual corpora ."
+    },
+    {
+      "source": "58df2a30e2cb",
+      "target": "83c4527bc21b",
+      "relation": "COMPARE",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "I05-5008",
+      "width": 2.386,
+      "color": "#B279A2",
+      "title": "paraphrases --COMPARE--> hand-produced sets<br>support_count=1<br>paper_count=1<br>papers=I05-5008<br>example=We measured the quality of the paraphrases produced in an experiment , i.e. , -LRB- i -RRB- their grammaticality : at least 99 % correct sentences ; -LRB- ii -RRB- their equivalence in meaning : at least 96 % correct paraphrases either by meaning equivalence or entailment ; and , -LRB- iii -RRB- the amount of internal lexical and syntactical variation in a set of paraphrases : slightly superior to that of hand-produced sets ."
+    },
+    {
+      "source": "8177f96b7c1b",
+      "target": "5f09916863c6",
+      "relation": "COMPARE",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#B279A2",
+      "title": "tracker --COMPARE--> trackers<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=Experiments show that the learned tracker performs much better than existing trackers on the tracking of complex non-rigid motions such as fish twisting with self-occlusion and large inter-frame lip motion ."
+    },
+    {
+      "source": "e539b76849f0",
+      "target": "266854221e7e",
+      "relation": "CONJUNCTION",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "I05-5008",
+      "width": 2.386,
+      "color": "#72B7B2",
+      "title": "BLEU --CONJUNCTION--> NIST<br>support_count=1<br>paper_count=1<br>papers=I05-5008<br>example=We propose a method that automatically generates paraphrase sets from seed sentences to be used as reference sets in objective machine translation evaluation measures like BLEU and NIST ."
+    },
+    {
+      "source": "5ed51c4ec8c4",
+      "target": "ed5938cc654a",
+      "relation": "CONJUNCTION",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#72B7B2",
+      "title": "computational cost --CONJUNCTION--> conversion accuracy<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=To implement the two speech enhancement systems based on real-time VC , one from NAM to a whispered voice and the other from electrolaryngeal speech to a natural voice , we propose several methods for reducing computational cost while preserving conversion accuracy ."
+    },
+    {
+      "source": "5d5ebc8dcecf",
+      "target": "db0f5692aa33",
+      "relation": "CONJUNCTION",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "I05-5008",
+      "width": 2.386,
+      "color": "#72B7B2",
+      "title": "equivalence in meaning --CONJUNCTION--> grammaticality<br>support_count=1<br>paper_count=1<br>papers=I05-5008<br>example=We measured the quality of the paraphrases produced in an experiment , i.e. , -LRB- i -RRB- their grammaticality : at least 99 % correct sentences ; -LRB- ii -RRB- their equivalence in meaning : at least 96 % correct paraphrases either by meaning equivalence or entailment ; and , -LRB- iii -RRB- the amount of internal lexical and syntactical variation in a set of paraphrases : slightly superior to that of hand-produced sets ."
+    },
+    {
+      "source": "f80e448bc8f2",
+      "target": "5d5ebc8dcecf",
+      "relation": "CONJUNCTION",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "I05-5008",
+      "width": 2.386,
+      "color": "#72B7B2",
+      "title": "internal lexical and syntactical variation --CONJUNCTION--> equivalence in meaning<br>support_count=1<br>paper_count=1<br>papers=I05-5008<br>example=We measured the quality of the paraphrases produced in an experiment , i.e. , -LRB- i -RRB- their grammaticality : at least 99 % correct sentences ; -LRB- ii -RRB- their equivalence in meaning : at least 96 % correct paraphrases either by meaning equivalence or entailment ; and , -LRB- iii -RRB- the amount of internal lexical and syntactical variation in a set of paraphrases : slightly superior to that of hand-produced sets ."
+    },
+    {
+      "source": "db31d38471d2",
+      "target": "3b7adbef408f",
+      "relation": "CONJUNCTION",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "I05-5008",
+      "width": 2.386,
+      "color": "#72B7B2",
+      "title": "meaning equivalence --CONJUNCTION--> entailment<br>support_count=1<br>paper_count=1<br>papers=I05-5008<br>example=We measured the quality of the paraphrases produced in an experiment , i.e. , -LRB- i -RRB- their grammaticality : at least 99 % correct sentences ; -LRB- ii -RRB- their equivalence in meaning : at least 96 % correct paraphrases either by meaning equivalence or entailment ; and , -LRB- iii -RRB- the amount of internal lexical and syntactical variation in a set of paraphrases : slightly superior to that of hand-produced sets ."
+    },
+    {
+      "source": "6322ee75889a",
+      "target": "99e2125ea561",
+      "relation": "CONJUNCTION",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "J87-1003",
+      "width": 2.386,
+      "color": "#72B7B2",
+      "title": "nouns --CONJUNCTION--> reflexive pronouns<br>support_count=1<br>paper_count=1<br>papers=J87-1003<br>example=The agreement in question involves number in nouns and reflexive pronouns and is syntactic rather than semantic in nature because grammatical number in English , like grammatical gender in languages such as French , is partly arbitrary ."
+    },
+    {
+      "source": "2eb246d30d63",
+      "target": "84917f0d5123",
+      "relation": "CONJUNCTION",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#72B7B2",
+      "title": "one --CONJUNCTION--> other<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=To implement the two speech enhancement systems based on real-time VC , one from NAM to a whispered voice and the other from electrolaryngeal speech to a natural voice , we propose several methods for reducing computational cost while preserving conversion accuracy ."
+    },
+    {
+      "source": "86604c489be6",
+      "target": "8623aebe02d9",
+      "relation": "CONJUNCTION",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "C92-2068",
+      "width": 2.386,
+      "color": "#72B7B2",
+      "title": "over copying --CONJUNCTION--> early copying<br>support_count=1<br>paper_count=1<br>papers=C92-2068<br>example=The proposed scheme eliminates redundant copying while maintaining the quasi-destructive scheme 's ability to avoid over copying and early copying combined with its ability to handle cyclic structures without algorithmic additions ."
+    },
+    {
+      "source": "f84d6b442627",
+      "target": "e663cf40826c",
+      "relation": "CONJUNCTION",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#72B7B2",
+      "title": "self-occlusion --CONJUNCTION--> inter-frame lip motion<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=Experiments show that the learned tracker performs much better than existing trackers on the tracking of complex non-rigid motions such as fish twisting with self-occlusion and large inter-frame lip motion ."
+    },
+    {
+      "source": "2bcb9d4bcd72",
+      "target": "5cafd7b7f2bc",
+      "relation": "CONJUNCTION",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#72B7B2",
+      "title": "silent speech enhancement --CONJUNCTION--> electrolaryngeal speech enhancement<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=In this paper , we present a digital signal processor -LRB- DSP -RRB- implementation of real-time statistical voice conversion -LRB- VC -RRB- for silent speech enhancement and electrolaryngeal speech enhancement ."
+    },
+    {
+      "source": "e771d4218b6e",
+      "target": "dab7453ab60c",
+      "relation": "CONJUNCTION",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "N06-4001",
+      "width": 2.386,
+      "color": "#72B7B2",
+      "title": "tutorial dialogue --CONJUNCTION--> on-line communities<br>support_count=1<br>paper_count=1<br>papers=N06-4001<br>example=As evidence of its usefulness and usability , it has been used successfully in a research context to uncover relationships between language and behavioral patterns in two distinct domains : tutorial dialogue -LRB- Kumar et al. , submitted -RRB- and on-line communities -LRB- Arguello et al. , 2006 -RRB- ."
+    },
+    {
+      "source": "a4ce944f2300",
+      "target": "1049ca477c8c",
+      "relation": "EVALUATE-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "A97-1052",
+      "width": 2.386,
+      "color": "#FF9DA6",
+      "title": "accuracy --EVALUATE-FOR--> parser<br>support_count=1<br>paper_count=1<br>papers=A97-1052<br>example=We also demonstrate that a subcategorization dictionary built with the system improves the accuracy of a parser by an appreciable amount"
+    },
+    {
+      "source": "5ed51c4ec8c4",
+      "target": "dd669307a669",
+      "relation": "EVALUATE-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#FF9DA6",
+      "title": "computational cost --EVALUATE-FOR--> methods<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=To implement the two speech enhancement systems based on real-time VC , one from NAM to a whispered voice and the other from electrolaryngeal speech to a natural voice , we propose several methods for reducing computational cost while preserving conversion accuracy ."
+    },
+    {
+      "source": "ed5938cc654a",
+      "target": "dd669307a669",
+      "relation": "EVALUATE-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#FF9DA6",
+      "title": "conversion accuracy --EVALUATE-FOR--> methods<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=To implement the two speech enhancement systems based on real-time VC , one from NAM to a whispered voice and the other from electrolaryngeal speech to a natural voice , we propose several methods for reducing computational cost while preserving conversion accuracy ."
+    },
+    {
+      "source": "1679b9dbdd9f",
+      "target": "63b63813de30",
+      "relation": "EVALUATE-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "ICCV_2013_36_abs",
+      "width": 2.386,
+      "color": "#FF9DA6",
+      "title": "multiple standard datasets --EVALUATE-FOR--> method<br>support_count=1<br>paper_count=1<br>papers=ICCV_2013_36_abs<br>example=Promising results for multiple standard datasets -- in particular for the different building styles they contain -- demonstrate the potential of the method ."
+    },
+    {
+      "source": "1049ca477c8c",
+      "target": "41116e29f265",
+      "relation": "EVALUATE-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "A97-1052",
+      "width": 2.386,
+      "color": "#FF9DA6",
+      "title": "parser --EVALUATE-FOR--> subcategorization dictionary<br>support_count=1<br>paper_count=1<br>papers=A97-1052<br>example=We also demonstrate that a subcategorization dictionary built with the system improves the accuracy of a parser by an appreciable amount"
+    },
+    {
+      "source": "e3848289cd64",
+      "target": "0a0ec5f27a47",
+      "relation": "EVALUATE-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#FF9DA6",
+      "title": "sound quality --EVALUATE-FOR--> NAM and electrolaryngeal speech<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=However , the sound quality of NAM and electrolaryngeal speech suffers from lack of naturalness ."
+    },
+    {
+      "source": "3635b14da96d",
+      "target": "2781dde847a4",
+      "relation": "FEATURE-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "J87-1003",
+      "width": 2.386,
+      "color": "#F58518",
+      "title": "grammatical gender --FEATURE-OF--> languages<br>support_count=1<br>paper_count=1<br>papers=J87-1003<br>example=The agreement in question involves number in nouns and reflexive pronouns and is syntactic rather than semantic in nature because grammatical number in English , like grammatical gender in languages such as French , is partly arbitrary ."
+    },
+    {
+      "source": "e663cf40826c",
+      "target": "f5923a533e15",
+      "relation": "FEATURE-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#F58518",
+      "title": "inter-frame lip motion --FEATURE-OF--> fish twisting<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=Experiments show that the learned tracker performs much better than existing trackers on the tracking of complex non-rigid motions such as fish twisting with self-occlusion and large inter-frame lip motion ."
+    },
+    {
+      "source": "02a7e6ec1541",
+      "target": "f856290e656c",
+      "relation": "FEATURE-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2006_21_abs",
+      "width": 2.386,
+      "color": "#F58518",
+      "title": "joint intensity distribution --FEATURE-OF--> statistically learned prior knowledge<br>support_count=1<br>paper_count=1<br>papers=CVPR_2006_21_abs<br>example=In this paper , we will develop a Bayesian framework that allows to impose statistically learned prior knowledge about the joint intensity distribution into image registration methods ."
+    },
+    {
+      "source": "681089f5888c",
+      "target": "ea43579483fc",
+      "relation": "FEATURE-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#F58518",
+      "title": "limited computational resources --FEATURE-OF--> devices<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=An implementation on devices that are highly portable but have limited computational resources would greatly contribute to its practical use ."
+    },
+    {
+      "source": "f02526a7aad4",
+      "target": "07f3895ab3ea",
+      "relation": "FEATURE-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#F58518",
+      "title": "low dimensional manifold --FEATURE-OF--> parameterized object state<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=The basic assumption is that the parameterized object state lies on a low dimensional manifold and can be learned from training data ."
+    },
+    {
+      "source": "9afeaa63d450",
+      "target": "f3fff57d6783",
+      "relation": "FEATURE-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2006_21_abs",
+      "width": 2.386,
+      "color": "#F58518",
+      "title": "low-level criterion --FEATURE-OF--> it<br>support_count=1<br>paper_count=1<br>papers=CVPR_2006_21_abs<br>example=Although this criterion provides for good registration results in many applications , it remains a purely low-level criterion ."
+    },
+    {
+      "source": "3b3f2a4b5286",
+      "target": "604b758c245e",
+      "relation": "FEATURE-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "ICCV_2013_36_abs",
+      "width": 2.386,
+      "color": "#F58518",
+      "title": "occluded parts inpainted --FEATURE-OF--> facade textures<br>support_count=1<br>paper_count=1<br>papers=ICCV_2013_36_abs<br>example=Novel tilings can then be created , yielding facade textures with different dimensions or with occluded parts inpainted ."
+    },
+    {
+      "source": "00de01e41008",
+      "target": "1b0ebc27e4a5",
+      "relation": "FEATURE-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "C92-2068",
+      "width": 2.386,
+      "color": "#F58518",
+      "title": "quasi-destructive scheme 's ability --FEATURE-OF--> scheme<br>support_count=1<br>paper_count=1<br>papers=C92-2068<br>example=The proposed scheme eliminates redundant copying while maintaining the quasi-destructive scheme 's ability to avoid over copying and early copying combined with its ability to handle cyclic structures without algorithmic additions ."
+    },
+    {
+      "source": "f84d6b442627",
+      "target": "f5923a533e15",
+      "relation": "FEATURE-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#F58518",
+      "title": "self-occlusion --FEATURE-OF--> fish twisting<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=Experiments show that the learned tracker performs much better than existing trackers on the tracking of complex non-rigid motions such as fish twisting with self-occlusion and large inter-frame lip motion ."
+    },
+    {
+      "source": "893a3a60963c",
+      "target": "ea43579483fc",
+      "relation": "FEATURE-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#F58518",
+      "title": "sufficient computational resources --FEATURE-OF--> devices<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=VC has proven to be one of the promising approaches to address this problem , and it has been successfully implemented on devices with sufficient computational resources ."
+    },
+    {
+      "source": "e539b76849f0",
+      "target": "ecf9a3bb595a",
+      "relation": "HYPONYM-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "I05-5008",
+      "width": 2.386,
+      "color": "#54A24B",
+      "title": "BLEU --HYPONYM-OF--> machine translation evaluation measures<br>support_count=1<br>paper_count=1<br>papers=I05-5008<br>example=We propose a method that automatically generates paraphrase sets from seed sentences to be used as reference sets in objective machine translation evaluation measures like BLEU and NIST ."
+    },
+    {
+      "source": "fec583b43274",
+      "target": "43ccde70b0f1",
+      "relation": "HYPONYM-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#54A24B",
+      "title": "Electrolaryngeal speech --HYPONYM-OF--> alaryngeal speech<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=Electrolaryngeal speech is one of the typical types of alaryngeal speech produced by an alternative speaking method for laryngectomees ."
+    },
+    {
+      "source": "f5923a533e15",
+      "target": "4270d60777ba",
+      "relation": "HYPONYM-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#54A24B",
+      "title": "fish twisting --HYPONYM-OF--> complex non-rigid motions<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=Experiments show that the learned tracker performs much better than existing trackers on the tracking of complex non-rigid motions such as fish twisting with self-occlusion and large inter-frame lip motion ."
+    },
+    {
+      "source": "757281be9e70",
+      "target": "2781dde847a4",
+      "relation": "HYPONYM-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "J87-1003",
+      "width": 2.386,
+      "color": "#54A24B",
+      "title": "French --HYPONYM-OF--> languages<br>support_count=1<br>paper_count=1<br>papers=J87-1003<br>example=The agreement in question involves number in nouns and reflexive pronouns and is syntactic rather than semantic in nature because grammatical number in English , like grammatical gender in languages such as French , is partly arbitrary ."
+    },
+    {
+      "source": "742e5fb9023f",
+      "target": "b1501522f7ed",
+      "relation": "HYPONYM-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "N06-4001",
+      "width": 2.386,
+      "color": "#54A24B",
+      "title": "InfoMagnets --HYPONYM-OF--> interactive corpus exploration tool<br>support_count=1<br>paper_count=1<br>papers=N06-4001<br>example=We introduce a new interactive corpus exploration tool called InfoMagnets ."
+    },
+    {
+      "source": "8ac58992f529",
+      "target": "5879a235b86b",
+      "relation": "HYPONYM-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2006_21_abs",
+      "width": 2.386,
+      "color": "#54A24B",
+      "title": "maximum mutual information --HYPONYM-OF--> registration criteria<br>support_count=1<br>paper_count=1<br>papers=CVPR_2006_21_abs<br>example=A number of powerful registration criteria have been developed in the last decade , most prominently the criterion of maximum mutual information ."
+    },
+    {
+      "source": "266854221e7e",
+      "target": "ecf9a3bb595a",
+      "relation": "HYPONYM-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "I05-5008",
+      "width": 2.386,
+      "color": "#54A24B",
+      "title": "NIST --HYPONYM-OF--> machine translation evaluation measures<br>support_count=1<br>paper_count=1<br>papers=I05-5008<br>example=We propose a method that automatically generates paraphrase sets from seed sentences to be used as reference sets in objective machine translation evaluation measures like BLEU and NIST ."
+    },
+    {
+      "source": "dab7453ab60c",
+      "target": "66ef2c1c125e",
+      "relation": "HYPONYM-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "N06-4001",
+      "width": 2.386,
+      "color": "#54A24B",
+      "title": "on-line communities --HYPONYM-OF--> domains<br>support_count=1<br>paper_count=1<br>papers=N06-4001<br>example=As evidence of its usefulness and usability , it has been used successfully in a research context to uncover relationships between language and behavioral patterns in two distinct domains : tutorial dialogue -LRB- Kumar et al. , submitted -RRB- and on-line communities -LRB- Arguello et al. , 2006 -RRB- ."
+    },
+    {
+      "source": "2eb246d30d63",
+      "target": "8abeed823ba1",
+      "relation": "HYPONYM-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#54A24B",
+      "title": "one --HYPONYM-OF--> speech enhancement systems<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=To implement the two speech enhancement systems based on real-time VC , one from NAM to a whispered voice and the other from electrolaryngeal speech to a natural voice , we propose several methods for reducing computational cost while preserving conversion accuracy ."
+    },
+    {
+      "source": "84917f0d5123",
+      "target": "8abeed823ba1",
+      "relation": "HYPONYM-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#54A24B",
+      "title": "other --HYPONYM-OF--> speech enhancement systems<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=To implement the two speech enhancement systems based on real-time VC , one from NAM to a whispered voice and the other from electrolaryngeal speech to a natural voice , we propose several methods for reducing computational cost while preserving conversion accuracy ."
+    },
+    {
+      "source": "e771d4218b6e",
+      "target": "66ef2c1c125e",
+      "relation": "HYPONYM-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "N06-4001",
+      "width": 2.386,
+      "color": "#54A24B",
+      "title": "tutorial dialogue --HYPONYM-OF--> domains<br>support_count=1<br>paper_count=1<br>papers=N06-4001<br>example=As evidence of its usefulness and usability , it has been used successfully in a research context to uncover relationships between language and behavioral patterns in two distinct domains : tutorial dialogue -LRB- Kumar et al. , submitted -RRB- and on-line communities -LRB- Arguello et al. , 2006 -RRB- ."
+    },
+    {
+      "source": "58caca10ba42",
+      "target": "f341b2f59359",
+      "relation": "PART-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "C92-2068",
+      "width": 2.386,
+      "color": "#E45756",
+      "title": "Graph unification --PART-OF--> unification-based grammar parsing<br>support_count=1<br>paper_count=1<br>papers=C92-2068<br>example=Graph unification remains the most expensive part of unification-based grammar parsing ."
+    },
+    {
+      "source": "1a79867a172a",
+      "target": "7444ae795251",
+      "relation": "PART-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#E45756",
+      "title": "intrinsic object structure --PART-OF--> particle-filter style tracker<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=Thirdly the learned intrinsic object structure is integrated into a particle-filter style tracker ."
+    },
+    {
+      "source": "7fe2673abdd4",
+      "target": "29cca56ea800",
+      "relation": "PART-OF",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "C92-2068",
+      "width": 2.386,
+      "color": "#E45756",
+      "title": "speed-up element --PART-OF--> unification algorithms<br>support_count=1<br>paper_count=1<br>papers=C92-2068<br>example=We focus on one speed-up element in the design of unification algorithms : avoidance of copying of unmodified subgraphs ."
+    },
+    {
+      "source": "cdb3f9ad3970",
+      "target": "1d4f4e34b3e7",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2006_21_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "Bayesian framework --USED-FOR--> image registration methods<br>support_count=1<br>paper_count=1<br>papers=CVPR_2006_21_abs<br>example=In this paper , we will develop a Bayesian framework that allows to impose statistically learned prior knowledge about the joint intensity distribution into image registration methods ."
+    },
+    {
+      "source": "a01dab09d75d",
+      "target": "4283b527a9c3",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "N03-2003",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "class-dependent interpolation of N-grams --USED-FOR--> recognition task<br>support_count=1<br>paper_count=1<br>papers=N03-2003<br>example=In this paper , we show how training data can be supplemented with text from the web filtered to match the style and/or topic of the target recognition task , but also that it is possible to get bigger performance gains from the data by using class-dependent interpolation of N-grams ."
+    },
+    {
+      "source": "416a8a035ec3",
+      "target": "ba6428eca37b",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "N03-2003",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "conversational speech --USED-FOR--> language modeling<br>support_count=1<br>paper_count=1<br>papers=N03-2003<br>example=Sources of training data suitable for language modeling of conversational speech are limited ."
+    },
+    {
+      "source": "ea43579483fc",
+      "target": "f3fff57d6783",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "devices --USED-FOR--> it<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=VC has proven to be one of the promising approaches to address this problem , and it has been successfully implemented on devices with sufficient computational resources ."
+    },
+    {
+      "source": "8aaf95855057",
+      "target": "f1289277e3a8",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "digital signal processor -LRB- DSP -RRB- implementation --USED-FOR--> real-time statistical voice conversion -LRB- VC -RRB-<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=In this paper , we present a digital signal processor -LRB- DSP -RRB- implementation of real-time statistical voice conversion -LRB- VC -RRB- for silent speech enhancement and electrolaryngeal speech enhancement ."
+    },
+    {
+      "source": "263bd55b021b",
+      "target": "7d323395a013",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "dimensionality reduction and density estimation algorithm --USED-FOR--> unsupervised learning of object intrinsic representation<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=Based on this assumption , firstly we derived the dimensionality reduction and density estimation algorithm for unsupervised learning of object intrinsic representation , the obtained non-rigid part of object state reduces even to 2 dimensions ."
+    },
+    {
+      "source": "68dffd6d21a6",
+      "target": "7444ae795251",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "dynamical model --USED-FOR--> particle-filter style tracker<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=We will show that this intrinsic object representation has some interesting properties and based on which the newly derived dynamical model makes particle-filter style tracker more robust and reliable ."
+    },
+    {
+      "source": "ac5aa92a65eb",
+      "target": "cca8507a3d62",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "N06-4001",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "educational tool --USED-FOR--> protocol analysis<br>support_count=1<br>paper_count=1<br>papers=N06-4001<br>example=As an educational tool , it has been used as part of a unit on protocol analysis in an Educational Research Methods course ."
+    },
+    {
+      "source": "3b7adbef408f",
+      "target": "58df2a30e2cb",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "I05-5008",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "entailment --USED-FOR--> paraphrases<br>support_count=1<br>paper_count=1<br>papers=I05-5008<br>example=We measured the quality of the paraphrases produced in an experiment , i.e. , -LRB- i -RRB- their grammaticality : at least 99 % correct sentences ; -LRB- ii -RRB- their equivalence in meaning : at least 96 % correct paraphrases either by meaning equivalence or entailment ; and , -LRB- iii -RRB- the amount of internal lexical and syntactical variation in a set of paraphrases : slightly superior to that of hand-produced sets ."
+    },
+    {
+      "source": "3f9b6345a354",
+      "target": "72c79ff10f9d",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "ICCV_2013_36_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "genetic algorithm --USED-FOR--> facades<br>support_count=1<br>paper_count=1<br>papers=ICCV_2013_36_abs<br>example=A genetic algorithm guides the novel facades as well as inpainted parts to be consistent with the example , both in terms of their overall structure and their detailed textures ."
+    },
+    {
+      "source": "3f9b6345a354",
+      "target": "8e33a7b735f6",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "ICCV_2013_36_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "genetic algorithm --USED-FOR--> inpainted parts<br>support_count=1<br>paper_count=1<br>papers=ICCV_2013_36_abs<br>example=A genetic algorithm guides the novel facades as well as inpainted parts to be consistent with the example , both in terms of their overall structure and their detailed textures ."
+    },
+    {
+      "source": "742e5fb9023f",
+      "target": "dbd726f39a6f",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "N06-4001",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "InfoMagnets --USED-FOR--> exploratory corpus analysis<br>support_count=1<br>paper_count=1<br>papers=N06-4001<br>example=InfoMagnets aims at making exploratory corpus analysis accessible to researchers who are not experts in text mining ."
+    },
+    {
+      "source": "1a79867a172a",
+      "target": "142655817aec",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "intrinsic object structure --USED-FOR--> robust visual tracking<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=In this paper , a novel method to learn the intrinsic object structure for robust visual tracking is proposed ."
+    },
+    {
+      "source": "9fe55655cb41",
+      "target": "68dffd6d21a6",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "intrinsic representation --USED-FOR--> dynamical model<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=Secondly the dynamical model is derived and trained based on this intrinsic representation ."
+    },
+    {
+      "source": "f3fff57d6783",
+      "target": "66ef2c1c125e",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "N06-4001",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "it --USED-FOR--> domains<br>support_count=1<br>paper_count=1<br>papers=N06-4001<br>example=As evidence of its usefulness and usability , it has been used successfully in a research context to uncover relationships between language and behavioral patterns in two distinct domains : tutorial dialogue -LRB- Kumar et al. , submitted -RRB- and on-line communities -LRB- Arguello et al. , 2006 -RRB- ."
+    },
+    {
+      "source": "183c4394a909",
+      "target": "9fcc602cdedd",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2006_21_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "it --USED-FOR--> intensity correspondences<br>support_count=1<br>paper_count=1<br>papers=CVPR_2006_21_abs<br>example=Experimental results demonstrate that the resulting registration process is more robust to missing low-level information as it favors intensity correspondences statistically consistent with the learned intensity distributions ."
+    },
+    {
+      "source": "fc609d7630ba",
+      "target": "deb703953f64",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2006_21_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "kernel density estimate --USED-FOR--> joint intensity distributions<br>support_count=1<br>paper_count=1<br>papers=CVPR_2006_21_abs<br>example=The prior is given by a kernel density estimate on the space of joint intensity distributions computed from a representative set of pre-registered image pairs ."
+    },
+    {
+      "source": "fc609d7630ba",
+      "target": "3e9f9b2c64bd",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2006_21_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "kernel density estimate --USED-FOR--> prior<br>support_count=1<br>paper_count=1<br>papers=CVPR_2006_21_abs<br>example=The prior is given by a kernel density estimate on the space of joint intensity distributions computed from a representative set of pre-registered image pairs ."
+    },
+    {
+      "source": "db31d38471d2",
+      "target": "58df2a30e2cb",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "I05-5008",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "meaning equivalence --USED-FOR--> paraphrases<br>support_count=1<br>paper_count=1<br>papers=I05-5008<br>example=We measured the quality of the paraphrases produced in an experiment , i.e. , -LRB- i -RRB- their grammaticality : at least 99 % correct sentences ; -LRB- ii -RRB- their equivalence in meaning : at least 96 % correct paraphrases either by meaning equivalence or entailment ; and , -LRB- iii -RRB- the amount of internal lexical and syntactical variation in a set of paraphrases : slightly superior to that of hand-produced sets ."
+    },
+    {
+      "source": "e104f84319a1",
+      "target": "1a79867a172a",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "method --USED-FOR--> intrinsic object structure<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=In this paper , a novel method to learn the intrinsic object structure for robust visual tracking is proposed ."
+    },
+    {
+      "source": "63b63813de30",
+      "target": "e7306022cdd0",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "ICCV_2013_36_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "method --USED-FOR--> synthesizing complex , photo-realistic facade images<br>support_count=1<br>paper_count=1<br>papers=ICCV_2013_36_abs<br>example=We present a method for synthesizing complex , photo-realistic facade images , from a single example ."
+    },
+    {
+      "source": "63b63813de30",
+      "target": "39ee5629a37e",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "method --USED-FOR--> tracking problems<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=The proposed method also has the potential to solve other type of tracking problems ."
+    },
+    {
+      "source": "f4b11679df3e",
+      "target": "ecf9a3bb595a",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "I05-5008",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "paraphrase --USED-FOR--> machine translation evaluation measures<br>support_count=1<br>paper_count=1<br>papers=I05-5008<br>example=We propose a method that automatically generates paraphrase sets from seed sentences to be used as reference sets in objective machine translation evaluation measures like BLEU and NIST ."
+    },
+    {
+      "source": "b55bc0b864da",
+      "target": "deb703953f64",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2006_21_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "pre-registered image pairs --USED-FOR--> joint intensity distributions<br>support_count=1<br>paper_count=1<br>papers=CVPR_2006_21_abs<br>example=The prior is given by a kernel density estimate on the space of joint intensity distributions computed from a representative set of pre-registered image pairs ."
+    },
+    {
+      "source": "f1289277e3a8",
+      "target": "5cafd7b7f2bc",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "real-time statistical voice conversion -LRB- VC -RRB- --USED-FOR--> electrolaryngeal speech enhancement<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=In this paper , we present a digital signal processor -LRB- DSP -RRB- implementation of real-time statistical voice conversion -LRB- VC -RRB- for silent speech enhancement and electrolaryngeal speech enhancement ."
+    },
+    {
+      "source": "f1289277e3a8",
+      "target": "2bcb9d4bcd72",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "real-time statistical voice conversion -LRB- VC -RRB- --USED-FOR--> silent speech enhancement<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=In this paper , we present a digital signal processor -LRB- DSP -RRB- implementation of real-time statistical voice conversion -LRB- VC -RRB- for silent speech enhancement and electrolaryngeal speech enhancement ."
+    },
+    {
+      "source": "03a405a863b6",
+      "target": "8abeed823ba1",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "real-time VC --USED-FOR--> speech enhancement systems<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=To implement the two speech enhancement systems based on real-time VC , one from NAM to a whispered voice and the other from electrolaryngeal speech to a natural voice , we propose several methods for reducing computational cost while preserving conversion accuracy ."
+    },
+    {
+      "source": "b414cca31cd8",
+      "target": "04a1065ef0d2",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2006_21_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "registration process --USED-FOR--> missing low-level information<br>support_count=1<br>paper_count=1<br>papers=CVPR_2006_21_abs<br>example=Experimental results demonstrate that the resulting registration process is more robust to missing low-level information as it favors intensity correspondences statistically consistent with the learned intensity distributions ."
+    },
+    {
+      "source": "1b0ebc27e4a5",
+      "target": "1b4a2112db01",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "C92-2068",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "scheme --USED-FOR--> cyclic structures<br>support_count=1<br>paper_count=1<br>papers=C92-2068<br>example=The proposed scheme eliminates redundant copying while maintaining the quasi-destructive scheme 's ability to avoid over copying and early copying combined with its ability to handle cyclic structures without algorithmic additions ."
+    },
+    {
+      "source": "31332066a0c0",
+      "target": "43ccde70b0f1",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "speaking method --USED-FOR--> alaryngeal speech<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=Electrolaryngeal speech is one of the typical types of alaryngeal speech produced by an alternative speaking method for laryngectomees ."
+    },
+    {
+      "source": "31332066a0c0",
+      "target": "78eff9a31791",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "INTERSPEECH_2013_31_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "speaking method --USED-FOR--> laryngectomees<br>support_count=1<br>paper_count=1<br>papers=INTERSPEECH_2013_31_abs<br>example=Electrolaryngeal speech is one of the typical types of alaryngeal speech produced by an alternative speaking method for laryngectomees ."
+    },
+    {
+      "source": "f856290e656c",
+      "target": "1d4f4e34b3e7",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2006_21_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "statistically learned prior knowledge --USED-FOR--> image registration methods<br>support_count=1<br>paper_count=1<br>papers=CVPR_2006_21_abs<br>example=In this paper , we will develop a Bayesian framework that allows to impose statistically learned prior knowledge about the joint intensity distribution into image registration methods ."
+    },
+    {
+      "source": "5c2d6089284e",
+      "target": "63b63813de30",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "C92-2068",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "structure-sharing --USED-FOR--> method<br>support_count=1<br>paper_count=1<br>papers=C92-2068<br>example=We propose a method of attaining such a design through a method of structure-sharing which avoids log -LRB- d -RRB- overheads often associated with structure-sharing of graphs without any use of costly dependency pointers ."
+    },
+    {
+      "source": "649ca3294f00",
+      "target": "5be384a33503",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "A97-1052",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "textual corpora --USED-FOR--> system<br>support_count=1<br>paper_count=1<br>papers=A97-1052<br>example=We describe a novel technique and implemented system for constructing a subcategorization dictionary from textual corpora ."
+    },
+    {
+      "source": "0761e4128945",
+      "target": "10208690f3b3",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "ICCV_2013_36_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "tiling --USED-FOR--> semantic components<br>support_count=1<br>paper_count=1<br>papers=ICCV_2013_36_abs<br>example=After parsing the example image into its semantic components , a tiling for it is generated ."
+    },
+    {
+      "source": "8177f96b7c1b",
+      "target": "45910dca0671",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "tracker --USED-FOR--> tracking of complex non-rigid motions<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=Experiments show that the learned tracker performs much better than existing trackers on the tracking of complex non-rigid motions such as fish twisting with self-occlusion and large inter-frame lip motion ."
+    },
+    {
+      "source": "5f09916863c6",
+      "target": "45910dca0671",
+      "relation": "USED-FOR",
+      "support_count": 1,
+      "paper_count": 1,
+      "papers": "CVPR_2003_18_abs",
+      "width": 2.386,
+      "color": "#4C78A8",
+      "title": "trackers --USED-FOR--> tracking of complex non-rigid motions<br>support_count=1<br>paper_count=1<br>papers=CVPR_2003_18_abs<br>example=Experiments show that the learned tracker performs much better than existing trackers on the tracking of complex non-rigid motions such as fish twisting with self-occlusion and large inter-frame lip motion ."
+    }
+  ]
+}

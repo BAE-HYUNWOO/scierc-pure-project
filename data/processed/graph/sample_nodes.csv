@@ -1,0 +1,109 @@
+﻿id,label,entity_type,support_count,color
+63b63813de30,method,Generic,6,#BAB0AC
+ea43579483fc,devices,Generic,3,#BAB0AC
+66ef2c1c125e,domains,Generic,3,#BAB0AC
+f5923a533e15,fish twisting,OtherScientificTerm,3,#72B7B2
+1a79867a172a,intrinsic object structure,OtherScientificTerm,3,#72B7B2
+f3fff57d6783,it,Generic,3,#BAB0AC
+ecf9a3bb595a,machine translation evaluation measures,Metric,3,#54A24B
+f4b11679df3e,paraphrase,OtherScientificTerm,3,#72B7B2
+58df2a30e2cb,paraphrases,OtherScientificTerm,3,#72B7B2
+f1289277e3a8,real-time statistical voice conversion -LRB- VC -RRB-,Method,3,#4C78A8
+03a405a863b6,real-time VC,Method,3,#4C78A8
+8abeed823ba1,speech enhancement systems,Method,3,#4C78A8
+41116e29f265,subcategorization dictionary,OtherScientificTerm,3,#72B7B2
+5be384a33503,system,Generic,3,#BAB0AC
+43ccde70b0f1,alaryngeal speech,Material,2,#B279A2
+e539b76849f0,BLEU,Metric,2,#54A24B
+5ed51c4ec8c4,computational cost,Metric,2,#54A24B
+ed5938cc654a,conversion accuracy,Metric,2,#54A24B
+eb27a3d718a7,DSP,OtherScientificTerm,2,#72B7B2
+68dffd6d21a6,dynamical model,Method,2,#4C78A8
+5cafd7b7f2bc,electrolaryngeal speech enhancement,Task,2,#F58518
+3b7adbef408f,entailment,Method,2,#4C78A8
+5d5ebc8dcecf,equivalence in meaning,Metric,2,#54A24B
+3f9b6345a354,genetic algorithm,Generic,2,#BAB0AC
+1d4f4e34b3e7,image registration methods,Method,2,#4C78A8
+742e5fb9023f,InfoMagnets,Method,2,#4C78A8
+e663cf40826c,inter-frame lip motion,OtherScientificTerm,2,#72B7B2
+deb703953f64,joint intensity distributions,OtherScientificTerm,2,#72B7B2
+fc609d7630ba,kernel density estimate,Method,2,#4C78A8
+2781dde847a4,languages,Material,2,#B279A2
+db31d38471d2,meaning equivalence,Method,2,#4C78A8
+dd669307a669,methods,Generic,2,#BAB0AC
+266854221e7e,NIST,Metric,2,#54A24B
+dab7453ab60c,on-line communities,Material,2,#B279A2
+2eb246d30d63,one,Generic,2,#BAB0AC
+84917f0d5123,other,Generic,2,#BAB0AC
+1049ca477c8c,parser,Method,2,#4C78A8
+7444ae795251,particle-filter style tracker,Method,2,#4C78A8
+1b0ebc27e4a5,scheme,Generic,2,#BAB0AC
+f84d6b442627,self-occlusion,OtherScientificTerm,2,#72B7B2
+2bcb9d4bcd72,silent speech enhancement,Task,2,#F58518
+31332066a0c0,speaking method,Method,2,#4C78A8
+f856290e656c,statistically learned prior knowledge,OtherScientificTerm,2,#72B7B2
+8177f96b7c1b,tracker,Generic,2,#BAB0AC
+5f09916863c6,trackers,Generic,2,#BAB0AC
+45910dca0671,tracking of complex non-rigid motions,Task,2,#F58518
+e771d4218b6e,tutorial dialogue,Material,2,#B279A2
+a4ce944f2300,accuracy,Metric,1,#54A24B
+cdb3f9ad3970,Bayesian framework,Method,1,#4C78A8
+a01dab09d75d,class-dependent interpolation of N-grams,Method,1,#4C78A8
+4270d60777ba,complex non-rigid motions,OtherScientificTerm,1,#72B7B2
+416a8a035ec3,conversational speech,Material,1,#B279A2
+1b4a2112db01,cyclic structures,OtherScientificTerm,1,#72B7B2
+8aaf95855057,digital signal processor -LRB- DSP -RRB- implementation,Method,1,#4C78A8
+263bd55b021b,dimensionality reduction and density estimation algorithm,Method,1,#4C78A8
+8623aebe02d9,early copying,OtherScientificTerm,1,#72B7B2
+ac5aa92a65eb,educational tool,Method,1,#4C78A8
+fec583b43274,Electrolaryngeal speech,Material,1,#B279A2
+dbd726f39a6f,exploratory corpus analysis,Task,1,#F58518
+604b758c245e,facade textures,OtherScientificTerm,1,#72B7B2
+72c79ff10f9d,facades,OtherScientificTerm,1,#72B7B2
+757281be9e70,French,Material,1,#B279A2
+3635b14da96d,grammatical gender,OtherScientificTerm,1,#72B7B2
+db0f5692aa33,grammaticality,Metric,1,#54A24B
+58caca10ba42,Graph unification,Task,1,#F58518
+83c4527bc21b,hand-produced sets,OtherScientificTerm,1,#72B7B2
+8e33a7b735f6,inpainted parts,OtherScientificTerm,1,#72B7B2
+9fcc602cdedd,intensity correspondences,OtherScientificTerm,1,#72B7B2
+b1501522f7ed,interactive corpus exploration tool,Method,1,#4C78A8
+f80e448bc8f2,internal lexical and syntactical variation,Metric,1,#54A24B
+9fe55655cb41,intrinsic representation,Method,1,#4C78A8
+183c4394a909,it,OtherScientificTerm,1,#72B7B2
+02a7e6ec1541,joint intensity distribution,OtherScientificTerm,1,#72B7B2
+ba6428eca37b,language modeling,Method,1,#4C78A8
+78eff9a31791,laryngectomees,OtherScientificTerm,1,#72B7B2
+681089f5888c,limited computational resources,Material,1,#B279A2
+f02526a7aad4,low dimensional manifold,OtherScientificTerm,1,#72B7B2
+9afeaa63d450,low-level criterion,Metric,1,#54A24B
+8ac58992f529,maximum mutual information,Metric,1,#54A24B
+e104f84319a1,method,Method,1,#4C78A8
+04a1065ef0d2,missing low-level information,OtherScientificTerm,1,#72B7B2
+1679b9dbdd9f,multiple standard datasets,Generic,1,#BAB0AC
+0a0ec5f27a47,NAM and electrolaryngeal speech,Material,1,#B279A2
+6322ee75889a,nouns,OtherScientificTerm,1,#72B7B2
+3b3f2a4b5286,occluded parts inpainted,OtherScientificTerm,1,#72B7B2
+86604c489be6,over copying,OtherScientificTerm,1,#72B7B2
+07f3895ab3ea,parameterized object state,OtherScientificTerm,1,#72B7B2
+b55bc0b864da,pre-registered image pairs,Material,1,#B279A2
+3e9f9b2c64bd,prior,Generic,1,#BAB0AC
+cca8507a3d62,protocol analysis,Task,1,#F58518
+00de01e41008,quasi-destructive scheme 's ability,OtherScientificTerm,1,#72B7B2
+4283b527a9c3,recognition task,Task,1,#F58518
+99e2125ea561,reflexive pronouns,OtherScientificTerm,1,#72B7B2
+5879a235b86b,registration criteria,Metric,1,#54A24B
+b414cca31cd8,registration process,Method,1,#4C78A8
+142655817aec,robust visual tracking,Task,1,#F58518
+10208690f3b3,semantic components,Method,1,#4C78A8
+e3848289cd64,sound quality,Metric,1,#54A24B
+7fe2673abdd4,speed-up element,Method,1,#4C78A8
+5c2d6089284e,structure-sharing,Method,1,#4C78A8
+893a3a60963c,sufficient computational resources,Material,1,#B279A2
+e7306022cdd0,"synthesizing complex , photo-realistic facade images",Task,1,#F58518
+649ca3294f00,textual corpora,Material,1,#B279A2
+0761e4128945,tiling,OtherScientificTerm,1,#72B7B2
+39ee5629a37e,tracking problems,Task,1,#F58518
+29cca56ea800,unification algorithms,Method,1,#4C78A8
+f341b2f59359,unification-based grammar parsing,Task,1,#F58518
+7d323395a013,unsupervised learning of object intrinsic representation,Task,1,#F58518

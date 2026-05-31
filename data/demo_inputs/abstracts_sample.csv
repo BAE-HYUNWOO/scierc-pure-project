@@ -1,0 +1,3 @@
+paper_id,title,abstract,source
+paper_001,SciBERT Relation Extraction,"We propose a SciBERT-based model for scientific relation extraction. The model is evaluated on SciERC and compared with previous neural baselines.",manual
+paper_002,Transformer for Machine Translation,"This paper presents a Transformer model for neural machine translation. Experiments on WMT demonstrate improvements over recurrent baselines.",manual
